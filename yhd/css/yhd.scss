@@ -315,30 +315,123 @@ a{
             p{
                 line-height: 18px;
             }
-            
+            &::before{
+                content: "";
+                display: block;
+                position: absolute;
+                z-index: 3;
+                left: 50%;
+                margin-left: -5px;
+                top: -5px+0.5px;
+                width: 8px;
+                height: 8px;
+                #{$bgc}:#fff;
+                border: {
+                    top:1px solid #e5e5e5;
+                    left: 1px solid #e5e5e5;;
+                } 
+                transform: rotate(45deg);
+            }
         }
         .iconfont{
             font-size: 24px;
         }
-        &::before{
-            content: "";
-            display: block;
-            position: absolute;
-            z-index: 3;
-            left: 50%;
-            margin-left: -5px;
-            top: 25px+0.5px;
-            width: 8px;
-            height: 8px;
-            #{$bgc}:#fff;
-            border: {
-                top:1px solid #e5e5e5;
-                left: 1px solid #e5e5e5;;
-            } 
-            transform: rotate(45deg);
-        }
+        
         &:hover .none{
             display: block;
         }
     }
+}
+
+
+// 底部
+.ft_top{
+    padding: 30px 0;
+    border-bottom: 1px solid #ebebeb;
+    a{
+        float: left;
+        width: 205px;
+        margin: 0 51px;
+        overflow: hidden;
+        img{
+            float: left;
+            width: 66px;
+            height: 66px;
+            margin-right: 15px;
+        }
+        b{
+            display: block;
+            margin-top: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+        span{
+            font-size: 14px;
+            color: #999;
+            line-height: 26px;
+        }
+    }
+}
+.ft_help{
+    padding: 20px 0 20px;
+    .ft_hp_list{
+        float: left;
+        margin-left: 15px;
+        li{
+            float: left;
+            list-style: none;
+            width: 195px;
+        }
+        b{
+            display: block;
+            height: 32px;
+            font-size: 14px;
+            line-height: 32px;
+            color: #666;
+            font-weight: bold;
+            padding-left: 8px;
+        }
+        a{
+            @extend b;
+            height: 24px;
+            line-height: 24px;
+            padding: 0 8px;
+            font-size: 12px;
+            white-space: normal;
+            font-weight: normal;
+        } 
+        &~div{
+            float: left;
+            margin-right: 50px;
+            line-height: 32px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #666;
+            img{
+                width: 90px;
+                height: 90px;
+            }
+        } 
+    }  
+}
+.footer_link{
+    p{
+        color: #666;
+        text-align: center;
+        text-indent: 0;
+        line-height: 100%;
+        margin: 15px 0;
+        padding: 0;
+        a{
+            margin: 0 10px;
+        }
+    }
+    p+p+p{
+        padding: 10px 0 20px;
+        margin: 0;
+        a{
+            margin: 0 4px;
+        }
+    }
+    
 }
