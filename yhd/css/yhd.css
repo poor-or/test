@@ -305,6 +305,8 @@ a {
       font-size: 12px;
       white-space: normal;
       font-weight: normal; }
+      .ft_help .ft_hp_list a:hover {
+        color: red; }
     .ft_help .ft_hp_list ~ div {
       float: left;
       margin-right: 50px;

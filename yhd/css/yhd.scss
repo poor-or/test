@@ -399,6 +399,9 @@ a{
             font-size: 12px;
             white-space: normal;
             font-weight: normal;
+            &:hover{
+                color: red;
+            }
         } 
         &~div{
             float: left;
@@ -424,7 +427,9 @@ a{
         padding: 0;
         a{
             margin: 0 10px;
+            
         }
+
     }
     p+p+p{
         padding: 10px 0 20px;
