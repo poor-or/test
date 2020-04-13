@@ -1,12 +1,12 @@
 var ul = document.getElementById("ul_list");
 var ipt = document.getElementById("ipt");
-var opt = document.getElementById("txt");
+var opt=document.getElementById("txt");
 var city = document.getElementById("city");
 var block = document.getElementsByClassName("hd_city_sel")[0];
 var cTxt = document.getElementById("cityText");
 var lett = document.getElementById("letter");
 var ele = lett.children;
-var cityList = [];
+var cityList=[];
 var arr = [];
 
 for (var a = 0; a < ele.length; a++) {
@@ -27,14 +27,14 @@ xhr.onreadystatechange = function () {
                 if (data[j].cityLetter == arr[i]) {
                     span += `<a href="javascript:void(0);">${data[j].city}</a>`
                 }
-                cityList[j] = data[j].city;
+                cityList[j]=data[j].city;
             }
             ul.innerHTML += `<li class="clearfix">
                     <div class="city_screen">${arr[i]}</div>
                     <div class="city_box">${span}</div>
                 </li>`
         }
-        sessionStorage.setItem("lists", cityList);
+        sessionStorage.setItem("lists",cityList);
     }
 }
 // 改变城市
@@ -62,11 +62,11 @@ city.onclick = function () {
     city.parentElement.style.borderRight = "1px solid #dbdbdb";
     city.previousElementSibling.style.display = "block";
     event.stopPropagation();
-    window.addEventListener("click", function() {
-        if(!block.contains(event.target)){
-            close()
-        }
-    }, false)
+    window.addEventListener("click", close, false)
+    block.onclick = function () {
+        window.removeEventListener("click", close, false)
+    }
+
 }
 function cCity() {
     event.stopPropagation();
@@ -102,33 +102,26 @@ ipt.onblur = function () {
     ipt.previousElementSibling.style.display = "block";
     ipt.setAttribute("placeholder", "请输入城市名称");
 }
-// 点击x清楚ipt内容
-function clearTxt() {
-    ipt.value = "";
-}
+
 // 搜索框键入显示城市信息
 ipt.addEventListener("compositionstart", function () {
-    opt.style.display = "block";
-    opt.innerHTML = ipt.value;
+    opt.style.display="block";
+    opt.innerHTML=ipt.value;
 }, false)
 ipt.addEventListener("compositionupdate", function () {
-    opt.style.display = "block";
-    opt.innerHTML = ipt.value;
+    opt.style.display="block";
+    opt.innerHTML=ipt.value;
 }, false)
-ipt.onkeypress = function () {
-    compositionupdate()
-}
 ipt.addEventListener("compositionend", function () {
-    opt.style.display = "block";
-    opt.innerHTML = ipt.value;
-    var optTxt = sessionStorage.getItem("lists").split(",")
-    if (optTxt.indexOf(opt.innerHTML) == -1) {
-        opt.innerHTML = "";
+    opt.style.display="block";
+    opt.innerHTML=ipt.value;
+    var optTxt=sessionStorage.getItem("lists").split(",")
+    if(optTxt.indexOf(opt.innerHTML)== -1){
+        opt.innerHTML="";
     }
 }, false)
 // 点击城市改变
-opt.onclick = function () {
-    cTxt.innerHTML = opt.innerHTML;
-    opt.style.display = "none";
-    ipt.value = "";
+opt.onclick=function() {
+    cTxt.innerHTML=opt.innerHTML;
+    opt.style.display="none";
 }
