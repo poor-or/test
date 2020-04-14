@@ -257,7 +257,7 @@ a{
                 width: 260px;
                 position: absolute;
                 top: 30px;
-                left: 1200px;
+                left: 0;
                 // display: block;
                 z-index: 3;
                 background-color: white;
@@ -402,9 +402,6 @@ a{
     }
 }
 
-.intem{
-
-}
 .bd_top{
     background-color: #3f3d45;
     width: 100%;
@@ -430,6 +427,7 @@ a{
         position: relative;
         top: -91px;
         left: 170px;
+        overflow: hidden;
         li{
             float: left;
             text-align: center;
@@ -461,11 +459,22 @@ a{
                 radius: 2px;
             }
         }
-        .bd_item_set {
-            .bd_item_set_hd{
-   
-                background-color: #46444b;
+        
+         .none{
+            display: none;
+        }
+        .bd_block{
+            &:hover .none{
+                display: block;
             }
+        }
+        .bd_item_set_hd{
+            background-color: #46444b;
+            line-height: 50px;
+        }
+       
+        .bd_item_set {
+
             &:hover i{
                 transform: rotate(45deg);
             }
@@ -475,13 +484,53 @@ a{
 }
 
 
+// 中心内容板块
 
-
-
-
-
-
-
-.one{
-    height: 1000px;
+.bd_centre{
+    width: 100%;
+    height: auto;
+    padding: 22px 0 100px;
+    background-color:#e9e9e9;
+    .bd_centre_wrap{
+        // background-color: red;
+        .bd_centre_left{
+            width: 175px;
+            // height: 778px;
+            background-color: #fff;
+            padding: 18px 0 24px 0;
+            li{
+                height: 34px;
+                padding-top: 6px;
+                color: #666;
+                font-size: 14px;
+                font-weight: bold;
+                line-height: 34px;
+                width: 175px;
+                height: auto;
+                text-align: center;
+                a{
+                    height: 28px;
+                    color: #999;
+                    line-height: 28px;
+                    display: inline-block;
+                    width: 175px;
+                    height: auto;
+                    font-size: 12px;
+                }
+            }
+        }
+        .bd_centre_right{
+            width: 1040px;
+            // height: auto;
+            float: right;
+            .bd_center_user{
+                width: 340px;
+                height: 200px;
+                
+                background-image: url(../img/head_portrait/vipRankBg.png);
+            }
+        }
 }
+}
+
+
