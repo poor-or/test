@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>评论商品-1号店帮助中心</title>
     <link rel="stylesheet" href="./css/yhd.css">
     <link rel="stylesheet" href="./font/iconfont.css">
 </head>
@@ -14,13 +14,13 @@
         <!-- 头部 -->
         <header class="hd_header">
             <div class="hd_header_top wrap clearfix">
-                
+
                 <a href="#" class="hd_t_left">
                     <i class="iconfont icon-fangzihouse128"></i>
                     <span>1号店首页</span>
                 </a>
                 <!-- 选择城市 -->
-                <div class="hd_place hd_relative" >
+                <div class="hd_place hd_relative">
                     <div class="fff"></div>
                     <a class="hd_p_city" href="javascript:void(0);" id="city">
                         <i class="iconfont icon-loc-s"></i>
@@ -33,7 +33,7 @@
                             <div class="hd_city_ipt">
                                 <i class="iconfont icon-sousuo"></i>
                                 <input id="ipt" type="text" placeholder="请输入城市名称">
-                                <span class="clearText" style="display: none;">×</span>
+                                <span class="clearText" style="display: none;" onclick="clearTxt()">×</span>
                                 <div id="txt"></div>
                             </div>
                             <span class="close_city" onclick="cCity()">×</span>
@@ -63,7 +63,7 @@
                         <!-- 按字母查找 -->
                         <div class="hd_letter_search clearfix" id="letter"">
                             <span>按字母查找</span>
-                            <a href="#" class="col">A</a>
+                            <a href=" #" class="col">A</a>
                             <a href="#">B</a>
                             <a href="#">C</a>
                             <a href="#">D</a>
@@ -116,7 +116,7 @@
                     </div>
                     <div class="app hd_r_l hd_relative">
                         <a href="">
-                            <i class="iconfont icon-shouji"></i><span>手机APP</span>
+                            <i class="iconfont icon-shouji"></i><span>APP下载</span>
                         </a>
                         <div class="appCode none">
                             <p>扫描二维码</p>
@@ -129,12 +129,57 @@
                 </div>
             </div>
         </header>
-
+        <!-- 搜索 -->
+        <div class="co_content  wrap">
+            <div class="subnav clearfix">
+                <div class="co_logo">
+                    <a href="#">
+                        <img src="./img/ft-cn/1.png">
+                    </a>
+                </div>
+                <div class="subnav-inf">
+                    <div class="search">
+                        <input type="text">
+                        <button><i class="iconfont icon-fangdajing"></i></button>
+                    </div>
+                    <p>
+                        <a title="咖啡" target="_blank" href="//search.yhd.com/c0-0/k%25E5%2592%2596%25E5%2595%25A1/">咖啡</a>
+                        <a title="酒精75" target="_blank" href="//search.yhd.com/c0-0/k%25E9%2585%2592%25E7%25B2%25BE75/">酒精75</a>
+                        <a title="麦片" target="_blank" href="//search.yhd.com/c0-0/k%25E9%25BA%25A6%25E7%2589%2587/">麦片</a>
+                        <a title="广舒平脚气泡脚" target="_blank" href="//search.yhd.com/c0-0/k%25E5%25B9%25BF%25E8%2588%2592%25E5%25B9%25B3%25E8%2584%259A%25E6%25B0%2594%25E6%25B3%25A1%25E8%2584%259A/">广舒平脚气泡脚</a>
+                        <a title="衬衫男霁蓝" target="_blank" href="//search.yhd.com/c0-0/k%25E8%25A1%25AC%25E8%25A1%25AB%25E7%2594%25B7%25E9%259C%2581%25E8%2593%259D/">衬衫男霁蓝</a>
+                        <a title="滴露" target="_blank" href="//search.yhd.com/c0-0/k%25E6%25BB%25B4%25E9%259C%25B2/">滴露</a>
+                        <a title="大米10kg" target="_blank" href="//search.yhd.com/c0-0/k%25E5%25A4%25A7%25E7%25B1%25B310kg/">大米10kg</a>
+                    </p>
+                </div>
+                <div class="shopping-t">
+                    <a href="#">
+                        <i class="iconfont icon-gouwuchekong"></i>
+                        <span>购物车</span>
+                    </a>
+                </div>
+            </div>          
+        </div>
+        <div class="hd_cm_wrap">
+            <div class="wrap">
+                <div class="hd_cm_nav clearfix">
+                    <div class="hd_cm_allsort_wrap">
+                        <a>所有商品分类
+                            <i class="iconfont icon-arrowBottom-fill"></i>
+                        </a>
+                        <div class="mod_hd_allsort"></div>
+                    </div>
+                    <div class="hd_cm_nav_wrap">
+                        <a href="//coin.yhd.com/" title="领金币" target="_blank">领金币</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- 底部 -->
         <footer class="ft_content wrap">
             <!-- 正品保障一行 -->
-            <div class="ft_top">
+            <div class="ft_top clearfix">
                 <a target="_blank">
                     <img alt="" src="./img/f_top/F01.png">
                     <b>正品保障</b>
@@ -157,9 +202,9 @@
                 </a>
             </div>
             <!-- 帮助说明 -->
-            <div class="ft_help">
+            <div class="ft_help clearfix">
                 <div class="ft_hp_list">
-                    <ul>
+                    <ul class="clearfix">
                         <li>
                             <b>新手入门</b>
                             <a href="">购物流程</a>
@@ -198,9 +243,8 @@
                     <img src="./img/code/wechat.jpg" alt="">
                 </div>
             </div>
-            <!-- 底部其他信息 -->
-
         </footer>
+        <!-- 底部其他信息 -->
         <div class="footer_link">
             <p>
                 <a>沪ICP备16050468号</a>
