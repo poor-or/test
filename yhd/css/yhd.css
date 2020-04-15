@@ -25,9 +25,10 @@ a {
     color: red; }
 
 .hd_header {
-  background-color: #f4f4f4;
-  margin-bottom: 200px;
-  border-bottom: 1px solid #e5e5e5; }
+  margin-bottom: 200px; }
+  .hd_header .hd-bg {
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #e5e5e5; }
 
 .hd_header_top {
   min-width: 980px;

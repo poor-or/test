@@ -7,123 +7,126 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/yhd.css">
     <link rel="stylesheet" href="./font/iconfont.css">
+
 </head>
 
 <body>
     <div class="container">
         <!-- 头部 -->
         <header class="hd_header">
-            <div class="hd_header_top wrap clearfix">
-                
-                <a href="#" class="hd_t_left">
-                    <i class="iconfont icon-fangzihouse128"></i>
-                    <span>1号店首页</span>
-                </a>
-                <!-- 选择城市 -->
-                <div class="hd_place hd_relative" >
-                    <div class="fff"></div>
-                    <a class="hd_p_city" href="javascript:void(0);" id="city">
-                        <i class="iconfont icon-loc-s"></i>
-                        <span>送货地址：</span><span id="cityText">上海</span>
+            <div class="hd-bg">
+                <div class="hd_header_top wrap clearfix">
+
+                    <a href="#" class="hd_t_left">
+                        <i class="iconfont icon-fangzihouse128"></i>
+                        <span>1号店首页</span>
                     </a>
-                    <div class="hd_city_sel none">
-                        <!-- 搜索城市 -->
-                        <div class="hd_city_search">
-                            <span>搜索城市：</span>
-                            <div class="hd_city_ipt">
-                                <i class="iconfont icon-sousuo"></i>
-                                <input id="ipt" type="text" placeholder="请输入城市名称">
-                                <span class="clearText" style="display: none;" onclick="clearTxt()">×</span>
-                                <div id="txt"></div>
+                    <!-- 选择城市 -->
+                    <div class="hd_place hd_relative">
+                        <div class="fff"></div>
+                        <a class="hd_p_city" href="javascript:void(0);" id="city">
+                            <i class="iconfont icon-loc-s"></i>
+                            <span>送货地址：</span><span id="cityText">上海</span>
+                        </a>
+                        <div class="hd_city_sel none">
+                            <!-- 搜索城市 -->
+                            <div class="hd_city_search">
+                                <span>搜索城市：</span>
+                                <div class="hd_city_ipt">
+                                    <i class="iconfont icon-sousuo"></i>
+                                    <input id="ipt" type="text" placeholder="请输入城市名称">
+                                    <span class="clearText" style="display: none;" onclick="clearTxt()">×</span>
+                                    <div id="txt"></div>
+                                </div>
+                                <span class="close_city" onclick="cCity()">×</span>
                             </div>
-                            <span class="close_city" onclick="cCity()">×</span>
-                        </div>
-                        <!-- 热门城市 -->
-                        <div class="hd_hot_city clearfix" onclick="getText()">
-                            <span>热门城市：</span>
-                            <div>
-                                <a href="javascript:void(0);">上海市</a>
-                                <a href="javascript:void(0);">北京市</a>
-                                <a href="javascript:void(0);">广州市</a>
-                                <a href="javascript:void(0);">深圳市</a>
-                                <a href="javascript:void(0);">南京市</a>
-                                <a href="javascript:void(0);">杭州市</a>
-                                <a href="javascript:void(0);">武汉市</a>
-                                <a href="javascript:void(0);">成都市</a>
-                                <a href="javascript:void(0);">重庆市</a>
-                                <a href="javascript:void(0);">苏州市</a>
-                                <a href="javascript:void(0);">天津市</a>
-                                <a href="javascript:void(0);">合肥市</a>
-                                <a href="javascript:void(0);">温州市</a>
-                                <a href="javascript:void(0);">无锡市</a>
-                                <a href="javascript:void(0);">宁波市</a>
-                                <a href="javascript:void(0);">常州市</a>
+                            <!-- 热门城市 -->
+                            <div class="hd_hot_city clearfix" onclick="getText()">
+                                <span>热门城市：</span>
+                                <div>
+                                    <a href="javascript:void(0);">上海市</a>
+                                    <a href="javascript:void(0);">北京市</a>
+                                    <a href="javascript:void(0);">广州市</a>
+                                    <a href="javascript:void(0);">深圳市</a>
+                                    <a href="javascript:void(0);">南京市</a>
+                                    <a href="javascript:void(0);">杭州市</a>
+                                    <a href="javascript:void(0);">武汉市</a>
+                                    <a href="javascript:void(0);">成都市</a>
+                                    <a href="javascript:void(0);">重庆市</a>
+                                    <a href="javascript:void(0);">苏州市</a>
+                                    <a href="javascript:void(0);">天津市</a>
+                                    <a href="javascript:void(0);">合肥市</a>
+                                    <a href="javascript:void(0);">温州市</a>
+                                    <a href="javascript:void(0);">无锡市</a>
+                                    <a href="javascript:void(0);">宁波市</a>
+                                    <a href="javascript:void(0);">常州市</a>
+                                </div>
                             </div>
-                        </div>
-                        <!-- 按字母查找 -->
-                        <div class="hd_letter_search clearfix" id="letter"">
+                            <!-- 按字母查找 -->
+                            <div class="hd_letter_search clearfix" id="letter"">
                             <span>按字母查找</span>
-                            <a href="#" class="col">A</a>
-                            <a href="#">B</a>
-                            <a href="#">C</a>
-                            <a href="#">D</a>
-                            <a href="#">E</a>
-                            <a href="#">F</a>
-                            <a href="#">G</a>
-                            <a href="#">H</a>
-                            <a href="#">J</a>
-                            <a href="#">K</a>
-                            <a href="#">L</a>
-                            <a href="#">M</a>
-                            <a href="#">N</a>
-                            <a href="#">P</a>
-                            <a href="#">Q</a>
-                            <a href="#">R</a>
-                            <a href="#">S</a>
-                            <a href="#">T</a>
-                            <a href="#">W</a>
-                            <a href="#">X</a>
-                            <a href="#">Y</a>
-                            <a href="#">Z</a>
-                        </div>
-                        <!-- 按字母分类城市列表 -->
-                        <div class="hd_city_list" onclick="getText()">
-                            <ul id="ul_list">
-                            </ul>
-                            <script src="./js/yhd.js"></script>
-                        </div>
-                    </div>
-                </div>
-                <div class="hd_right clearfix">
-                    <div class="hd_r_logReg hd_r_l">
-                        <span>Hi,请</span>
-                        <a href="">登录</a>
-                        <a href="">注册</a>
-                    </div>
-                    <div class="hd_myOrder hd_r_l">
-                        <a href="">
-                            <i class="iconfont icon-dingdan"></i>
-                            <span>我的订单</span>
-                        </a>
-                    </div>
-                    <div class="hd_client hd_r_l hd_relative">
-                        <a href="">客户服务</a>
-                        <i></i>
-                        <div class="hd_clientMenu none">
-                            <a href="">包裹跟踪</a>
-                            <a href="">在线退换货</a>
+                            <a href=" #" class="col">A</a>
+                                <a href="#">B</a>
+                                <a href="#">C</a>
+                                <a href="#">D</a>
+                                <a href="#">E</a>
+                                <a href="#">F</a>
+                                <a href="#">G</a>
+                                <a href="#">H</a>
+                                <a href="#">J</a>
+                                <a href="#">K</a>
+                                <a href="#">L</a>
+                                <a href="#">M</a>
+                                <a href="#">N</a>
+                                <a href="#">P</a>
+                                <a href="#">Q</a>
+                                <a href="#">R</a>
+                                <a href="#">S</a>
+                                <a href="#">T</a>
+                                <a href="#">W</a>
+                                <a href="#">X</a>
+                                <a href="#">Y</a>
+                                <a href="#">Z</a>
+                            </div>
+                            <!-- 按字母分类城市列表 -->
+                            <div class="hd_city_list" onclick="getText()">
+                                <ul id="ul_list">
+                                </ul>
+
+                            </div>
                         </div>
                     </div>
-                    <div class="app hd_r_l hd_relative">
-                        <a href="">
-                            <i class="iconfont icon-shouji"></i><span>手机APP</span>
-                        </a>
-                        <div class="appCode none">
-                            <p>扫描二维码</p>
-                            <p>下载1号店APP</p>
+                    <div class="hd_right clearfix">
+                        <div class="hd_r_logReg hd_r_l">
+                            <span>Hi,请</span>
+                            <a href="">登录</a>
+                            <a href="">注册</a>
+                        </div>
+                        <div class="hd_myOrder hd_r_l">
                             <a href="">
-                                <img src="./img/code/appCode.png" alt="">
+                                <i class="iconfont icon-dingdan"></i>
+                                <span>我的订单</span>
                             </a>
+                        </div>
+                        <div class="hd_client hd_r_l hd_relative">
+                            <a href="">客户服务</a>
+                            <i></i>
+                            <div class="hd_clientMenu none">
+                                <a href="">包裹跟踪</a>
+                                <a href="">在线退换货</a>
+                            </div>
+                        </div>
+                        <div class="app hd_r_l hd_relative">
+                            <a href="">
+                                <i class="iconfont icon-shouji"></i><span>手机APP</span>
+                            </a>
+                            <div class="appCode none">
+                                <p>扫描二维码</p>
+                                <p>下载1号店APP</p>
+                                <a href="">
+                                    <img src="./img/code/appCode.png" alt="">
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -248,6 +251,9 @@
             </p>
         </div>
     </div>
+
+
+    <script src="./js/yhd.js"></script>
 </body>
 
 </html>
