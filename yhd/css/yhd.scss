@@ -428,12 +428,13 @@ a{
     }
     .hd_cm_wrap{
         border-bottom: 2px solid #ff4040;
+        position: relative;
         .hd_cm_nav{
             width: 980px;
             height: 38px;
         }
         .hd_cm_allsort_wrap{
-            float: left;
+            float: left;        
             a{
                 display: block;
                 width: 210px;
@@ -454,8 +455,36 @@ a{
                 transform: rotate(180deg);
                 
                 }
-            }
-           
+            }         
+        }
+        .mod_h{
+            display:none;
+            position: absolute;
+            width: 210px;
+            height: 400px;
+            background-color: rgba(48,48,48,0.9);
+            top: 40px;
+            font-size: 14px; 
+            li{
+                display: block;
+                height: 32px;
+                line-height: 32px;
+                transition: all .1s ease-out 0s;
+                font-weight: normal;
+                color: #fff;
+                i{
+                    color: #8f8f8f;
+                    margin: 0 14px;
+                    font-size: 20px;
+                }
+                a{
+                    color: #fff;
+                    font-size: 12px;
+                }
+            }           
+        }
+        &:hover .mod_h{
+            display: block;
         }
         .hd_cm_nav_wrap{
             width: 78px;
@@ -468,6 +497,45 @@ a{
             }
         }
     }
+// 中间
+.left_menu {
+    width: 205px;
+    float: left;
+    margin-top: 10px;
+    ul{
+        border: 1px solid #d4d4d4;
+         list-style: none;
+         h2{
+        background: url(../img/ft-cn/4.png) repeat-x;
+        height: 30px;
+        line-height: 31px;
+        font-size: 14px;
+        padding-left: 18px;
+        color: #333;
+        }
+        h3{
+            background: url(../img/ft-cn/2.jpg) no-repeat;
+            height: 29px;
+            line-height: 29px;
+            font-size: 12px;
+            padding-left: 19px;
+            color: #333;
+            font-weight: normal;
+            border-top: 1px solid #d4d4d4;
+            cursor: pointer;
+        }
+        .on{
+            background: url(../img/ft-cn/3.jpg) no-repeat;
+        }
+        li a{
+            background: url(../img/ft-cn/5.png) no-repeat 0px 7px;
+            height: 24px;
+            line-height: 24px;
+            padding-left: 10px;
+            margin-left: 10px;
+        }
+    }
+}
 
 // 底部
 .ft_top{
