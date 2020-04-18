@@ -217,6 +217,30 @@ a {
         color: red; }
     .hd_header_top .hd_right .hd_r_logReg span, .hd_header_top .hd_right .hd_r_logReg .hd_place .none .hd_hot_city div, .hd_header_top .hd_place .none .hd_hot_city .hd_right .hd_r_logReg div, .hd_header_top .hd_right .hd_r_logReg .hd_place .none .hd_letter_search div, .hd_header_top .hd_place .none .hd_letter_search .hd_right .hd_r_logReg div, .hd_header_top .hd_right .hd_r_logReg span + a, .hd_header_top .hd_right .hd_r_logReg .hd_place .none .hd_hot_city div + a, .hd_header_top .hd_place .none .hd_hot_city .hd_right .hd_r_logReg div + a, .hd_header_top .hd_right .hd_r_logReg .hd_place .none .hd_letter_search div + a, .hd_header_top .hd_place .none .hd_letter_search .hd_right .hd_r_logReg div + a {
       color: red; }
+    .hd_header_top .hd_right .login-txt {
+      float: left; }
+      .hd_header_top .hd_right .login-txt .user:hover + div a:first-child {
+        display: block; }
+        .hd_header_top .hd_right .login-txt .user:hover + div a:first-child + a {
+          display: none; }
+      .hd_header_top .hd_right .login-txt div {
+        width: 110px;
+        float: right;
+        position: relative; }
+        .hd_header_top .hd_right .login-txt div a {
+          position: absolute;
+          right: 0;
+          margin: 0 3px; }
+          .hd_header_top .hd_right .login-txt div a:first-child {
+            right: 10px;
+            color: #CCC;
+            display: none; }
+          .hd_header_top .hd_right .login-txt div a span, .hd_header_top .hd_right .login-txt div a .hd_place .none .hd_hot_city div, .hd_header_top .hd_place .none .hd_hot_city .hd_right .login-txt div a div, .hd_header_top .hd_right .login-txt div a .hd_place .none .hd_letter_search div, .hd_header_top .hd_place .none .hd_letter_search .hd_right .login-txt div a div {
+            padding: 2px 5px;
+            margin-right: 5px;
+            background-color: red;
+            color: #fff;
+            border-radius: 20px; }
     .hd_header_top .hd_right .hd_r_l {
       padding: 0 10px; }
     .hd_header_top .hd_right .hd_member:hover i {
@@ -304,7 +328,7 @@ a {
           color: #333; }
     .hd_bp .search-text .shop-car {
       float: right;
-      border: 1px solid #AAA;
+      border: 1px solid #CCC;
       border-radius: 20px; }
       .hd_bp .search-text .shop-car a {
         display: inline-block;
@@ -379,15 +403,19 @@ a {
             color: red; }
 
 .banner {
-  width: 100%;
-  height: 400px;
   position: relative; }
-  .banner .lunbo img {
-    position: absolute;
-    height: 100%;
-    top: 0;
-    left: -200px;
-    transition: all .6s; }
+  .banner .lunbo {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative; }
+    .banner .lunbo img {
+      position: absolute;
+      height: 100%;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: all .6s; }
   .banner .lunbo + div {
     width: 100%;
     height: 40px;
@@ -408,6 +436,71 @@ a {
       box-shadow: 0px 0px 2px;
       background-color: #fff;
       transition: all .3s; }
+
+.hd-fixed {
+  width: 100%;
+  height: 60px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 1px #AAA;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  background-color: #fff; }
+  .hd-fixed img {
+    height: 60px; }
+  .hd-fixed .wrap {
+    height: 60px; }
+    .hd-fixed .wrap a {
+      vertical-align: middle; }
+    .hd-fixed .wrap div {
+      display: inline-block;
+      vertical-align: middle; }
+      .hd-fixed .wrap div.fix-search {
+        width: 405px;
+        margin: 8px 0 0 80px;
+        position: relative; }
+        .hd-fixed .wrap div.fix-search input {
+          width: 400px;
+          height: 36px;
+          font-size: 14px;
+          padding: 0 70px 0 20px;
+          border-radius: 20px;
+          outline: none;
+          border: 2px solid red; }
+          .hd-fixed .wrap div.fix-search input + span, .hd-fixed .wrap div.fix-search .hd_header_top .hd_place .none .hd_hot_city input + div, .hd_header_top .hd_place .none .hd_hot_city .hd-fixed .wrap div.fix-search input + div, .hd-fixed .wrap div.fix-search .hd_header_top .hd_place .none .hd_letter_search input + div, .hd_header_top .hd_place .none .hd_letter_search .hd-fixed .wrap div.fix-search input + div {
+            position: absolute;
+            top: 10px;
+            left: 22px;
+            font-size: 14px; }
+          .hd-fixed .wrap div.fix-search input:focus + span, .hd-fixed .wrap div.fix-search .hd_header_top .hd_place .none .hd_hot_city input:focus + div, .hd_header_top .hd_place .none .hd_hot_city .hd-fixed .wrap div.fix-search input:focus + div, .hd-fixed .wrap div.fix-search .hd_header_top .hd_place .none .hd_letter_search input:focus + div, .hd_header_top .hd_place .none .hd_letter_search .hd-fixed .wrap div.fix-search input:focus + div {
+            display: none; }
+        .hd-fixed .wrap div.fix-search .ipt-sec {
+          position: absolute;
+          width: 68px;
+          background-color: red;
+          color: #fff;
+          text-align: center;
+          line-height: 36px;
+          border-radius: 0 20px 20px 0;
+          right: -88px;
+          top: 0; }
+          .hd-fixed .wrap div.fix-search .ipt-sec .iconfont {
+            font-size: 24px; }
+      .hd-fixed .wrap div.shop-car {
+        float: right;
+        margin: 10px 10px 0 0;
+        border: 1px solid #CCC;
+        border-radius: 20px; }
+        .hd-fixed .wrap div.shop-car a {
+          display: inline-block;
+          width: 120px;
+          height: 38px;
+          text-align: center;
+          line-height: 38px;
+          font-size: 16px; }
+
+.nav-body {
+  background-color: #f5f5f5; }
 
 .ft_top {
   padding: 30px 0;

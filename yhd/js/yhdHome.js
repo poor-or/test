@@ -133,6 +133,32 @@ opt.onclick = function () {
     ipt.value = "";
 }
 
+// 登录显示用户名
+var userInfo=document.getElementsByClassName("login-txt")[0].children;
+var dateTime=new Date();
+if(dateTime.getHours()<=11){
+    userInfo[0].innerHTML="上午好"
+}else if(dateTime.getHours()<=14){
+    userInfo[0].innerHTML="中午好"
+}else if(dateTime.getHours()<=20){
+    userInfo[0].innerHTML="下午好"
+}else{
+    userInfo[0].innerHTML="晚上好"
+}
+var userName=sessionStorage.getItem("userName");
+if(userName){
+    userInfo[0].parentElement.style.display="block";
+    userInfo[0].parentElement.previousElementSibling.style.display="none";
+    userInfo[1].innerHTML=userName;
+}else{
+    userInfo[0].parentElement.previousElementSibling.style.display="block";
+    userInfo[0].parentElement.style.display="none";
+}
+function exitUser() {
+    userInfo[0].parentElement.style.display="none";
+    userInfo[0].parentElement.previousElementSibling.style.display="block";
+}
+
 
 // 轮播
 var swi=document.getElementsByClassName("lunbo")[0].children;
@@ -158,3 +184,14 @@ setInterval(function() {
     }
     sec[x].onmouseenter()
 },3000)
+
+// 顶部固定
+var hdNav=document.getElementsByClassName("hd-fixed")[0];
+window.onscroll=function() {
+    if(this.scrollY>637){
+        hdNav.style.display="block";
+    }
+    else{
+        hdNav.style.display="none";
+    }
+}

@@ -282,6 +282,38 @@ a{
             }
             
         }
+        // 登陆后显示
+        .login-txt{
+            float: left;
+            .user:hover+div a:first-child{
+                display: block;
+                &+a{
+                    display: none;
+                }
+            }
+            div{
+                width: 110px;
+                float: right;
+                position: relative;
+                a{
+                    position: absolute;
+                    right: 0;
+                    margin: 0 3px;
+                    &:first-child{
+                        right: 10px;
+                        color: #CCC;
+                        display: none;
+                    }
+                    span{
+                        padding: 2px 5px;
+                        margin-right: 5px;
+                        #{$bgc}:red;
+                        color: #fff;
+                        border-radius: 20px;
+                    }
+                }
+            }
+        }
         .hd_r_l{
             @extend .hd_t_left;
             padding: 0 10px;
@@ -370,7 +402,7 @@ a{
                 color: #333;
                 border-radius: 100px;
                 border: 1px solid #CCC;
-                background-color: #fcfcfc;
+                #{$bgc}: #fcfcfc;
                 background: url("../img/imgs/sea.png") 435px 8px no-repeat ;
                 background-size:  20px 20px;
                 outline: none;
@@ -402,7 +434,7 @@ a{
         }
         .shop-car{
             float: right;
-            border: 1px solid #AAA;
+            border: 1px solid #CCC;
             border-radius: 20px;
             a{
                 display: inline-block;
@@ -435,7 +467,7 @@ a{
         line-height: 40px;
         font-size: 16px;
         text-align: center;
-        background-color: #ff4040;
+        #{$bgc}: #ff4040;
         color: #fff;
         i{
             margin: 0 5px;
@@ -457,7 +489,7 @@ a{
     .category-list{
         display: none;
         height: 410px;
-        background-color: #fff;
+        #{$bgc}: #fff;
         border: 1px solid #ff4040;
         position: absolute;
         top: 180px;
@@ -502,16 +534,21 @@ a{
 }
 // banner图
 .banner{
-    width: 100%;
-    height: 400px;
+    // width: 100%;
+    // height: 400px;
     // overflow: hidden;
     position: relative;
     .lunbo{
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+        position: relative;
         img{
             position: absolute;
             height: 100%;
             top: 0;
-            left: -200px;
+            left: 50%;
+            transform: translateX(-50%);
             transition: all .6s;
         }
     }
@@ -533,11 +570,91 @@ a{
             padding: 5px;
             margin: 0 5px;
             box-shadow: 0px 0px 2px ; 
-            background-color: #fff;
+            #{$bgc}: #fff;
             transition: all .3s;
         }
     }
 }
+
+// 固定搜索条
+.hd-fixed{
+    width: 100%;
+    height: 60px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 1px #AAA;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    #{$bgc}:#fff;
+    img{
+        height: 60px;
+    }
+    .wrap{
+        height: 60px;
+        a{vertical-align: middle;}
+        div{
+            display: inline-block;
+            vertical-align: middle;
+            &.fix-search{
+                width: 405px;
+                margin: 8px 0 0 80px;
+                position: relative;
+                input{
+                    width: 400px;
+                    height: 36px;
+                    font-size: 14px;
+                    padding: 0 70px 0 20px;
+                    border-radius: 20px;
+                    outline: none;
+                    border: 2px solid red;
+                    &+span{
+                        position: absolute;
+                        top: 10px;
+                        left: 22px;
+                        font-size: 14px;
+                    }
+                    &:focus+span{
+                        display: none;
+                    }
+                }
+
+                .ipt-sec{
+                    position: absolute;
+                    width: 68px;
+                    background-color: red;
+                    color: #fff;
+                    text-align: center;
+                    line-height: 36px;
+                    border-radius: 0 20px 20px 0;
+                    right: -88px;
+                    top: 0;
+                    .iconfont{
+                        font-size: 24px;
+                    }
+                }
+            }
+            &.shop-car{
+                float: right;
+                margin: 10px 10px 0 0;
+                border: 1px solid #CCC;
+                border-radius: 20px;
+                a{
+                    display: inline-block;
+                    width: 120px;
+                    height: 38px;
+                    text-align: center;
+                    line-height: 38px;
+                    font-size: 16px;
+                }
+            }
+        }   
+    }
+}
+// body内容
+.nav-body{
+    #{$bgc}: #f5f5f5;
+}
+
 
 // 底部
 .ft_top{
