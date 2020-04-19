@@ -430,11 +430,16 @@ a{
         border-bottom: 2px solid #ff4040;
         position: relative;
         .hd_cm_nav{
-            width: 980px;
-            height: 38px;
+            height: 38px;         
+            }
+            .hd-cm-app{
+                width: 214px;
+                &:hover .mod_h{
+                    display:block;
+            } 
         }
         .hd_cm_allsort_wrap{
-            float: left;        
+            float: left;      
             a{
                 display: block;
                 width: 210px;
@@ -446,6 +451,7 @@ a{
                 font-size: 14px;
                 color: #fff;
                 cursor:pointer;
+                z-index: 10;
                 i{  
                     display: inline-block;
                     font-size: 14px;
@@ -455,6 +461,7 @@ a{
                 transform: rotate(180deg);
                 
                 }
+                
             }         
         }
         .mod_h{
@@ -465,6 +472,7 @@ a{
             background-color: rgba(48,48,48,0.9);
             top: 40px;
             font-size: 14px; 
+            z-index: 10;
             li{
                 display: block;
                 height: 32px;
@@ -483,13 +491,12 @@ a{
                 }
             }           
         }
-        &:hover .mod_h{
-            display: block;
-        }
+       
         .hd_cm_nav_wrap{
             width: 78px;
             height: 38px;
             float: left;
+            
             a{
                 padding-left: 20px;
                 line-height: 38px;

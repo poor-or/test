@@ -326,8 +326,11 @@ a {
   border-bottom: 2px solid #ff4040;
   position: relative; }
   .hd_cm_wrap .hd_cm_nav {
-    width: 980px;
     height: 38px; }
+  .hd_cm_wrap .hd-cm-app {
+    width: 214px; }
+    .hd_cm_wrap .hd-cm-app:hover .mod_h {
+      display: block; }
   .hd_cm_wrap .hd_cm_allsort_wrap {
     float: left; }
     .hd_cm_wrap .hd_cm_allsort_wrap a {
@@ -340,7 +343,8 @@ a {
       font-weight: bold;
       font-size: 14px;
       color: #fff;
-      cursor: pointer; }
+      cursor: pointer;
+      z-index: 10; }
       .hd_cm_wrap .hd_cm_allsort_wrap a i {
         display: inline-block;
         font-size: 14px;
@@ -354,7 +358,8 @@ a {
     height: 400px;
     background-color: rgba(48, 48, 48, 0.9);
     top: 40px;
-    font-size: 14px; }
+    font-size: 14px;
+    z-index: 10; }
     .hd_cm_wrap .mod_h li {
       display: block;
       height: 32px;
@@ -369,8 +374,6 @@ a {
       .hd_cm_wrap .mod_h li a {
         color: #fff;
         font-size: 12px; }
-  .hd_cm_wrap:hover .mod_h {
-    display: block; }
   .hd_cm_wrap .hd_cm_nav_wrap {
     width: 78px;
     height: 38px;
@@ -488,4 +491,4 @@ a {
   .footer_link p + p + p a {
     margin: 0 4px; }
 
-/*# sourceMappingURL=yhd.css.map */
+/*# sourceMappingURL=service.css.map */

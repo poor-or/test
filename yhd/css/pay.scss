@@ -342,318 +342,177 @@ a{
         }
     }
 }
-// 金币商城
+// 搜索
     .subnav{
-        width: 100%;
-        height: 90px;
-        background-color: #fff;
-        overflow: hidden;
-        .subnav-a{
-            margin-top: 32px;
-            width: 124px;
-            height: 30px;
-            line-height: 30px;
-            text-align: center;
-            position: relative;
-            z-index: 1;
-        }
-        .gs-logo-gif{
-            width: 218px;
-            height: 90px;
-            margin-left: -10px;
-        }
-        .gs-fl{
-            float: left;
-        }
-        .gs-nav{
-            margin-left: 84px;
-            li{
-                float: left;
-                list-style: none;
-                height: 100%;
-                line-height: 90px;
-                font-size: 16px;
-                padding: 0 37px;          
-            }
-            .active a{
-                font-weight: 600;
-                color: #bc9c66;             
-            }
-            .active-a:hover a{
-                color: #bc9c66;
-            }
-        }
-        .gs-fr{
-            float: right;
-            right: 0;
-        }
-        .gs-shopping{
-            border: 1px solid rgb(204,206,207);
-            width: 132px;
-            height: 38px;
-            line-height: 36px;
-            text-align: center;
-            margin-top: 27px;
-            font-size: 16px;
-            position: relative;
-            i{
-                font-size: 18px;
-                margin-right: 12px;
-            }
-            .badge {
-                position: absolute;
-                top: -5px;
-                right: -5px;
-                padding: 1px 6px;
-                line-height: 17px;
-                background-color: #fc4246;
-                font-size: 12px;
-                border-radius: 20px;
-                color: #fff;
-            }
-        }
-    }
-// 中间登录部分
-.cn-center{
-    width: 100%;
-    height: 532px;
-    background-color: rgba(230,218,255,.5);
-    overflow: hidden;
-    .cf-center{
-        width: 100%;
-        height: 410px;
-        margin-top: 50px;
-    }
-    .cn-left{
-        width: 320px;
-        height: 430px;
-        background-image: url(../img/gold/10.png);
-        overflow: hidden;
-        float: left;
-        margin-top: -10px;
-    }
-    ._box{
-        border-radius: 50%;
-        width: 94px;
-        height: 94px;
-        margin: 40px auto 0;
-        border: 6px solid #fff;      
-        box-shadow: 0px 0px 25px 0px rgba(71,71,71,0.22);
-        background-color: #ececec;
-        overflow: hidden;
-        img{
-            width: 100%;
-            height: 100%;
-        }
-    }
-    ._gold{
-        margin-top: 42px;
-        text-align: center;
-        i{
-            font-size: 38px;
-            color: #8e8abf;
-            margin-right: 5px;
-        }
-        a{
-            color: #8e8abf;
-            vertical-align: 8px;
-            font-size: 16px;
-        }
-    }
-    .sign-in{
-        margin: 48px auto 0;
-        color: #fff;
-        text-align: center;
-        background-color:#6762a4;
-        width: 200px;
-        height: 50px;
-        font-size: 14px;
-        line-height: 50px;
-        -webkit-border-radius: 50px;
-        border-radius: 50px;
-        cursor: pointer;
-    }
-    .cn-cn{
-        float: left;
-        width: 636px;
-        height: 410px;
-        position: relative;
-        overflow: hidden;
-        z-index: 10;
-       .cn-img{
-          position: absolute;
-            width:1272px;
-            transition:all .6s;
+        height: 110px;
+        width: 1228px;
+        .co_logo{
+            width: 205px;
+            height: 110px;
+            position: absolute;
+            margin-left: 0;
+            
             img{
-                float: left;
+                width: 205px;
+                height: 110px;
             }
+            
         }
-    }
-    .cn-btn{
-        position: absolute;
-        bottom: 20px;
-        left: 45%;
-        background-color: rgba(230,218,245,.4);
-        border-radius: 10px;
-        padding: 6px 7px;
-        span{
-            float: left;
-            width: 10px;
-            height: 10px;
-            margin: 0 5px;
-            border-radius: 50%;
-            background-color: #fff;
-        }
-        .btn-color{
-            background-color: #7d73b3;;
-        }
-    }
-    .cn-right{
-        width: 260px;
-        height: 100%;
-        float: right;
-        margin-left: 10px;
-    }
-    ._top{
-        height: 200px;
-        margin-bottom: 10px;      
-        border-radius: 2px;
-        background-color: #fff;
-        box-shadow: 1px 2px 20px -5px rgba(71,71,71,0.2);
-        ._aside_item{
-            overflow: hidden;
-        } 
-        h3{
-            margin-top: 22px;
-            text-align: center;
-            font-size: 20px;  
-            color: #333;
-            position: relative;
-             &:after {
-                content: '';
-                position: absolute;
-                top: 38px;
-                left: 110px;
-                width: 36px;
-                border-top: 2px solid #a38fcf;
-             }
-        }
-        img{
-            width: 120px;
-            height: 120px;
-            margin-top: 20px;
-            margin-left: 65px;
-            transition: .3s;
-            &:hover{
-                transform: scale(1.1);
-            }
-        }
-    }
-
-}
-// 热点活动
-    .ho-t{
-        background: #fff url(../img/gold/11.jpg) no-repeat top center;
-        padding-top: 50px;
-        h3{
-            text-align: center;
-            font-size: 30px;
-            position: relative;
-            width: 200px;
-            margin: 0 auto;
-            &:after{
-                content: '';
-                width: 70px;
-                height: 4px;
-                position: absolute;
-                left: 65px;
-                bottom: -25px;
-                background-color: #d3bb93;
-            }
-        }
-        .ho-t2{
-            margin: 55px -7px 0;
-            overflow: hidden;
-        }
-        .ho-t2 li{
-            float: left;
-            width: 400px;
-            height: 240px;
-            margin: 0 7px;
-            position: relative;
-            overflow: hidden;
-            h4{
-                position: absolute;
-                top: 44px;
-                left: 35px;
-                font-size: 22px;
-                font-weight: 600;
+        .subnav-inf{
+            height: 76px;
+            // width: 754px;
+            float: left;    
+            margin-left: 250px;
+             padding: 32px 14px 0 35px;
+             .search{
+                background-color: red;
+                padding: 2px;
+                border-radius: 2px;
+                input{
+                    border: 0 none;
+                    width: 655px;
+                    height: 36px;
+                    padding-left: 30px;
+                    outline: 0 none;
+                }
+                button{
+                    width: 50px;
+                    height: 36px;
+                    border: 0 none;
+                    background-color: #ff4040;
+                    text-align: center;
+                    line-height: 36px;
+                    color: #fff;
+                    float: right;
+                    i{  
+                        font-size: 24px;
+                    }
+                }
             }
             p{
-                position: absolute;
-                top: 82px;
-                left: 35px;
-                font-size: 18px;
-                font-weight: 600;
-                color: #d2a55f;
-                &:after{
-                    content: '';
-                    width: 20px;
-                    height: 2px;
-                    position: absolute;
-                    left: 0px;
-                    bottom: -10px;
-                    background-color: #d2a55f;
+                a{
+                    margin-right: 15px;
+                    line-height: 36px;
+                    color: #aaa;
+                    font-size: 14px;
+                     &:hover {
+                    color:red;
                 }
-            }
-            img{
-                width: 216px;
-                height: 216px;
-                position: absolute;
-                bottom: 0;
-                right: -10px;
-                transition: .3s;
-                &:hover{
-                    transform: translatex(-10px);
                 }
+               
             }
         }
-        .th1{
-            background-color: #f4f4f4;
+        .shopping-t{   
+            float: right;
+            width: 132px;
+            height: 40px;
+            border: 1px solid #d7d7d7;
+            background: #fff; 
+            text-align: center; 
+            margin-top: 30px;         
+            a{
+                display: block;
+                width: 130px;
+                height: 20px;
+                padding: 9px 0 9px;                
+                line-height: 20px;
+                color: #666;
+                font-size: 16px;
+                 float: right;                
+            }
+            i{
+                margin-right: 12px;
+                font-size: 20px;
+            }
+        }    
+    }
+    .hd_cm_wrap{
+        border-bottom: 2px solid #ff4040;
+        position: relative;
+        .hd_cm_nav{
+            height: 38px;         
+            }
+            .hd-cm-app{
+                width: 214px;
+                &:hover .mod_h{
+                    display:block;
+            } 
         }
-        .th2{
-            background-color: #f5f3ef;
+        .hd_cm_allsort_wrap{
+            float: left;      
+            a{
+                display: block;
+                width: 210px;
+                height: 40px;
+                background-color: #ff4040;
+                line-height: 40px;
+                text-align: center;
+                font-weight: bold;
+                font-size: 14px;
+                color: #fff;
+                cursor:pointer;
+                z-index: 10;
+                i{  
+                    display: inline-block;
+                    font-size: 14px;
+                    transition: all .2s;
+                }
+                &:hover i{
+                transform: rotate(180deg);
+                
+                }
+                
+            }         
         }
-        .th3{
-            background-color: #f3f2f6;
+        .mod_h{
+            display:none;
+            position: absolute;
+            width: 210px;
+            height: 400px;
+            background-color: rgba(48,48,48,0.9);
+            top: 40px;
+            font-size: 14px; 
+            z-index: 10;
+            li{
+                display: block;
+                height: 32px;
+                line-height: 32px;
+                transition: all .1s ease-out 0s;
+                font-weight: normal;
+                color: #fff;
+                i{
+                    color: #8f8f8f;
+                    margin: 0 14px;
+                    font-size: 20px;
+                }
+                a{
+                    color: #fff;
+                    font-size: 12px;
+                }
+            }           
+        }
+       
+        .hd_cm_nav_wrap{
+            width: 78px;
+            height: 38px;
+            float: left;
+            
+            a{
+                padding-left: 20px;
+                line-height: 38px;
+                font-size: 16px;
+            }
         }
     }
-.ho-b{
-    background: #fff url(../img/gold/11.jpg) no-repeat top center;
-    padding-top: 45px;
-    h3{
-        text-align: center;
-        font-size: 30px;
-        width: 200px;
-        margin: 0 auto;
-        position: relative;
-        &:after{
-            content: '';
-            width: 70px;
-            height: 4px;
-            position: absolute;
-            left: 65px;
-            bottom: -25px;
-            background-color: #d3bb93;
-        }
-    }   
-}
+// 中间
+
+
+
 
 // 底部
 .ft_top{
     padding: 30px 0;
     border-bottom: 1px solid #ebebeb;
-    margin-top: 100px;
     a{
         float: left;
         width: 205px;
