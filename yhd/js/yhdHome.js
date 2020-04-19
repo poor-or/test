@@ -14,29 +14,32 @@ for (var a = 0; a < ele.length; a++) {
 }
 arr.shift()
 // ajax获取城市信息
-var xhr = new XMLHttpRequest();
-xhr.open('GET', 'http://localhost:8081/city.php', true);
-xhr.send();
-xhr.onreadystatechange = function () {
-    if (xhr.readyState == 4 && xhr.status == 200) {
-        var data = JSON.parse(xhr.responseText);
-        var span = "";
-        for (var i = 0; i < arr.length; i++) {
-            span = "";
-            for (var j = 0; j < data.length; j++) {
-                if (data[j].cityLetter == arr[i]) {
-                    span += `<a href="javascript:void(0);">${data[j].city}</a>`
+function getCity() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'http://localhost:8081/city.php', true);
+    xhr.send();
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            var data = JSON.parse(xhr.responseText);
+            var span = "";
+            for (var i = 0; i < arr.length; i++) {
+                span = "";
+                for (var j = 0; j < data.length; j++) {
+                    if (data[j].cityLetter == arr[i]) {
+                        span += `<a href="javascript:void(0);">${data[j].city}</a>`
+                    }
+                    cityList[j] = data[j].city;
                 }
-                cityList[j] = data[j].city;
+                ul.innerHTML += `<li class="clearfix">
+                        <div class="city_screen">${arr[i]}</div>
+                        <div class="city_box">${span}</div>
+                    </li>`
             }
-            ul.innerHTML += `<li class="clearfix">
-                    <div class="city_screen">${arr[i]}</div>
-                    <div class="city_box">${span}</div>
-                </li>`
+            sessionStorage.setItem("lists", cityList);
         }
-        sessionStorage.setItem("lists", cityList);
     }
 }
+getCity()
 // 改变城市
 var list1 = [];
 list1.push(...arr, "热门城市：");
@@ -185,37 +188,82 @@ setInterval(function () {
     sec[x].onmouseenter()
 }, 3000)
 
-// 顶部固定和回顶部
+// 顶部固定和回顶部,滚动到底部请求数据
 var hdNav = document.getElementsByClassName("hd-fixed")[0];
-var toTop=document.getElementById("to-top");
+var toTop = document.getElementById("to-top");
+var goods_list = document.getElementById("goods_list");
+var times = 0;
+var scrTime = 0;
 window.onscroll = function () {
     if (this.scrollY > 651) {
         hdNav.style.display = "block";
     }
     else {
         hdNav.style.display = "none";
-        
+
     }
-    if(this.scrollY > 495){
-        toTop.parentElement.style.position="fixed";
-        toTop.parentElement.style.top="156px";
+    if (this.scrollY > 495) {
+        toTop.parentElement.style.position = "fixed";
+        toTop.parentElement.style.top = "156px";
     }
-    else{
-        toTop.parentElement.style="";
+    else {
+        toTop.parentElement.style = "";
     }
-    if(this.scrollY > 1637){
-        toTop.style.display="block";
+    if (this.scrollY > 1637) {
+        toTop.style.display = "block";
     }
-    else{
-        toTop.style.display="none";
+    else {
+        toTop.style.display = "none";
     }
-    toTop.onclick=function() {
+    toTop.onclick = function () {
         document.documentElement.scrollTop = 0;
     }
+    var src_h = document.documentElement.children[1].offsetHeight - window.scrollY;
+
+    if (src_h < 900) {
+        goods_list.parentElement.nextElementSibling.style.display="block";
+        scrTime++;
+        if (scrTime > 1) {
+            times += 40;
+        }
+        if (times <= 40) {
+            getGoods(times);
+        }
+    }
 }
+// 异步请求加载数据
+function getGoods(times = 0) {
+    
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'http://localhost:8081/goods.php?page=' + times, true);
+    xhr.send();
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            var data = JSON.parse(xhr.responseText);
+            for (var i = 0; i < data.length; i++) {
+                goods_list.innerHTML += `
+                <li>
+                    <a class="clearfix goods-file" href="">
+                        <img src="${data[i].pictureAddress}" alt="">
+                        <p>${data[i].goodsName}</p>
+                        <span>${data[i].price}</span>
+                    </a>
+                    <div class="mask">
+                        <a class="one" href=""><i class="iconfont icon-iconset0309"></i></a>
+                        <a class="last" href="">找相似</a>
+                    </div>
+                </li>
+                `
+            }
+        }
+    }
+}
+getGoods()
+
+
 
 // 超级品牌倒计时
-window.onload=function() {
+window.onload = function () {
     setInterval(function () {
         var timeNow = new Date();
         var time = timeNow.getSeconds();
@@ -227,7 +275,24 @@ window.onload=function() {
         var num = ["02", "01", "00"];
         hours > 12 ? hours -= 12 : hours;
         h.innerHTML = num[hours % 3];
-        60-minute<10?m.innerHTML="0"+(60-minute):m.innerHTML=60-minute;
-        60-time<10?s.innerHTML="0"+(60-time):s.innerHTML=60-time;
+        60 - minute < 10 ? m.innerHTML = "0" + (60 - minute) : m.innerHTML = 60 - minute;
+        60 - time < 10 ? s.innerHTML = "0" + (60 - time) : s.innerHTML = 60 - time;
     }, 1000)
 }
+
+// 甄选右边分页
+function prev(e) {
+    e = window.event.target;
+    ul_list = e.parentElement.previousElementSibling.children[0];
+    if (parseInt(ul_list.style.left) < 5) {
+        ul_list.style.left = parseInt(ul_list.style.left) + 100 + "px"
+    }
+}
+function next(e) {
+    e = window.event.target;
+    ul_list = e.parentElement.previousElementSibling.previousElementSibling.children[0];
+    if (parseInt(ul_list.style.left) > -195) {
+        ul_list.style.left = parseInt(ul_list.style.left) - 100 + "px"
+    }
+}
+
