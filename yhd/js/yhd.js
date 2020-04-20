@@ -148,4 +148,5 @@ if(userName){
 function exitUser() {
     userInfo[0].parentElement.style.display="none";
     userInfo[0].parentElement.previousElementSibling.style.display="block";
+    sessionStorage.removeItem("userName");
 }

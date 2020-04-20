@@ -160,6 +160,7 @@ if (userName) {
 function exitUser() {
     userInfo[0].parentElement.style.display = "none";
     userInfo[0].parentElement.previousElementSibling.style.display = "block";
+    sessionStorage.removeItem("userName");
 }
 
 
@@ -221,13 +222,16 @@ window.onscroll = function () {
     var src_h = document.documentElement.children[1].offsetHeight - window.scrollY;
 
     if (src_h < 900) {
-        goods_list.parentElement.nextElementSibling.style.display="block";
+        
         scrTime++;
         if (scrTime > 1) {
-            times += 40;
+            times += 80;
+            goods_list.parentElement.nextElementSibling.style.display="block";
         }
-        if (times <= 40) {
+        if (times <= 80) {
             getGoods(times);
+        }else{
+            goods_list.parentElement.nextElementSibling.style.display="none";
         }
     }
 }
@@ -240,7 +244,7 @@ function getGoods(times = 0) {
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
             var data = JSON.parse(xhr.responseText);
-            for (var i = 0; i < data.length; i++) {
+            for (var i = 0; i < 40; i++) {
                 goods_list.innerHTML += `
                 <li>
                     <a class="clearfix goods-file" href="">
@@ -255,6 +259,48 @@ function getGoods(times = 0) {
                 </li>
                 `
             }
+            // 超级单品更新商品
+            var super_list = document.getElementById("super-good");
+            if(super_list.children.length<=1){
+                for(var j=0;j<9;j++){
+                    var set_time1=Math.floor(Math.random()*Math.random()*80)
+                    var pri=parseFloat(data[set_time1].price.substr(1,data[set_time1].price.length))+50;
+                    super_list.innerHTML+=`
+                    <li>
+                        <a href="">
+                            <div class="single-top">
+                                <img src="${data[set_time1].pictureAddress}" alt="">
+                            </div>
+                            <div class="single-bot">
+                                <p>${data[set_time1].goodsName}</p>
+                                <span class="single-line"><i></i></span>
+                                <span class="original-price">${data[set_time1].price}</span><span class="Present-price">￥${pri}</span>
+                            </div>
+                        </a>
+                    </li>
+                    `
+                }
+            }
+            
+            setInterval(function() {
+                for(var j=0;j<9;j++){
+                    var set_time=Math.floor(Math.random()*Math.random()*80)
+                    var pri=parseFloat(data[set_time].price.substr(1,data[set_time].price.length))+50;
+                    super_list.children[j+1].innerHTML=`
+                        <a href="">
+                            <div class="single-top">
+                                <img src="${data[set_time].pictureAddress}" alt="">
+                            </div>
+                            <div class="single-bot">
+                                <p>${data[set_time].goodsName}</p>
+                                <span class="single-line"><i></i></span>
+                                <span class="original-price">${data[set_time].price}</span><span class="Present-price">￥${pri}</span>
+                            </div>
+                        </a>
+                    
+                    `
+                }
+            },10800000)
         }
     }
 }
