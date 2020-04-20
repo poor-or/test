@@ -1,3 +1,4 @@
+
 var ul = document.getElementById("ul_list");
 var ipt = document.getElementById("ipt");
 var opt = document.getElementById("txt");
@@ -8,7 +9,6 @@ var lett = document.getElementById("letter");
 var ele = lett.children;
 var cityList = [];
 var arr = [];
-
 for (var a = 0; a < ele.length; a++) {
     arr[a] = ele[a].innerHTML;
 }
@@ -62,8 +62,8 @@ city.onclick = function () {
     city.parentElement.style.borderRight = "1px solid #dbdbdb";
     city.previousElementSibling.style.display = "block";
     event.stopPropagation();
-    window.addEventListener("click", function() {
-        if(!block.contains(event.target)){
+    window.addEventListener("click", function () {
+        if (!block.contains(event.target)) {
             close()
         }
     }, false)
@@ -131,4 +131,103 @@ opt.onclick = function () {
     cTxt.innerHTML = opt.innerHTML;
     opt.style.display = "none";
     ipt.value = "";
+}
+
+// 登录显示用户名
+var userInfo = document.getElementsByClassName("login-txt")[0].children;
+var dateTime = new Date();
+if (dateTime.getHours() <= 11) {
+    userInfo[0].innerHTML = "上午好"
+} else if (dateTime.getHours() <= 14) {
+    userInfo[0].innerHTML = "中午好"
+} else if (dateTime.getHours() <= 20) {
+    userInfo[0].innerHTML = "下午好"
+} else {
+    userInfo[0].innerHTML = "晚上好"
+}
+var userName = sessionStorage.getItem("userName");
+if (userName) {
+    userInfo[0].parentElement.style.display = "block";
+    userInfo[0].parentElement.previousElementSibling.style.display = "none";
+    userInfo[1].innerHTML = userName;
+} else {
+    userInfo[0].parentElement.previousElementSibling.style.display = "block";
+    userInfo[0].parentElement.style.display = "none";
+}
+function exitUser() {
+    userInfo[0].parentElement.style.display = "none";
+    userInfo[0].parentElement.previousElementSibling.style.display = "block";
+}
+
+
+// 轮播
+var swi = document.getElementsByClassName("lunbo")[0].children;
+var sec = document.getElementById("sec").children;
+var x = 0;
+for (var i = 0; i < sec.length; i++) {
+    sec[i].index = i;
+    sec[i].onmouseenter = function () {
+        for (var j = 0; j < swi.length; j++) {
+            swi[j].children[0].style.opacity = 0;
+            sec[j].style = ""
+        }
+        swi[this.index].children[0].style.opacity = 1;
+        x = this.index;
+        this.style.backgroundColor = "#333"
+        this.style.color = "#fff"
+    }
+}
+setInterval(function () {
+    x++;
+    if (x == 3) {
+        x = 0;
+    }
+    sec[x].onmouseenter()
+}, 3000)
+
+// 顶部固定和回顶部
+var hdNav = document.getElementsByClassName("hd-fixed")[0];
+var toTop=document.getElementById("to-top");
+window.onscroll = function () {
+    if (this.scrollY > 651) {
+        hdNav.style.display = "block";
+    }
+    else {
+        hdNav.style.display = "none";
+        
+    }
+    if(this.scrollY > 495){
+        toTop.parentElement.style.position="fixed";
+        toTop.parentElement.style.top="156px";
+    }
+    else{
+        toTop.parentElement.style="";
+    }
+    if(this.scrollY > 1637){
+        toTop.style.display="block";
+    }
+    else{
+        toTop.style.display="none";
+    }
+    toTop.onclick=function() {
+        document.documentElement.scrollTop = 0;
+    }
+}
+
+// 超级品牌倒计时
+window.onload=function() {
+    setInterval(function () {
+        var timeNow = new Date();
+        var time = timeNow.getSeconds();
+        var minute = timeNow.getMinutes();
+        var hours = timeNow.getHours();
+        var h = document.getElementById("djs-clock").children[0];
+        var m = document.getElementById("djs-clock").children[1];
+        var s = document.getElementById("djs-clock").children[2];
+        var num = ["02", "01", "00"];
+        hours > 12 ? hours -= 12 : hours;
+        h.innerHTML = num[hours % 3];
+        60-minute<10?m.innerHTML="0"+(60-minute):m.innerHTML=60-minute;
+        60-time<10?s.innerHTML="0"+(60-time):s.innerHTML=60-time;
+    }, 1000)
 }

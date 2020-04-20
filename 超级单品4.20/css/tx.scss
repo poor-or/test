@@ -1,9 +1,4 @@
 $bgc:background-color;
-*{
-    margin: 0;
-    padding: 0;
-}
-
 .clearfix::after{
     content: "";
     display: block;
@@ -12,15 +7,22 @@ $bgc:background-color;
     visibility: hidden;
 }
 .wrap{
-    width: 1228px;
+    width: 1070px;
     margin: 0 auto;
+}
+a,i,span,div,p{
+    vertical-align: middle;
 }
 body{
     font:12px Arial,Helvetica,sans-serif;
     color: #333;
     list-style: none;
 }
+li{
+    list-style: none;
+}
 a{
+    display: inline-block;
     color: #666;
     text-decoration: none;
     &:hover{
@@ -28,8 +30,8 @@ a{
     }
 }
 
+
 .hd_header{
-    margin-bottom: 200px;
     .hd-bg{
         #{$bgc}: #f4f4f4;
         border-bottom: 1px solid #e5e5e5;
@@ -47,10 +49,8 @@ a{
         float: left;
         padding: 0 10px;
     }    
-    
     .hd_t_left>i{
-        color: red;
-        font-size: 12px;
+        font-size: 15px;
     }
     .hd_place{
 
@@ -166,6 +166,10 @@ a{
                     }
                 }
             }
+            .hd_r_l-sptxt {
+                color:#666;
+                font-size: 12px;
+            }
             .hd_letter_search{
                 @extend .hd_hot_city;
                 padding: 12px 0 0;
@@ -228,6 +232,52 @@ a{
             }
         }
     }
+    .news{
+        height: 30px;
+        overflow: hidden;
+        @extend .hd_t_left;
+        text-align: left;
+        i{
+            color: red;
+        }
+        .n_mess{
+            position: relative;
+            padding-left: 5px;
+            display: inline-block;
+            width: 150px;
+            animation: move 5s infinite;
+            @keyframes move {
+                0%{
+                    top:0px;
+                    transition: all .3s;
+                }
+                45%{
+                    top:0px;
+                    transition: all .3s;
+                }
+                50%{
+                    top:-30px;
+                    transition: all .3s;
+                }
+                90%{
+                    top:-30px;
+                    transition: all .3s;
+                }
+                95%{
+                    top:-60px;
+                    transition: all .3s;
+                }
+                100%{
+                    top:-60px;
+                    transition: all .3s;
+                }
+            }
+            span{
+                display: block;
+                position: absolute;
+            }
+        }
+    }
     .hd_right{
         float: right;
         .hd_r_logReg{
@@ -242,9 +292,48 @@ a{
             }
             
         }
+        // 登陆后显示
+        .login-txt{
+            float: left;
+            .user:hover+div a:first-child{
+                display: block;
+                &+a{
+                    display: none;
+                }
+            }
+            div{
+                width: 110px;
+                float: right;
+                position: relative;
+                a{
+                    position: absolute;
+                    right: 0;
+                    margin: 0 3px;
+                    &:first-child{
+                        right: 10px;
+                        color: #CCC;
+                        display: none;
+                    }
+                    span{
+                        padding: 2px 5px;
+                        margin-right: 5px;
+                        #{$bgc}:red;
+                        color: #fff;
+                        border-radius: 20px;
+                    }
+                }
+            }
+        }
         .hd_r_l{
             @extend .hd_t_left;
             padding: 0 10px;
+        }
+        .hd_member{
+            &:hover{
+                i{
+                    color: red;
+                }
+            }
         }
         .hd_myOrder{
             .iconfont{
@@ -256,47 +345,7 @@ a{
             }
         }
     }
-    .hd_client{
-        &:hover .none{
-            display: block;
-        }
-        i{
-            width: 4px;
-            height: 4px;
-            display: inline-block;
-            transform: rotate(-135deg);
-            transition: all .3s;
-            transform-origin: 2px 2px;
-            border: {
-                top: 2px solid #AAA;
-                left: 2px solid #AAA;
-                radius: 2px;
-            }
-        }
-        &:hover i{
-            transform: rotate(45deg);
-        }
-        .none{
-            position: absolute;
-            top: 29px;
-            left: 0px;
-            width: 86px;
-            padding: 5px 0;
-            border: 1px solid #dbdbdb;
-            border-top: none;
-            #{$bgc}:#fff;
-            text-align: left;
-            a{
-                display: block;
-                line-height: 26px;
-                padding-left: 10px; 
-                color: #333;
-                &:hover{
-                    color: red;
-                }
-            }
-        }
-    }
+    
     .hd_relative{
         position: relative;
         z-index: 2;
@@ -343,102 +392,4 @@ a{
             display: block;
         }
     }
-}
-
-
-// 底部
-.ft_top{
-    padding: 30px 0;
-    border-bottom: 1px solid #ebebeb;
-    a{
-        float: left;
-        width: 205px;
-        margin: 0 51px;
-        overflow: hidden;
-        img{
-            float: left;
-            width: 66px;
-            height: 66px;
-            margin-right: 15px;
-        }
-        b{
-            display: block;
-            margin-top: 10px;
-            font-size: 16px;
-            color: #333;
-        }
-        span{
-            font-size: 14px;
-            color: #999;
-            line-height: 26px;
-        }
-    }
-}
-.ft_help{
-    padding: 20px 0 20px;
-    .ft_hp_list{
-        float: left;
-        margin-left: 15px;
-        li{
-            float: left;
-            list-style: none;
-            width: 195px;
-        }
-        b{
-            display: block;
-            height: 32px;
-            font-size: 14px;
-            line-height: 32px;
-            color: #666;
-            font-weight: bold;
-            padding-left: 8px;
-        }
-        a{
-            @extend b;
-            height: 24px;
-            line-height: 24px;
-            padding: 0 8px;
-            font-size: 12px;
-            white-space: normal;
-            font-weight: normal;
-            &:hover{
-                color: red;
-            }
-        } 
-        &~div{
-            float: left;
-            margin-right: 50px;
-            line-height: 32px;
-            font-size: 14px;
-            font-weight: bold;
-            color: #666;
-            img{
-                width: 90px;
-                height: 90px;
-            }
-        } 
-    }  
-}
-.footer_link{
-    p{
-        color: #666;
-        text-align: center;
-        text-indent: 0;
-        line-height: 100%;
-        margin: 15px 0;
-        padding: 0;
-        a{
-            margin: 0 10px;
-            
-        }
-
-    }
-    p+p+p{
-        padding: 10px 0 20px;
-        margin: 0;
-        a{
-            margin: 0 4px;
-        }
-    }
-    
 }
