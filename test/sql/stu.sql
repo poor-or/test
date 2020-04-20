@@ -11,7 +11,7 @@
  Target Server Version : 80019
  File Encoding         : 65001
 
- Date: 20/04/2020 21:05:27
+ Date: 20/04/2020 21:47:36
 */
 
 SET NAMES utf8mb4;
@@ -902,13 +902,15 @@ CREATE TABLE `tb_member`  (
   `Email` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   `Address` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   `ZhiFuPWD` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `userPictrue` varchar(1000) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL
+  `userPictrue` varchar(1000) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `addressType` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `birthday` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of tb_member
 -- ----------------------------
-INSERT INTO `tb_member` VALUES (1, '张xx', '123456', '男', '张三', '13544874455', '12345@qq.com', '郑州二七马寨', '123456', NULL);
+INSERT INTO `tb_member` VALUES (1, '张xx', '123456', '男', '张三', '13544874455', '12345@qq.com', '郑州二七马寨', '123456', NULL, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for tb_order
