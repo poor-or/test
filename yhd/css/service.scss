@@ -240,6 +240,179 @@ a{
             }
             
         }
+         // 登陆后显示
+         .login-txt{
+            float: left;
+            position: relative;
+            text-align: left;
+            padding: 0 10px;
+            div{
+                width: 60px;
+                float: right;
+                position: relative;
+                a{
+                    // float: left;
+                    position: absolute;
+                    right: 0;
+                    margin: 0 3px;
+                    span{
+                        padding: 2px 5px;
+                        margin-right: 5px;
+                        #{$bgc}:red;
+                        color: #fff;
+                        border-radius: 20px;
+                    }
+                    i{
+                        width: 4px;
+                        height: 4px;
+                        display: inline-block;
+                        transform: rotate(-135deg);
+                        transition: all .3s;
+                        transform-origin: 2px 2px;
+                        border: {
+                            top: 2px solid #AAA;
+                            left: 2px solid #AAA;
+                            radius: 2px;
+                        }
+                    }
+                    
+                }
+            }
+            &:hover{
+                background-color: #fff;
+                border: 1px solid #CCC;
+                border-top: none;
+                .vip i{
+                    transform: rotate(45deg);
+                }
+                .hd-user-privilege{
+                    display: block;
+                }
+            }
+            .hd-user-privilege{
+                position: absolute;
+                top: 29px;
+                left: -1px;
+                display: none; 
+                width: 260px;
+                height: 174px;
+                padding: 15px;
+                border: 1px solid #dbdbdb;
+                #{$bgc}: #fff;
+                .privilege-top{
+                    width: 260px;
+                    height: 90px;
+                    position: relative;
+                    a:first-child{
+                        position: absolute;
+                        width: 60px;
+                        height: 60px;
+                        left: 0;
+                        border-radius: 50%;
+                        padding: 3px;
+                        border: 1px solid #CCC;
+                        &+a{
+                            position: absolute;
+                            left: 90px;
+                            top: 5px;
+                            span{
+                                color: #333;
+                                #{$bgc}:#fff;
+                            }
+                            &+a{
+                                position: absolute;
+                                left: 90px;
+                                top: 30px;
+                                span{
+                                    padding: 2px 5px;
+                                }
+                                &+a{
+                                    margin: -15px -15px 0 0;
+                                    span{
+                                        color: #ccc;
+                                        #{$bgc}:#fff;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    img{
+                        border-radius: 50%;
+                        width: 60px;
+                        height: 60px;
+                    }
+                }
+                .privilege-bot{
+                    width: 260px;
+                    height: 90px;
+                    p{
+                        width: 240px;
+                        margin: 0 auto;
+                        border-top: 1px solid #ccc;
+                        position: relative;
+                        span{
+                            position: absolute;
+                            left: 50%;
+                            top: -15px;
+                            transform: translateX(-50%);
+                            #{$bgc}:#fff;
+                            padding: 0 10px;
+                        }
+                    }
+                    .item{
+                        width: 260px;
+                        height: 85px;
+                        position: relative;
+                        img:first-child{
+                            float: left;
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 20px;
+                            height: 20px;
+                            vertical-align: middle;
+                            transform: rotate(180deg);
+                            &+div{
+                                float: left;
+                                width: 100%;
+                                padding: 20px 0px 0 20px;
+                                div{
+                                    float: left;
+                                    text-align: center;
+                                    em{
+                                        font-style: normal;
+                                        line-height: 16px;
+                                    }
+                                }
+                                span{
+                                    display: inline-block;
+                                    width: 40px;
+                                    height: 40px;
+                                    border-radius: 50%;
+                                    border: 1px solid red;
+                                    text-align: center;
+                                    vertical-align: middle;
+                                    white-space: normal;
+                                    i{
+                                        font-size: 24px;
+                                        color: red;
+                                        line-height: 40px;
+                                    }
+                                }
+                            } 
+                        }
+                        img:last-child{
+                            position: absolute;
+                            top: 50%;
+                            right: 0;
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                }
+            }
+
+        }
         .hd_r_l{
             @extend .hd_t_left;
             padding: 0 10px;
