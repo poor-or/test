@@ -1,0 +1,434 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    
+}
+/* 头部 */
+.header{
+    font-size: 12px;
+    height: 78px;
+    border-top: 1px solid #e1e1e1; 
+    border-bottom: 1px solid #e1e1e1; 
+    background-color: #fff;  
+}
+.header .wrap{
+    width: 1200px;
+    margin: 0 auto;
+}
+.header-logo{
+    cursor:pointer;
+    float: left;
+    padding: 16px;  
+}
+.header-right{
+    padding: 20px;
+    float: right; 
+    width: 290px;
+}
+.header-right-span{
+    color: #999;    
+    font-family: "SimSun"; 
+    margin-right: 20px;
+}
+.header-right-a:hover{
+    color: tomato;
+}
+.help{
+    cursor:pointer;
+    position: relative;
+    float: right; 
+}
+.help :nth-child(2){
+    color: #333;
+    z-index:6;
+}
+.dian{
+    position: relative;
+    z-index: 100;
+}
+ .dian:hover .help-a{
+    color: red; 
+}
+.help-l{
+    margin-right: 4px;
+    width: 16px;
+    height: 18px;
+    display: inline-block;
+    background: url(../img/regist.png) no-repeat -344px 0 ;
+    vertical-align: middle;
+}
+.help-r{
+    margin-left: 4px;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    background: url(../img/regist.png) no-repeat -346px -30px ;
+    vertical-align: middle;
+}
+/* 隐藏部分 */
+.help-hiddle{    
+    display:none;
+    z-index: 3;
+    position: absolute;
+    top: -3px;
+    right:-5px;
+    width: 100px;
+    padding-top: 21px;
+    border: 1px solid #ccc;
+}
+.help-hiddle li{
+    background-color: white; 
+    text-align: left;
+    padding-left: 28px;
+    height: 23px;
+    line-height: 23px;
+    border-top: 1px dashed #ccc;
+}
+.help-hiddle li a   {
+    color: #333;
+    }
+.help:hover.help .help-hiddle{
+  display: block;
+}
+.change1-color:hover{
+    color: red ;  
+}
+.change2-color:hover{
+    color: red ;  
+}
+.change3-color:hover{
+    color: red ;  
+}
+.change4-color:hover{
+    color: red ;  
+}
+/* 表单 */
+ .content{
+     position: relative;
+     font-size: 14px;
+     padding: 30px 0 40px;
+     background: #fcfcfc;
+     height: 470px;
+     border-bottom: 1px solid #f4f4f4;
+ }
+ /* 背景 */
+  .bg-icon1{
+    position: absolute;
+    top: 27px;
+    left: 50%;
+    z-index: 2;
+    width: 1200px;
+    height: 500px;
+    margin-left: -600px;
+    background: url(../img/bg_icon1.png)no-repeat;
+    opacity: .2; 
+}
+ .bg-icon2{
+    position: absolute;
+    top: 27px;
+    left: 50%;
+    z-index: 2;
+    width: 1200px;
+    height: 500px;
+    margin-left: -600px;
+    background: url(../img/bg_icon2.png)no-repeat;
+    opacity: .05; 
+}
+ .bg-icon3{
+    position: absolute;
+    top: 27px;
+    left: 50%;
+    z-index: 2;
+    width: 1200px;
+    height: 500px;
+    margin-left: -600px;
+    background: url(../img/bg_icon3.png)no-repeat;
+    opacity: .05;
+}
+ .bg-icon4{
+    position: absolute;
+    top: 27px;
+    left: 50%;
+    z-index: 2;
+    width: 1200px;
+    height: 500px;
+    margin-left: -600px;
+    background: url(../img/bg_icon4.png)no-repeat;
+    opacity: .05; 
+}
+ .bg-icon5{
+    position: absolute;
+    top: 27px;
+    left: 50%;
+    z-index:2;
+    width: 1200px;
+    height: 500px;
+    margin-left: -600px;
+    background: url(../img/bg_icon5.png)no-repeat;
+    opacity: .05; 
+}  
+ .content-current{
+     position: relative;
+     height: 470px;
+     width: 330px;
+     margin:0 auto; 
+ }
+ .content-current h4{
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 50px;
+    color: #333;
+ }
+ .content-current li{
+    margin-top: 10px;
+ }
+ .current-item{
+    position: relative;
+    z-index: 2;
+    width: 328px;
+    height: 50px;
+    border: 1px solid #dedede;
+    border-radius: 3px;    
+ }
+ /* 输入框 */
+ .current-item input{
+    position: relative;
+    z-index: 2;
+    width: 288px;
+    height: 20px;
+    margin-top: 15px;
+    padding: 0px 20px;
+    background: 0;
+    border: 0;
+    outline: 0;   
+    line-height: 20px;
+ }
+ /* 输入框左边 */
+ .item-block{
+     display: none;
+     width: 70px;
+     height: 20px;
+     position: absolute;
+     left: -80px;
+     top: 15px;
+     text-align: right;
+     
+ }
+ /* 输入框右边 */
+ .urse-rule,.phone-rule,.psd-rule{
+     display: none;
+       color: #757575;
+        font-size: 12px;
+         padding: 5px;
+         position: absolute;
+         top: 0px;
+         left: 350px;
+         width: 160px;
+         height: 40px;
+         line-height: 20px;
+         background-color: #E4E4E4;
+ }
+ .square{   
+     display: inline-block;
+     position: absolute;
+     top: 20px;
+     left: -10px;
+     width: 0;
+     height: 0;
+     border: 5px solid transparent;
+     border-right: 5px solid #E4E4E4;    
+ }
+ #user-bg,#phone-bg{
+      display: none;
+      color: #757575;
+       font-size: 12px;
+        padding: 5px;
+        position: absolute;
+        top: 0px;
+        left: 350px;
+        width: 160px;
+        height: 40px;
+        line-height: 20px;
+        background-color: #FFF4D7;
+}
+#psd-bg{
+    display: none;
+      color: #757575;
+       font-size: 12px;
+        padding: 5px;
+        position: absolute;
+        top: 0px;
+        left: 350px;
+        width: 130px;
+        height: 30px;
+        line-height: 30px;
+        background-color: #FFF4D7;
+}
+.square1{   
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    left: -10px;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-right: 5px solid #FFF4D7;    
+}
+ .psd1-rule{
+    display: none;
+    color: #757575;
+    font-size: 12px;
+     padding: 5px;
+     position: absolute;
+     top:5px;
+     left: 350px;
+     width: 100px;
+     height: 30px;
+     line-height: 30px;
+     background-color: #E4E4E4;
+ }
+ #psd1-bg{
+    display: none;
+    color: #757575;
+    font-size: 12px;
+     padding: 5px;
+     position: absolute;
+     top:5px;
+     left: 350px;
+     width: 150px;
+     height: 30px;
+     line-height: 30px;
+     background-color: #FFF4D7;
+ }
+ .blank{
+    display: none;
+    color: #757575;
+    font-size: 12px;
+     padding: 5px;
+     position: absolute;
+     top:5px;
+     left: 350px;
+     width: 150px;
+     height: 30px;
+     line-height: 30px;
+     background-color: #FFF4D7;
+ }
+ .blank .sq{
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    left: -10px;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-right: 5px solid #FFF4D7; 
+ }
+ .new{
+    display: none;
+    color: #757575;
+    font-size: 12px;
+     padding: 5px;
+     position: absolute;
+     top:-10px;
+     left: 350px;
+     width: 160px;
+     height: 60px;
+     line-height: 20px;
+     background-color: #E4E4E4;
+ }
+ .cir{
+     display: none;
+     width: 23px;
+     height: 23px;
+     background: url(../img/cir.png) no-repeat -50px 0;
+     position: absolute;
+     top: 15px;
+     left: 350px;
+     
+ }
+ .flcurrrent-item{
+    width: 192px;
+ }
+ .flcurrrent-item input{
+    width: 152px;
+ }
+ .current-li{
+     position: relative;
+ }
+ .current-li a {
+     position: absolute;
+     top: 0;
+     left: 193px;
+    width: 126px;
+    height: 50px;
+    margin-left: 10px;
+    text-align: center;
+    background-color: #57565f;
+    line-height: 52px;
+    color: #fff;
+    cursor: default;
+    border-radius: 2px;
+    font-size: 14px
+ }
+
+ .current-argeen{
+    height: 100px;
+    font-size: 12px;
+    line-height: 40px;
+    color: #666;
+    text-indent: 1em;
+ }
+ .current-argeen:nth-child(2){
+    color: #06c;
+ }
+ .argeen-sign{ 
+    position: relative;
+    z-index: 4;
+    border: none;
+    cursor:pointer;
+    display: block;
+    width: 330px;
+    height: 50px;
+    margin-top: 10px;
+    background-color: #ff3c3c;
+    font-size: 16px;
+    line-height: 52px;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+ }
+ .argeen-sign:hover{
+     background-color: rgb(207, 15, 15);
+ }
+ /* footer */
+ .footer{ 
+    width: 980px;  
+    font-size: 12px;
+    margin: 20px auto 0;
+    text-align: center;
+ }
+ .footer a{
+     height: 15px;
+     color: #333;   
+ } 
+ .point{
+   cursor:pointer;  
+ }
+ .footer a:hover{
+     color: #ff3c3c;
+ }
+.footer span{
+    color: #333;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+ .footer p{
+     margin-top: 15px;
+     color: #333;
+ }
+

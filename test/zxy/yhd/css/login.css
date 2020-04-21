@@ -1,0 +1,396 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;    
+}
+body{
+    background: #fcfcfc;
+}
+/* 头部 */
+.header{
+    font-size: 12px;
+    height: 78px;
+    border-top: 1px solid #e1e1e1; 
+    border-bottom: 1px solid #e1e1e1; 
+    background-color: #fff;  
+}
+.header .wrap{
+    width: 1200px;
+    margin: 0 auto;
+}
+.header-logo{
+    cursor:pointer;
+    float: left;
+    padding: 16px;  
+}
+.header-right{
+    padding: 20px;
+    float: right; 
+    width: 290px;
+}
+.header-right-span{
+    color: #999;    
+    font-family: "SimSun"; 
+    margin-right: 20px;
+}
+.header-right-span a{
+    color: #06c;
+}
+.dian{
+    position: relative;
+    z-index: 100;
+}
+.dian:hover .help-a{
+    color: red; 
+}
+.help{
+    cursor:pointer;
+    position: relative;
+    float: right; 
+}
+.help :nth-child(2){
+    color: #333;
+}
+.help-l{
+    margin-right: 4px;
+    width: 16px;
+    height: 18px;
+    display: inline-block;
+    background: url(../img/regist.png) no-repeat -344px 0 ;
+    vertical-align: middle;
+}
+.help-r{
+    margin-left: 4px;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    background: url(../img/regist.png) no-repeat -346px -30px ;
+    vertical-align: middle;
+}
+/* 隐藏部分 */
+.help-hiddle{    
+    display:none;
+    z-index: 3;
+    position: absolute;
+    top: -3px;
+    right:-5px;
+    width: 100px;
+    padding-top: 21px;
+    border: 1px solid #ccc;
+}
+.help-hiddle li{
+    background-color: white; 
+    text-align: left;
+    padding-left: 28px;
+    height: 23px;
+    line-height: 23px;
+    border-top: 1px dashed #ccc;
+}
+.help-hiddle li a   {
+    color: #333;
+    }
+.help:hover.help .help-hiddle{
+  display: block;
+}
+.help .help-a:hover{
+    z-index: 5;
+    color: red;
+}
+.change1-color:hover{
+    color: red ;  
+}
+.change2-color:hover{
+    color: red ;  
+}
+.change3-color:hover{
+    color: red ;  
+}
+.change4-color:hover{
+    color: red ;  
+}
+/* 内容 */
+.login{
+    background-color: #FCFCFC;
+    padding: 25px 0;
+    background: url(../img/sogin-bg.png) repeat-x;
+}
+.clearfix:after{
+    display: block;
+    content: ".";
+    height: 0;
+    visibility: hidden;
+    clear: both;
+    font-size: 0;
+    line-height: 0;
+}
+.login-con{
+    /* border: 1px solid lawngreen; */
+    height: 390px;
+    width: 980px;
+    margin: 0 auto;
+}
+.mod-left{
+    width: 510px;
+    height: 315px;
+    margin-top: 45px;
+    float: left;
+}
+.mod-right{
+    background-color: #fff;
+    position: relative;
+    font-size: 12px;
+    padding: 45px 35px 0 35px;
+    width: 330px;
+    float: right;
+}
+.mod-login{
+    font-size: 14px;
+    float: left;
+    color: #666;
+    font-weight: bold;
+}
+.mod-sign{ 
+    color: #06c;
+    float: right;   
+}
+.mod-sign:hover{
+    color:red;
+}
+.mod-item{
+    width: 330px;
+    margin: 0 auto;
+}
+.login-user{
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
+    width: 290px;
+    height: 20px;
+    border: 1px solid #dedede;
+}
+.ipt{  
+    outline: none;
+    width: 230px;
+    height: 24px;
+    padding-left: 3px;
+    border: 0 none;
+    line-height: 24px;
+    vertical-align: middle;
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+}
+/* 点击输入框显示 */
+/* .focus-block{
+    display: none;
+    width:210px ;
+    height: 110px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .1);
+    position: absolute;
+    top: 107px;
+    left: 100px;
+    z-index: 100;
+}
+.inform-data{
+    padding:10px  0 10px 40px;
+    height: 50px;
+}
+.inform-data p{
+    height: 25px;
+    line-height: 25px;
+}
+.inform-botoom{
+    background-color: #F1F3F4;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 5px;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+} */
+.user-ico{
+    background: url(../img/login_new.png) no-repeat -50px 4px;
+    display: inline-block;
+    width: 42px;
+    height: 24px;
+    vertical-align: middle;
+    color: #666;
+}
+.psd-ico{
+    background: url(../img/login_new.png) no-repeat -150px 4px;
+    display: inline-block;
+    width: 42px;
+    height: 24px;
+    vertical-align: middle;
+    color: #666;
+}
+.auto-login{
+    position: relative;
+    margin: 10px 0;
+    height: 24px;
+    line-height: 24px;
+}
+.auto-check{
+    float: left;
+    padding-left: 18px;
+    background: url(../img/login_new.png) no-repeat -347px -264px;
+    color: #999;
+}
+ .auto-uncheck{
+    float: left;
+    padding-left: 18px;
+    background: url(../img/login_new.png) no-repeat -347px -325px;
+    border: 2px solid lightskyblue;
+    color: #999;
+} 
+.auto-hidden{
+    display: none;
+    float: left;
+    margin-left: 7px;
+    color: red;
+}
+.auto-right{
+    color: #999;
+    float: right;
+}
+.btn{
+    width: 330px;
+    height: 52px;
+    border: 0 none;
+    border-radius: 3px;
+    background: #ff3c3c;
+    font-size: 16px;
+    color: #FFF;
+    cursor: pointer;
+    text-shadow: 1px 1px 1px #ff7373;
+    font-family: "Microsoft YaHei";
+    line-height: 52px;
+}
+.clearfix:after{
+    content: "";
+    height: 0;
+    display: block;
+    clear: both;
+    visibility: hidden;
+}
+.more-login{
+    position: relative;
+}
+.more-login p{
+    padding: 15px 0;
+    color: #666;
+}
+.pointer{
+    position: relative;
+    cursor: pointer;
+}
+.more-ul{
+    float: left;
+    width: 230px;
+}
+.more-ul li{
+    float: left;
+    margin: 0 20px 0 0;
+}
+.more-ul a{
+    display: inline-block;
+    width: 32px;
+    height: 35px;
+    font-size: 32px;
+    line-height: 35px;
+}
+
+.fold{
+    width: 100px;
+    float: right;
+    display: block;
+    line-height: 34px;
+    color: #999;
+}
+.fold-i{
+    display: inline-block;
+    width: 20px;
+    height: 26px;
+    margin-top: 4px;
+    text-align: center;
+    vertical-align: middle;
+    background: url(../img/login_new.png) no-repeat  -200px 3px;
+}
+.unfold i{
+   background-position: -250px 3px;
+}
+/* 更多合作伙伴隐藏部分 */
+.more-loading{
+    display: none;
+    margin-top: 15px;
+}
+.more-loading li{
+    float: left;
+    width: 82px;
+    margin: 0 0 10px 0;
+    line-height: 16px;
+}
+.more-loading li a i{
+    margin-right: 5px;
+}
+.alipay{
+    color: #00b2ee;
+}
+.wangyi{
+    color: #c4282b;
+}
+.baidu{
+    color: #2932e1;
+}
+.renren{
+    color: #005eac;
+}
+.pingan{
+    color: #ff3204;
+}
+.mogujie{
+    color: #e84478;
+}
+.login-switch{
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+}
+.switch-a{
+    display: block;
+    width: 62px;
+    height: 62px;
+    cursor: pointer;
+    background: url(../img/codeSwich.png)no-repeat -88px 0;
+}
+/* 尾部 */
+.footer{ 
+    width: 980px;  
+    font-size: 12px;
+    margin: 20px auto 0;
+    text-align: center;
+ }
+ /* 二维码 */
+
+ .footer a{
+     height: 15px;
+     color: #333;   
+ } 
+ .point{
+   cursor:pointer;  
+ }
+ .footer a:hover{
+     color: #ff3c3c;
+ }
+.footer span{
+    color: #333;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+ .footer p{
+     margin-top: 15px;
+     color: #333;
+ }

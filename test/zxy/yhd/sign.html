@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/sign.css">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+
+</head>
+<body>
+    <div class="header">
+        <div class="wrap">
+            <div class="header-logo">
+                <a href="../../lmy/yhd/yhdHome.html"></a>
+                <img src="./img/logo.jpg" alt="">
+            </div>
+            <div class="header-right">
+                <span class="header-right-span">您好，欢迎光临1号店!
+                    <a href="./login.html" class="header-right-a">请登录</a>
+                </span>
+                <div class="help">
+                    <div class="dian">
+                        <s class="help-l"></s>
+                        <a href="" class="help-a">帮助中心</a>
+                        <s class="help-r"></s>
+                    </div>
+                    <div class="help-hiddle">
+                        <ul>
+                            <li><a href="" class="change1-color">包裹跟踪</a></li>
+                            <li><a href="" class="change2-color">常见问题</a></li>
+                            <li><a href="" class="change3-color">在线退换货</a></li>
+                            <li><a href="" class="change4-color">在线投诉</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 表单 -->
+    <form action="./sign.php" method="GET" target="stop">
+        <div class="content">
+            <div class="bg-icon1"></div>
+            <div class="bg-icon2"></div>
+            <div class="bg-icon3"></div>
+            <div class="bg-icon4"></div>
+            <div class="bg-icon5"></div>
+            <div class="content-current">
+                <h4>1号店注册</h4>
+                <ul>
+                    <li>
+                        <div class="current-item item-user">
+                            <input type="text" placeholder="用户名" id="user" name="user">
+                            <span class="item-block user-block"> 用户名</span>
+                            <div>
+                                <div class="urse-rule user-block1">
+                                    <s class="square"></s>
+                                    4-20位字符,可由中文,英文,数字或"_"组成
+                                </div>
+                                <div id="user-bg">
+                                    <s class="square1"></s>
+                                    请输入正确的用户名,用户名应为4-20位字符
+                                </div>
+                                <div class="blank" id="userblank">
+                                    <s class="sq"></s>
+                                    用户名不能为空</div>
+                                <div class="cir" id="cirUser"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="current-item item-phone">
+                            <input type="text" placeholder="手机号" id="phone" name="phone">
+                            <span class="item-block phone-block">手机号</span>
+                            <div>
+                                <div class="phone-rule phone-block1">
+                                    <s class="square"></s>
+                                    请输入正确的手机号,以便接收订单通知,找回密码等
+                                </div>
+                                <div id="phone-bg">
+                                    <s class="square1"></s>
+                                    格式错误，请输入正确的手机号
+                                </div>
+                                <div class="cir" id="cirPhone"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="current-li">
+                        <div class="current-item flcurrrent-item">
+                            <input type="text" placeholder="短信验证码" id="news">
+                            <span class="item-block  new-block">短信验证码</span>
+                            <div class="new new-block1">
+                                <s class="square"></s>
+                                如无法接受验证码,请重启手机并确认短信未被拦截!4G用户请关闭网络进行接受
+                            </div>
+                        </div>
+                        <a href="" class="current-phone">获取验证码</a>
+                    </li>
+                    <li>
+                        <div class="current-item">
+                            <input type="password" placeholder="设置密码" id="psd" name="psd">
+                            <span class="item-block psd-block">设置密码</span>
+                            <div>
+                                <div class="psd-rule psd-block1">
+                                    <s class="square"></s>
+                                    6-20个大小写英文字母,符号或数字组合</div>
+                                <div id="psd-bg">
+                                    <s class="square1"></s>
+                                    密码应为6-20位字符</div>
+                                <div class="blank" id="psdblank">
+                                    <s class="sq"></s>
+                                    密码不能为空
+                                </div>
+                                <div class="blank" id="num">
+                                    <s class="sq"></s>
+                                    密码不能全为数字</div>
+                                <div class="cir" id="cirPsd"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="current-item">
+                            <input type="password" placeholder="确认密码" id="psd1" name="psd1">
+                            <span class="item-block psd1-block">确认密码</span>
+                            <div>
+                                <div class="psd1-rule psd1-block1">
+                                    <s class="square"></s>
+                                    请在次输入密码</div>
+                                <div id="psd1-bg">
+                                    <s class="square1"></s>
+                                    二次密码输入不一致</div>
+                                <div class="cir" id="cirPsd1"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="current-argeen">点击注册,表示同意1号店
+                            <a href="">《服务协议及隐私声明》</a>
+                            <input type="submit" class="argeen-sign" id="login" value="同意协议并注册">
+                            <!-- <a href="javascript:void(0)" class="argeen-sign" id="login">同意协议并注册</a> -->
+                        </a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </form>
+<iframe name="stop" style="display: none;"></iframe>
+    <!-- footer -->
+    <div class="footer">
+        <a href="" class="point">沪ICP备16050468号</a>
+        <span>|</span>
+        <a href="">沪B2-20170039</a>
+        <span>|</span>
+        <a href="" class="point">营业执照</a>
+        <p>Copyright © 1号店网上超市 2007-2018，All Rights Reserved</p>
+    </div>
+    <script src="js/sign.js"></script>
+    <script scr="sign.php"></script>
+</body>
+</html>
