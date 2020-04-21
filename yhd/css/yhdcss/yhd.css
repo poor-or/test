@@ -180,12 +180,6 @@ a {
               padding-right: 30px; }
   .hd_header_top .hd_right {
     float: right; }
-    .hd_header_top .hd_right .hd_r_logReg a {
-      color: #AAA; }
-      .hd_header_top .hd_right .hd_r_logReg a + a:hover {
-        color: red; }
-    .hd_header_top .hd_right .hd_r_logReg span, .hd_header_top .hd_right .hd_r_logReg .hd_place .none .hd_hot_city div, .hd_header_top .hd_place .none .hd_hot_city .hd_right .hd_r_logReg div, .hd_header_top .hd_right .hd_r_logReg .hd_place .none .hd_letter_search div, .hd_header_top .hd_place .none .hd_letter_search .hd_right .hd_r_logReg div, .hd_header_top .hd_right .hd_r_logReg span + a, .hd_header_top .hd_right .hd_r_logReg .hd_place .none .hd_hot_city div + a, .hd_header_top .hd_place .none .hd_hot_city .hd_right .hd_r_logReg div + a, .hd_header_top .hd_right .hd_r_logReg .hd_place .none .hd_letter_search div + a, .hd_header_top .hd_place .none .hd_letter_search .hd_right .hd_r_logReg div + a {
-      color: red; }
     .hd_header_top .hd_right .hd_r_l {
       padding: 0 10px; }
     .hd_header_top .hd_right .hd_myOrder .iconfont {
@@ -255,7 +249,7 @@ a {
       border-left: 1px solid #e5e5e5;
       transform: rotate(45deg); }
   .hd_header_top .app .iconfont {
-    font-size: 24px; }
+    font-size: 18px; }
   .hd_header_top .app:hover .none {
     display: block; }
 

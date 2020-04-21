@@ -230,18 +230,7 @@ a{
     }
     .hd_right{
         float: right;
-        .hd_r_logReg{
-            a{
-                color: #AAA;
-                &+a:hover{
-                    color: red;
-                }
-            }
-            span,span+a{
-                color: red;
-            }
-            
-        }
+        
         .hd_r_l{
             @extend .hd_t_left;
             padding: 0 10px;
@@ -336,7 +325,7 @@ a{
             }
         }
         .iconfont{
-            font-size: 24px;
+            font-size: 18px;
         }
         
         &:hover .none{

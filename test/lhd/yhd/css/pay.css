@@ -215,7 +215,10 @@ a {
             border-radius: 2px; }
       .hd_header_top .hd_right .login-txt:hover {
         background-color: #fff;
+<<<<<<< HEAD
         border: 1px solid #CCC;
+=======
+>>>>>>> a5d83a073e239da58a7baa43286249437b77f92a
         border-top: none; }
         .hd_header_top .hd_right .login-txt:hover .vip i {
           transform: rotate(45deg); }
@@ -230,7 +233,12 @@ a {
         height: 174px;
         padding: 15px;
         border: 1px solid #dbdbdb;
+<<<<<<< HEAD
         background-color: #fff; }
+=======
+        background-color: #fff;
+        z-index: 100; }
+>>>>>>> a5d83a073e239da58a7baa43286249437b77f92a
         .hd_header_top .hd_right .login-txt .hd-user-privilege .privilege-top {
           width: 260px;
           height: 90px;

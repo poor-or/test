@@ -280,7 +280,10 @@ a{
             }
             &:hover{
                 background-color: #fff;
+<<<<<<< HEAD
                 border: 1px solid #CCC;
+=======
+>>>>>>> a5d83a073e239da58a7baa43286249437b77f92a
                 border-top: none;
                 .vip i{
                     transform: rotate(45deg);
@@ -299,6 +302,10 @@ a{
                 padding: 15px;
                 border: 1px solid #dbdbdb;
                 #{$bgc}: #fff;
+<<<<<<< HEAD
+=======
+                z-index: 100;
+>>>>>>> a5d83a073e239da58a7baa43286249437b77f92a
                 .privilege-top{
                     width: 260px;
                     height: 90px;

@@ -213,10 +213,13 @@ a{
     background-color: #fff;
     color: #ff6805;
 }
+<<<<<<< HEAD
 .tabs-checkout{
     background-color: #fff;
     color: #ff6805;
 }
+=======
+>>>>>>> a5d83a073e239da58a7baa43286249437b77f92a
 .tabs-list2{
     border-radius: 0px 5px  5px 0;
 }
@@ -260,7 +263,10 @@ a{
     margin: 0 auto;
     width: 1165px;
 }
+<<<<<<< HEAD
 /* 抢购中 */
+=======
+>>>>>>> a5d83a073e239da58a7baa43286249437b77f92a
 .pro-list{
     margin-right: -10px;
 }
@@ -272,6 +278,7 @@ a{
     margin: 0 10px 10px 0;
     background-color: #fff;
 }
+<<<<<<< HEAD
 /*  即将抢购*/
 .comming_list{
     margin-right: -10px;
@@ -303,6 +310,8 @@ a{
     background-color: #ffb74d;
 }
 
+=======
+>>>>>>> a5d83a073e239da58a7baa43286249437b77f92a
 .inner{
     position: relative;
     overflow: hidden;
@@ -421,8 +430,11 @@ a{
 .pro-list li:hover .btn{
     height: 40px;
 }
+<<<<<<< HEAD
 
 /* 商品下面的 */
+=======
+>>>>>>> a5d83a073e239da58a7baa43286249437b77f92a
 .super-bottom{
      margin-bottom: 86px;
      overflow: hidden;
@@ -474,6 +486,7 @@ a{
 .back .back-i{
     font-size: 24px;
 }
+<<<<<<< HEAD
 .side-item:hover{
     color: #fd5b45;
 }
@@ -484,6 +497,8 @@ a{
     background-color: #fd5b45;
     color: #fff;
 }
+=======
+>>>>>>> a5d83a073e239da58a7baa43286249437b77f92a
 /* 下面的背景为白色的部分 */
 .bottom-price{
     width: 1228px;

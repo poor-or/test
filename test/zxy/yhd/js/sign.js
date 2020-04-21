@@ -13,7 +13,10 @@ $("#user").focus(function () {
 });
 // 用户名失去焦点
 $("#user").blur(function () {
+<<<<<<< HEAD
     console.log($("h1").text());
+=======
+>>>>>>> a5d83a073e239da58a7baa43286249437b77f92a
     if ($(this).val() == "") {
         $("#userblank").css("display", "block");
         $("#userblank").siblings().css("display", "none")
@@ -32,6 +35,29 @@ $("#user").blur(function () {
         }
     }
 })
+<<<<<<< HEAD
+=======
+//     var number=$.inArray("$(this).val()", data)
+// if(number>-1){
+//     console.log("数据存在")
+// } else {
+//     console.log("数据不存在")
+// }
+// $("#user").blur(function () {
+//     var xhr = new XMLHttpRequest();
+//     xhr.onreadystatechange = function () {
+//         if (xhr.readyState === 4 && xhr.status === 200) {
+//             var data = JSON.parse(xhr.responseText);
+//             console.log(data)
+
+//         }
+
+//     }
+
+//     xhr.open("GET", "http://localhost:8081/1号店/php/sign.php", true);
+//     xhr.send();
+// })
+>>>>>>> a5d83a073e239da58a7baa43286249437b77f92a
 // 手机号
 $("#phone").focus(function () {
     $(".phone-block").css("display", "block");
@@ -40,6 +66,10 @@ $("#phone").focus(function () {
     $(".phone-block1").siblings().css("display", "none")
 })
 $("#phone").blur(function () {
+<<<<<<< HEAD
+=======
+    // $(".item-user").css("border","1px solid red")
+>>>>>>> a5d83a073e239da58a7baa43286249437b77f92a
     if ($(this).val() == "") {
         $("#phone-bg").css("display", "block");
         $("#phone-bg").siblings().css("display", "none")
@@ -98,6 +128,13 @@ $("#psd").blur(function () {
             $("#num").css("display", "block")
             $("#num").siblings().css("display", "none")
         }
+<<<<<<< HEAD
+=======
+        // else if(txt.indexOf(" ")!=-1){
+        //     console.log(txt.indexOf(" "))
+        //     $("#num").text("密码不允许有空格");
+        // }
+>>>>>>> a5d83a073e239da58a7baa43286249437b77f92a
         else if (pattPsd.test($(this).val())) {
             $("#cirPsd").css("display", "block");
             $("#cirPsd").siblings().css("display", "none")
@@ -136,9 +173,13 @@ $("#psd1").blur(function () {
     }
 })
 // 点击按钮
+<<<<<<< HEAD
 $("#login").click(function () { 
     $("#user").val()=='';
         $("#phone").val()=='';
+=======
+$("#login").click(function () {
+>>>>>>> a5d83a073e239da58a7baa43286249437b77f92a
     if ($("#user").val() == '') {
         $("#userblank").css("display", "block");
     }
@@ -148,11 +189,16 @@ $("#login").click(function () {
     if ($("#psd").val() == '') {
         $("#psdblank").css("display", "block");
     }
+<<<<<<< HEAD
     if ($("#psd1").val() == '') {
         $("#psd1-bg").css("display", "block");
     }
     else if (arr.length >= 4) {
         location.href = 'login.html';
        
+=======
+    else if (arr.length >= 4) {
+        location.href = 'login.html';
+>>>>>>> a5d83a073e239da58a7baa43286249437b77f92a
     }
 })

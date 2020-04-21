@@ -61,6 +61,7 @@
                         <span class="psd-ico"></span>
                         <input type="password" placeholder="密码" class="ipt" id="psd">
                     </div>
+<<<<<<< HEAD
                     
                 </div>
                 <!-- <div class="focus-block" >
@@ -70,6 +71,13 @@
                     </div>
                     <div class="inform-botoom">管理账户</div>
                 </div>  -->
+=======
+                    <div class="inform">
+                            <p></p>
+                            <p></p>
+                    </div> 
+                </div>
+>>>>>>> a5d83a073e239da58a7baa43286249437b77f92a
                 <div class="auto-login">
                     <p>
                         <a href="#" class="auto-check">自动登录</a>
@@ -125,14 +133,18 @@
         $(".auto-check").click(function () {
             $(this).toggleClass("auto-uncheck")
             $(".auto-hidden").toggle()
+<<<<<<< HEAD
              // 将数据存入记录
             localStorage.setItem("username",$("#ipt").val()) 
             localStorage.setItem("password",$("#psd").val())
+=======
+>>>>>>> a5d83a073e239da58a7baa43286249437b77f92a
         })
         $(".fold").click(function(){
             $(this).toggleClass("unfold")
             $(".more-loading").toggle()
         })
+<<<<<<< HEAD
         // 判断是否存入数据
        if(localStorage.username!= null){        
             var user=localStorage.username;
@@ -147,6 +159,31 @@
             $("#ipt").click(function(){
                 $(".focus-block").css("display","block");
             })
+=======
+        // 登陆按钮       
+        $(".btn").click(function(){
+          var value=$("#ipt").val();  
+          var psd=$("#psd").val(); 
+          console.log(value)
+          console.log(psd)
+            // location.href="product.html";
+        // 将数据存入记录
+            localStorage.setItem("username",value) 
+          localStorage.setItem("password",psd)
+        })   
+        // 获取存入的数据   
+    //     var oldvalue=localStorage.getItem("username")
+    //     var oldpsd=localStorage.getItem("password")       
+    //     $("#ipt").click(function(){
+    //    console.log(oldpsd)
+    //    console.log(oldvalue )
+    //    $("#ipt") .val(oldvalue);
+    //     $("#psd").val(oldpsd);
+    //     })
+
+   
+
+>>>>>>> a5d83a073e239da58a7baa43286249437b77f92a
 
     </script>
 </body>
