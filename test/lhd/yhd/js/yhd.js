@@ -132,6 +132,7 @@ opt.onclick = function () {
     opt.style.display = "none";
     ipt.value = "";
 }
+
 // 登录显示用户名
 var userInfo=document.getElementsByClassName("login-txt")[0].children;
 var userName=sessionStorage.getItem("userName");
@@ -147,4 +148,5 @@ if(userName){
 function exitUser() {
     userInfo[0].parentElement.style.display="none";
     userInfo[0].parentElement.previousElementSibling.style.display="block";
+    sessionStorage.removeItem("userName");
 }

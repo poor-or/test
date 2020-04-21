@@ -246,6 +246,7 @@ a{
             position: relative;
             text-align: left;
             padding: 0 10px;
+            box-sizing: border-box;
             div{
                 width: 60px;
                 float: right;
@@ -280,8 +281,8 @@ a{
             }
             &:hover{
                 background-color: #fff;
-                border: 1px solid #CCC;
                 border-top: none;
+                box-sizing: border-box;
                 .vip i{
                     transform: rotate(45deg);
                 }
@@ -299,6 +300,7 @@ a{
                 padding: 15px;
                 border: 1px solid #dbdbdb;
                 #{$bgc}: #fff;
+                z-index: 100;
                 .privilege-top{
                     width: 260px;
                     height: 90px;

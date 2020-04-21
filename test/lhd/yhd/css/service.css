@@ -215,7 +215,6 @@ a {
             border-radius: 2px; }
       .hd_header_top .hd_right .login-txt:hover {
         background-color: #fff;
-        border: 1px solid #CCC;
         border-top: none; }
         .hd_header_top .hd_right .login-txt:hover .vip i {
           transform: rotate(45deg); }
@@ -230,7 +229,8 @@ a {
         height: 174px;
         padding: 15px;
         border: 1px solid #dbdbdb;
-        background-color: #fff; }
+        background-color: #fff;
+        z-index: 100; }
         .hd_header_top .hd_right .login-txt .hd-user-privilege .privilege-top {
           width: 260px;
           height: 90px;
