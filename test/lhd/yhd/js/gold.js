@@ -13,7 +13,7 @@ function next() {
     $('.cn-btn span').eq(n).addClass('btn-color').siblings().removeClass();    
 };
 function auto(){
-    timer=setInterval(next,3000);
+    timer=setInterval(next,4000);
 };
 auto();
 $(".cn-cn").mouseover(function(){
