@@ -172,11 +172,7 @@ body{
     height: 20px;
     border: 1px solid #dedede;
 }
-<<<<<<< HEAD
 .ipt{  
-=======
-.ipt{
->>>>>>> a5d83a073e239da58a7baa43286249437b77f92a
     outline: none;
     width: 230px;
     height: 24px;
@@ -187,7 +183,6 @@ body{
     font-family: "Microsoft YaHei";
     font-size: 14px;
 }
-<<<<<<< HEAD
 /* 点击输入框显示 */
 /* .focus-block{
     display: none;
@@ -216,8 +211,6 @@ body{
     padding-left: 5px;
     border-top: 1px solid rgba(0, 0, 0, .1);
 } */
-=======
->>>>>>> a5d83a073e239da58a7baa43286249437b77f92a
 .user-ico{
     background: url(../img/login_new.png) no-repeat -50px 4px;
     display: inline-block;

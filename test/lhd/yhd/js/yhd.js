@@ -132,14 +132,6 @@ opt.onclick = function () {
     opt.style.display = "none";
     ipt.value = "";
 }
-<<<<<<< HEAD
-<<<<<<< HEAD:yhd/js/yhd.js
-
-=======
->>>>>>> aa65262b635c180f84e78fb74d1c20ffb9d49c90:test/lhd/yhd/js/yhd.js
-=======
-
->>>>>>> a5d83a073e239da58a7baa43286249437b77f92a
 // 登录显示用户名
 var userInfo=document.getElementsByClassName("login-txt")[0].children;
 var userName=sessionStorage.getItem("userName");
@@ -155,8 +147,5 @@ if(userName){
 function exitUser() {
     userInfo[0].parentElement.style.display="none";
     userInfo[0].parentElement.previousElementSibling.style.display="block";
-<<<<<<< HEAD
-=======
     sessionStorage.removeItem("userName");
->>>>>>> a5d83a073e239da58a7baa43286249437b77f92a
 }

@@ -13,16 +13,11 @@
   width: 1228px;
   margin: 0 auto; }
 
-<<<<<<< HEAD
-body {
-  font: 12px Arial,Helvetica,sans-serif;
-=======
 li {
   list-style: none; }
 
 body {
   font: 12px "microsoft yahei",Arial,Helvetica,sans-serif;
->>>>>>> a5d83a073e239da58a7baa43286249437b77f92a
   color: #333;
   list-style: none; }
 
@@ -32,31 +27,20 @@ a {
   a:hover {
     color: red; }
 
-<<<<<<< HEAD
-.hd_header {
-  margin-bottom: 200px; }
-  .hd_header .hd-bg {
-    background-color: #f4f4f4;
-    border-bottom: 1px solid #e5e5e5; }
-=======
 div, span, .hd_header_top .hd_place .none .hd_hot_city div, .hd_header_top .hd_place .none .hd_letter_search div, a, i, p, img {
   vertical-align: middle; }
 
 .hd_header .hd-bg {
   background-color: #f4f4f4;
   border-bottom: 1px solid #e5e5e5; }
->>>>>>> a5d83a073e239da58a7baa43286249437b77f92a
 
 .hd_header_top {
   min-width: 980px;
   height: 30px;
   text-align: center;
   line-height: 30px; }
-<<<<<<< HEAD
   .hd_header_top div, .hd_header_top span, .hd_header_top .hd_place .none .hd_hot_city div, .hd_header_top .hd_place .none .hd_letter_search div, .hd_header_top a, .hd_header_top i {
     vertical-align: middle; }
-=======
->>>>>>> a5d83a073e239da58a7baa43286249437b77f92a
   .hd_header_top .hd_t_left, .hd_header_top .hd_place, .hd_header_top .hd_right .hd_r_l {
     float: left;
     padding: 0 10px; }
@@ -417,14 +401,14 @@ div, span, .hd_header_top .hd_place .none .hd_hot_city div, .hd_header_top .hd_p
   .hd_header_top .app:hover .none {
     display: block; }
 
-<<<<<<< HEAD
-=======
 .head-top {
+  position: relative;
   height: 90px;
   border-bottom: 1px solid #e5e5e5;
   background-color: #fff; }
   .head-top .club-logo {
     float: left;
+    position: absolute;
     width: 214px;
     height: 32px;
     overflow: hidden;
@@ -433,6 +417,8 @@ div, span, .hd_header_top .hd_place .none .hd_hot_city div, .hd_header_top .hd_p
       width: 100%; }
   .head-top ul {
     float: left;
+    position: absolute;
+    left: 214px;
     width: 800px;
     padding: 34px 0 0 100px; }
     .head-top ul li {
@@ -563,7 +549,7 @@ div, span, .hd_header_top .hd_place .none .hd_hot_city div, .hd_header_top .hd_p
   position: relative; }
   .content .club-intro .club-swiper .intro-list {
     padding: 20px 0;
-    width: 450px;
+    width: 470px;
     font-size: 0;
     margin: 0 auto;
     height: 24px;
@@ -675,7 +661,6 @@ div, span, .hd_header_top .hd_place .none .hd_hot_city div, .hd_header_top .hd_p
     right: 0px;
     cursor: pointer; }
 
->>>>>>> a5d83a073e239da58a7baa43286249437b77f92a
 .ft_top {
   padding: 30px 0;
   border-bottom: 1px solid #ebebeb; }

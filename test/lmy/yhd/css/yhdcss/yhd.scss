@@ -15,16 +15,11 @@ $bgc:background-color;
     width: 1228px;
     margin: 0 auto;
 }
-<<<<<<< HEAD
-body{
-    font:12px Arial,Helvetica,sans-serif;
-=======
 li{
     list-style: none;
 }
 body{
     font:12px "microsoft yahei",Arial,Helvetica,sans-serif;
->>>>>>> a5d83a073e239da58a7baa43286249437b77f92a
     color: #333;
     list-style: none;
 }
@@ -35,16 +30,10 @@ a{
         color: red;
     }
 }
-<<<<<<< HEAD
-
-.hd_header{
-    margin-bottom: 200px;
-=======
 div,span,a,i,p,img {
     vertical-align: middle;
 }
 .hd_header{
->>>>>>> a5d83a073e239da58a7baa43286249437b77f92a
     .hd-bg{
         #{$bgc}: #f4f4f4;
         border-bottom: 1px solid #e5e5e5;
@@ -55,12 +44,9 @@ div,span,a,i,p,img {
     height: 30px;
     text-align: center;
     line-height: 30px;
-<<<<<<< HEAD
     div,span,a,i {
         vertical-align: middle;
     }
-=======
->>>>>>> a5d83a073e239da58a7baa43286249437b77f92a
     .hd_t_left{
         float: left;
         padding: 0 10px;
@@ -299,11 +285,7 @@ div,span,a,i,p,img {
                 }
             }
             &:hover{
-<<<<<<< HEAD
-                background-color: #fff;
-=======
                 #{$bgc}: #fff;
->>>>>>> a5d83a073e239da58a7baa43286249437b77f92a
                 border: 1px solid #CCC;
                 border-top: none;
                 .vip i{
@@ -540,15 +522,16 @@ div,span,a,i,p,img {
     }
 }
 
-<<<<<<< HEAD
-=======
+
 // 头部logo导航内容
 .head-top{
+    position: relative;
     height: 90px;
     border-bottom: 1px solid #e5e5e5;
     #{$bgc}: #fff;
     .club-logo{
         float: left;
+        position: absolute;
         width: 214px;
         height: 32px;
         overflow: hidden;
@@ -559,6 +542,8 @@ div,span,a,i,p,img {
     }
     ul{
         float: left;
+        position: absolute;
+        left: 214px;
         width: 800px;
         padding: 34px 0 0 100px;
         li{
@@ -727,7 +712,7 @@ div,span,a,i,p,img {
             position: relative;
             .intro-list{
                 padding: 20px 0;
-                width: 450px;
+                width: 470px;
                 font-size: 0;
                 margin: 0 auto;
                 height: 24px;
@@ -866,7 +851,6 @@ div,span,a,i,p,img {
     }
 }
 
->>>>>>> a5d83a073e239da58a7baa43286249437b77f92a
 
 // 底部
 .ft_top{
