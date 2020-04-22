@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/yhdcss/yhd.css">
     <link rel="stylesheet" href="../../font/iconfont.css">
-
+    <link rel="stylesheet" href="../../swiper/swiper.min.css">
 </head>
 
 <body>
@@ -189,48 +189,131 @@
 
         <nav class="content">
             <div class="club-nav vip-not">
+                <!-- 登录显示 -->
                 <div class="vip-login">
-
+                    <div class="vip-login-con clearfix wrap">
+                        <div class="vip-login-left">
+                            <p class="userName">Hi,<span>用户</span></p>
+                            <p class="userImg"><a href=""><img src="./img/imgs/user_default.jpg" alt=""></a></p>
+                            <p class="reg-time">你我相识已 <span>20</span> 天</p>
+                            <div class="gold clearfix">
+                                <span><a href=""><i class="iconfont icon-jinbi68"></i><br><em>1号金币</em> </a><br>0</span>
+                                <span><a href=""><i class="iconfont icon-libao67"></i><br><em>我的礼包</em></a><br>0</span>
+                            </div>
+                            <div class="red">
+                                <a href="">来APP签到 红包领不停 <img src="./img/imgs/vip/gold-jinbi.png" alt=""></a>
+                            </div>
+                            <span>连续签到天数越多 赚的越多</span>
+                        </div>
+                        <div class="vip-login-right clearfix">
+                            <div class="level clearfix">
+                                <ul class="clearfix" id="big">
+                                    <li class="small">
+                                        <i>你在这里</i>
+                                        <img src="./img/imgs/vip/bronze.png" alt="">
+                                        <div>
+                                            <span>新晋会员</span>
+                                            <p>完成一笔订单可晋升<br>白银会员</p>
+                                        </div>
+                                    </li>
+                                    <li class="small">
+                                        <!-- <i>你在这里</i> -->
+                                        <img src="./img/imgs/vip/Silver.png" alt="" style="top: 60px;">
+                                        <!-- <div>
+                                            <span>白银会员</span>
+                                            <p>完成一笔订单可晋升<br>黄金会员</p>
+                                        </div> -->
+                                    </li>
+                                    <li class="small">
+                                        <!-- <i>你在这里</i> -->
+                                        <img src="./img/imgs/vip/gold.png" alt="" style="top: 62px; width: 140px;
+                                        height: 140px;">
+                                        <!-- <div>
+                                            <span>黄金会员</span>
+                                            <p>完成一笔订单可晋升<br>铂金会员</p>
+                                        </div> -->
+                                    </li>
+                                    <li class="small">
+                                        <!-- <i>你在这里</i> -->
+                                        <img src="./img/imgs/vip/platinum.png" alt="" style="top: 60px;">
+                                        <!-- <div>
+                                            <span>铂金会员</span>
+                                            <p>完成一笔订单可晋升<br>钻石会员</p>
+                                        </div> -->
+                                    </li>
+                                    <li class="small">
+                                        <!-- <i>你在这里</i> -->
+                                        <img src="./img/imgs/vip/diamonds.png" alt="" style="top: 55px;">
+                                        <!-- <div>
+                                            <span>钻石会员</span>
+                                            <p>完成一笔订单可晋升<br>1号之星</p>
+                                        </div> -->
+                                    </li>
+                                    <li class="small">
+                                        <!-- <i>你在这里</i> -->
+                                        <img src="./img/imgs/vip/star.png" alt="" style="top: 57px;">
+                                        <!-- <div>
+                                            <span>1号之星</span>
+                                        </div> -->
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="font">
+                                <ul class="clearfix" id="font">
+                                    <li><a href="../../zxy/yhd/login.html" class="col"><i class="iconfont icon-tubiao_jinbi"></i><br>1号金币</a>
+                                    </li>
+                                    <li><a href="" class="col"><i class="iconfont icon-kefu"></i><br>在线客服</a></li>
+                                    <li><a href="" class="col"><i class="iconfont icon-3"></i><br>退换无忧</a></li>
+                                    <li><a href=""><i class="iconfont icon-shangmenhuanxinweihuode"></i><br>上门换新</a></li>
+                                    <li><a href=""><i class="iconfont icon-jisutuikuanweihuode"></i><br>闪电退款</a></li>
+                                    <li><a href=""><i class="iconfont icon-kuaijietongdao"></i><br>客服直达</a></li>
+                                    <li><a href="../../zxy/yhd/login.html"><i class="iconfont icon-haolibao"></i><br>1号礼包</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="vip-not-login wrap">
+                <!-- 未登录显示 -->
+                <div class="vip-not-login wrap" style="display: none;">
                     <a class="img-bor" href="#">
                         <img src="./img/imgs/user_default.jpg" alt="">
                     </a>
                     <p>欢迎来到1号店会员中心</p>
                     <a class="login-btn" href="../../zxy/yhd/login.html">点此登录查看可享权益</a>
                     <ul class="clearfix">
-                        <li><i class="iconfont icon-tubiao_jinbi"></i></li>
-                        <li><i class="iconfont icon-kefu"></i></li>
-                        <li><i class="iconfont icon-3"></i></li>
-                        <li><i class="iconfont icon-shangmenhuanxinweihuode"></i></li>
-                        <li><i class="iconfont icon-jisutuikuanweihuode"></i></li>
-                        <li><i class="iconfont icon-kuaijietongdao"></i></li>
-                        <li><i class="iconfont icon-haolibao"></i></li>
+                        <li><a href="../../zxy/yhd/login.html"><i class="iconfont icon-tubiao_jinbi"></i><br>1号金币</a>
+                        </li>
+                        <li><a href=""><i class="iconfont icon-kefu"></i><br>在线客服</a></li>
+                        <li><a href=""><i class="iconfont icon-3"></i><br>退换无忧</a></li>
+                        <li><a href=""><i class="iconfont icon-shangmenhuanxinweihuode"></i><br>上门换新</a></li>
+                        <li><a href=""><i class="iconfont icon-jisutuikuanweihuode"></i><br>闪电退款</a></li>
+                        <li><a href=""><i class="iconfont icon-kuaijietongdao"></i><br>客服直达</a></li>
+                        <li><a href="../../zxy/yhd/login.html"><i class="iconfont icon-haolibao"></i><br>1号礼包</a></li>
                     </ul>
                 </div>
             </div>
             <div class="club-act">
                 <div class="wrap clearfix">
                     <div class="vip-1"><a href="">
-                        <p>1号抢购</p>
-                        <span>甄选为你<br>购物更自在</span>
-                        <img src="./img/imgs/vip/vip-k.png" alt="">
-                    </a></div>
+                            <p>1号抢购</p>
+                            <span>甄选为你<br>购物更自在</span>
+                            <img src="./img/imgs/vip/vip-k.png" alt="">
+                        </a></div>
                     <div class="vip-2"><a href="">
-                        <p>福利集市</p>
-                        <span>福利随心兑<br>享品质生活</span>
-                        <img src="./img/imgs/vip/vip-q.png" alt="">
-                    </a></div>
+                            <p>福利集市</p>
+                            <span>福利随心兑<br>享品质生活</span>
+                            <img src="./img/imgs/vip/vip-q.png" alt="">
+                        </a></div>
                     <div class="vip-3"><a href="">
-                        <p>超级品牌</p>
-                        <span>精品汇聚<br>品质如一</span>
-                        <img src="./img/imgs/vip/vip-3.png" alt="">
-                    </a></div>
+                            <p>超级品牌</p>
+                            <span>精品汇聚<br>品质如一</span>
+                            <img src="./img/imgs/vip/vip-3.png" alt="">
+                        </a></div>
                     <div class="vip-4"><a href="">
-                        <p>金币商城</p>
-                        <span>签到送金币<br>好货准点抢</span>
-                        <img src="./img/imgs/vip/vip-4.png" alt="">
-                    </a></div>
+                            <p>金币商城</p>
+                            <span>签到送金币<br>好货准点抢</span>
+                            <img src="./img/imgs/vip/vip-4.png" alt="">
+                        </a></div>
                 </div>
             </div>
             <div class="club-intro wrap">
@@ -335,6 +418,10 @@
                     </div>
                     <span class="swi-left"><img src="./img/imgs/us-right.png" alt=""></span>
                     <span class="swi-right"><img src="./img/imgs/us-right.png" alt=""></span>
+
+                    
+
+
                 </div>
             </div>
         </nav>
@@ -457,6 +544,18 @@
         </div>
     </div>
     <script src="./js/yhd.js"></script>
+    <script src="../../swiper/swiper.jquery.min.js"></script>
+    <!-- <script>        
+        var mySwiper = new Swiper ('.swiper-container', {
+          direction: 'vertical',
+          loop: true,
+          // 如果需要分页器
+          pagination: '.swiper-pagination',
+
+          nextButton: '.swiper-button-next',
+          prevButton: '.swiper-button-prev',
+        })        
+        </script> -->
 </body>
 
 </html>
