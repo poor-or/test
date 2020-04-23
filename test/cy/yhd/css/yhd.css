@@ -180,8 +180,6 @@ a {
               padding-right: 30px; }
   .hd_header_top .hd_right {
     float: right; }
-<<<<<<< HEAD
-<<<<<<< HEAD:test/cy/yhd/css/yhdcss/yhd.css
     .hd_header_top .hd_right .hd_r_logReg a {
       color: #AAA; }
       .hd_header_top .hd_right .hd_r_logReg a + a:hover {
@@ -326,10 +324,6 @@ a {
               right: 0;
               width: 20px;
               height: 20px; }
-=======
->>>>>>> aa65262b635c180f84e78fb74d1c20ffb9d49c90:test/cy/yhd/css/yhd.css
-=======
->>>>>>> a5d83a073e239da58a7baa43286249437b77f92a
     .hd_header_top .hd_right .hd_r_l {
       padding: 0 10px; }
     .hd_header_top .hd_right .hd_myOrder .iconfont {

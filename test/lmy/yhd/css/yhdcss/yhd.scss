@@ -297,6 +297,7 @@ div,span,a,i,p,img {
             }
             .hd-user-privilege{
                 position: absolute;
+                z-index: 100;
                 top: 29px;
                 left: -1px;
                 display: none; 
@@ -363,6 +364,11 @@ div,span,a,i,p,img {
                             transform: translateX(-50%);
                             #{$bgc}:#fff;
                             padding: 0 10px;
+                            i{
+                                font-style: normal;
+                                vertical-align: bottom;
+                                margin: 0 3px;
+                            }
                         }
                     }
                     .item{
@@ -995,6 +1001,7 @@ div,span,a,i,p,img {
                         background: url(../../img/imgs/vip/card-bg.png) no-repeat;
                         background-size: 100% 100%;
                         box-shadow: 0 0 35px -10px #a2a2a2;
+                        transition: all .3s;
                         i{
                             display: block;
                             width: 60px;
@@ -1008,12 +1015,12 @@ div,span,a,i,p,img {
                             text-align: center;
                             padding: 10% 0 10px 0;
                             font-size: 14px;
-                            span{
+                            span:first-child{
                                 display: block;
                                 line-height: 16px;
                                 font-weight: bold;
                             }
-                            span:last-child{
+                            .not-get{
                                 #{$bgc}:#a2a2a2;
                                 color: #fff;
                                 display: inline-block;
@@ -1023,6 +1030,18 @@ div,span,a,i,p,img {
                                 padding: 2px 20px;
                                 font-size: 12px;
                                 font-weight: normal;
+                            }
+                            .get{
+                                position: absolute;
+                                #{$bgc}:#fff;
+                                color: #666;
+                                display: inline-block;
+                                border: 1px solid #a2a2a2;
+                                border-radius: 15px;
+                                margin-top: 10px;
+                                font-size: 12px;
+                                font-weight: normal;
+                                display: none;
                             }
                         }
                         .descri{
@@ -1041,36 +1060,36 @@ div,span,a,i,p,img {
                             }
                         }
                     }
-                    li:nth-child(1){
+                    .card-1{
                         left: 259px;
                         z-index: 20;
                     }
-                    li:nth-child(2){
+                    .card-2{
                         left: 555px;
                         z-index: 16;
                         transform: scale(0.93);
                     }
-                    li:nth-child(3){
+                    .card-3{
                         left: 610px;
                         z-index: 12;
                         transform: scale(0.8);
                     }
-                    li:nth-child(4){
+                    .card-4{
                         left: 370px;
                         z-index: 12;
                         transform: scale(0.8);
                     }
-                    li:nth-child(5){
+                    .card-5{
                         left: 130px;
                         z-index: 12;
                         transform: scale(0.8);
                     }
-                    li:nth-child(6){
+                    .card-6{
                         left: -110px;
                         z-index: 12;
                         transform: scale(0.8);
                     }
-                    li:nth-child(7){
+                    .card-7{
                         left: -40px;
                         z-index: 16;
                         transform: scale(0.93);

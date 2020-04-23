@@ -16,7 +16,7 @@ arr.shift()
 // ajax获取城市信息
 function getCity() {
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://localhost:8081/city.php', true);
+    xhr.open('GET', 'http://localhost:8080/test/test/lmy/yhd/city.php', true);
     xhr.send();
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
@@ -239,7 +239,7 @@ window.onscroll = function () {
 function getGoods(times = 0) {
     
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://localhost:8081/goods.php?page=' + times, true);
+    xhr.open('GET', 'http://localhost:8080/test/test/lmy/yhd/goods.php?page=' + times, true);
     xhr.send();
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {

@@ -5,6 +5,7 @@ var city = document.getElementById("city");
 var block = document.getElementsByClassName("hd_city_sel")[0];
 var cTxt = document.getElementById("cityText");
 var lett = document.getElementById("letter");
+var vipCard = document.getElementById("swi-card");
 var ele = lett.children;
 var cityList = [];
 var arr = [];
@@ -15,7 +16,7 @@ for (var a = 0; a < ele.length; a++) {
 arr.shift()
 // ajax获取城市信息
 var xhr = new XMLHttpRequest();
-xhr.open('GET', 'http://localhost:8081/city.php', true);
+xhr.open('GET', 'http://localhost:8080/test/test/lmy/yhd/city.php', true);
 xhr.send();
 xhr.onreadystatechange = function () {
     if (xhr.readyState == 4 && xhr.status == 200) {
@@ -62,8 +63,8 @@ city.onclick = function () {
     city.parentElement.style.borderRight = "1px solid #dbdbdb";
     city.previousElementSibling.style.display = "block";
     event.stopPropagation();
-    window.addEventListener("click", function() {
-        if(!block.contains(event.target)){
+    window.addEventListener("click", function () {
+        if (!block.contains(event.target)) {
             close()
         }
     }, false)
@@ -134,68 +135,174 @@ opt.onclick = function () {
 }
 
 // 登录显示用户名
-var userInfo=document.getElementsByClassName("login-txt")[0].children;
-var userName=sessionStorage.getItem("userName");
-if(userName){
-    userInfo[0].parentElement.previousElementSibling.style.display="none";
-    userInfo[0].parentElement.style.display="block";
-    userInfo[1].innerHTML=userName;
-    userInfo[3].children[0].children[1].innerHTML=userName;
-}else{
-    userInfo[0].parentElement.previousElementSibling.style.display="block";
-    userInfo[0].parentElement.style.display="none";
+sessionStorage.userName = "李四";
+var userInfo = document.getElementsByClassName("login-txt")[0].children;
+var userName = sessionStorage.getItem("userName");
+var userName1 = document.getElementsByClassName("userName")[0];
+var loginInfo = document.getElementsByClassName("vip-login")[0];
+var big = document.getElementById("big").children;
+var font = document.getElementById("font").children;
+
+if (userName) {
+    // 查询用户等级
+    // var userLv=0;
+    function getLv() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "http://localhost:8080/test/test/lmy/yhd/user.php", true);
+        xhr.send();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                var data = JSON.parse(xhr.responseText);
+                for(var i=0;i<data.length;i++){
+                    if(data[i].MemberName==userName){
+                        var userLv=data[i].level;
+                        var lvList=[3,3,5,6,7,7];
+                        console.log(userLv)
+                        for(var j=0;j<lvList[userLv-1];j++){
+                            big[userLv-1].onclick();
+                            for(var k=0;k<7;k++){
+                                if(vipCard.children[k].dataset.lv==j+1){
+                                    vipCard.children[k].style="background:url(./img/imgs/vip/get-bg.jpg) no-repeat;background-size: 100% 100%;";
+                                    vipCard.children[k].children[1].children[1].style.display="none";
+                                    vipCard.children[k].children[1].children[2].style.display="block";
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    getLv();
+    userInfo[0].parentElement.previousElementSibling.style.display = "none";
+    userInfo[0].parentElement.style.display = "block";
+    userInfo[1].innerHTML = userName;
+    userInfo[3].children[0].children[1].innerHTML = userName;
+    loginInfo.style.display = "block";
+    loginInfo.nextElementSibling.style.display = "none";
+    userName1.children[0].innerHTML = userName;
+
+} else {
+    userInfo[0].parentElement.previousElementSibling.style.display = "block";
+    userInfo[0].parentElement.style.display = "none";
+    loginInfo.style.display = "none";
+    loginInfo.nextElementSibling.style.display = "block";
 }
 function exitUser() {
-    userInfo[0].parentElement.style.display="none";
-    userInfo[0].parentElement.previousElementSibling.style.display="block";
+    userInfo[0].parentElement.style.display = "none";
+    userInfo[0].parentElement.previousElementSibling.style.display = "block";
+    loginInfo.style.display = "none";
+    loginInfo.nextElementSibling.style.display = "block";
     sessionStorage.removeItem("userName");
 }
 
 // 点击放大
-var big=document.getElementById("big").children;
-var font=document.getElementById("font").children;
-for(var i=0;i<big.length;i++){
-    big[i].className="small";
+
+for (var i = 0; i < big.length; i++) {
+    big[i].className = "small";
     big[0].classList.add("big");
-    big[i].index=i;
-    big[i].onclick=function() {
-        for(var j=0;j<big.length;j++){
+    big[i].index = i;
+    big[i].onclick = function () {
+        for (var j = 0; j < big.length; j++) {
             big[j].classList.remove("big")
         }
         this.classList.add("big");
-        if(this.index==0){
-            for(var k=0;k<3;k++){
-                font[k].children[0].className="col";
-            } 
-            for(var k=6;k>=3;k--){
-                font[k].children[0].className="";
-            } 
+        if (this.index == 0) {
+            for (var k = 0; k < 3; k++) {
+                font[k].children[0].className = "col";
+            }
+            for (var k = 6; k >= 3; k--) {
+                font[k].children[0].className = "";
+            }
         }
-        if(this.index==1){
-            for(var k=0;k<3;k++){
-                font[k].children[0].className="purple";
-            } 
-            for(var k=6;k>=3;k--){
-                font[k].children[0].className="";
-            } 
+        if (this.index == 1) {
+            for (var k = 0; k < 3; k++) {
+                font[k].children[0].className = "purple";
+            }
+            for (var k = 6; k >= 3; k--) {
+                font[k].children[0].className = "";
+            }
         }
-        if(this.index==2){
-            for(var k=0;k<5;k++){
-                font[k].children[0].className="green";
-            } 
-            font[5].children[0].className="";
-            font[6].children[0].className="";
+        if (this.index == 2) {
+            for (var k = 0; k < 5; k++) {
+                font[k].children[0].className = "green";
+            }
+            font[5].children[0].className = "";
+            font[6].children[0].className = "";
         }
-        if(this.index==3){
-            for(var k=0;k<6;k++){
-                font[k].children[0].className="modena";
-            } 
-            font[6].children[0].className="";
+        if (this.index == 3) {
+            for (var k = 0; k < 6; k++) {
+                font[k].children[0].className = "modena";
+            }
+            font[6].children[0].className = "";
         }
-        if(this.index==4){
-            for(var k=0;k<font.length;k++){
-                font[k].children[0].className="col";
-            } 
+        if (this.index == 4) {
+            for (var k = 0; k < font.length; k++) {
+                font[k].children[0].className = "col";
+            }
         }
     }
+}
+
+
+// 特权轮播
+
+var swiIntro = document.getElementById("swi-intro1").children;
+var swiCard = vipCard.children;
+for (var i = 0; i < swiIntro.length; i++) {
+    swiIntro[i].onclick = function () {
+        for (var j = 0; j < swiIntro.length; j++) {
+            swiIntro[j].className = "";
+        }
+        this.parentElement.style.left = -94 * this.dataset.index + "px"
+        for (var k = 2; k < 9; k++) {
+            if (swiIntro[k].dataset.index == this.dataset.index) {
+                swiIntro[k].className = "active";
+            }
+
+        }
+        swiCard[this.dataset.index].onclick()
+    }
+}
+var arrCard = [1, 2, 3, 4, 5, 6, 7]
+var j = 0
+for (var a = 0; a < swiCard.length; a++) {
+    swiCard[a].index = a;
+    swiCard[a].onclick = function () {
+        j = this.index
+        var arrCard1 = []
+        var arrCard2 = []
+        for (var m = 0; m < 7 - this.index; m++) {
+            arrCard1.push(arrCard[m])
+        }
+        for (var n = 0; n < 7; n++) {
+            if (arrCard1.indexOf(arrCard[n]) == -1) {
+                arrCard2.push(arrCard[n])
+            }
+        }
+        arrCard1 = [...arrCard2, ...arrCard1]
+        for (var b = 0; b < arrCard1.length; b++) {
+            swiCard[b].className = "card-" + arrCard1[b]
+        }
+        swiIntro[this.index + 2].onclick()
+    }
+}
+// 自动轮播
+setInterval(function() {
+    cardNext();
+},5000)
+// 点击按钮轮播
+function cardPre() {
+    j--
+    if (j < 0) {
+        j = 6
+    }
+    swiCard[j].onclick()
+}
+function cardNext() {
+    j++
+    if (j > 6) {
+        j = 0
+    }
+    swiCard[j].onclick()
 }

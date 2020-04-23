@@ -229,6 +229,7 @@ div, span, .hd_header_top .hd_place .none .hd_hot_city div, .hd_header_top .hd_p
           display: block; }
       .hd_header_top .hd_right .login-txt .hd-user-privilege {
         position: absolute;
+        z-index: 100;
         top: 29px;
         left: -1px;
         display: none;
@@ -286,6 +287,10 @@ div, span, .hd_header_top .hd_place .none .hd_hot_city div, .hd_header_top .hd_p
               transform: translateX(-50%);
               background-color: #fff;
               padding: 0 10px; }
+              .hd_header_top .hd_right .login-txt .hd-user-privilege .privilege-bot p span i, .hd_header_top .hd_right .login-txt .hd-user-privilege .privilege-bot p .hd_place .none .hd_hot_city div i, .hd_header_top .hd_place .none .hd_hot_city .hd_right .login-txt .hd-user-privilege .privilege-bot p div i, .hd_header_top .hd_right .login-txt .hd-user-privilege .privilege-bot p .hd_place .none .hd_letter_search div i, .hd_header_top .hd_place .none .hd_letter_search .hd_right .login-txt .hd-user-privilege .privilege-bot p div i {
+                font-style: normal;
+                vertical-align: bottom;
+                margin: 0 3px; }
           .hd_header_top .hd_right .login-txt .hd-user-privilege .privilege-bot .item {
             width: 260px;
             height: 85px;
@@ -772,7 +777,8 @@ div, span, .hd_header_top .hd_place .none .hd_hot_city div, .hd_header_top .hd_p
         height: 350px;
         background: url(../../img/imgs/vip/card-bg.png) no-repeat;
         background-size: 100% 100%;
-        box-shadow: 0 0 35px -10px #a2a2a2; }
+        box-shadow: 0 0 35px -10px #a2a2a2;
+        transition: all .3s; }
         .content .club-intro .club-swiper .intro-card ul li i {
           display: block;
           width: 60px;
@@ -785,11 +791,11 @@ div, span, .hd_header_top .hd_place .none .hd_hot_city div, .hd_header_top .hd_p
           text-align: center;
           padding: 10% 0 10px 0;
           font-size: 14px; }
-          .content .club-intro .club-swiper .intro-card ul li p span, .content .club-intro .club-swiper .intro-card ul li p .hd_header_top .hd_place .none .hd_hot_city div, .hd_header_top .hd_place .none .hd_hot_city .content .club-intro .club-swiper .intro-card ul li p div, .content .club-intro .club-swiper .intro-card ul li p .hd_header_top .hd_place .none .hd_letter_search div, .hd_header_top .hd_place .none .hd_letter_search .content .club-intro .club-swiper .intro-card ul li p div {
+          .content .club-intro .club-swiper .intro-card ul li p span:first-child, .content .club-intro .club-swiper .intro-card ul li p .hd_header_top .hd_place .none .hd_hot_city div:first-child, .hd_header_top .hd_place .none .hd_hot_city .content .club-intro .club-swiper .intro-card ul li p div:first-child, .content .club-intro .club-swiper .intro-card ul li p .hd_header_top .hd_place .none .hd_letter_search div:first-child, .hd_header_top .hd_place .none .hd_letter_search .content .club-intro .club-swiper .intro-card ul li p div:first-child {
             display: block;
             line-height: 16px;
             font-weight: bold; }
-          .content .club-intro .club-swiper .intro-card ul li p span:last-child, .content .club-intro .club-swiper .intro-card ul li p .hd_header_top .hd_place .none .hd_hot_city div:last-child, .hd_header_top .hd_place .none .hd_hot_city .content .club-intro .club-swiper .intro-card ul li p div:last-child, .content .club-intro .club-swiper .intro-card ul li p .hd_header_top .hd_place .none .hd_letter_search div:last-child, .hd_header_top .hd_place .none .hd_letter_search .content .club-intro .club-swiper .intro-card ul li p div:last-child {
+          .content .club-intro .club-swiper .intro-card ul li p .not-get {
             background-color: #a2a2a2;
             color: #fff;
             display: inline-block;
@@ -799,6 +805,17 @@ div, span, .hd_header_top .hd_place .none .hd_hot_city div, .hd_header_top .hd_p
             padding: 2px 20px;
             font-size: 12px;
             font-weight: normal; }
+          .content .club-intro .club-swiper .intro-card ul li p .get {
+            position: absolute;
+            background-color: #fff;
+            color: #666;
+            display: inline-block;
+            border: 1px solid #a2a2a2;
+            border-radius: 15px;
+            margin-top: 10px;
+            font-size: 12px;
+            font-weight: normal;
+            display: none; }
         .content .club-intro .club-swiper .intro-card ul li .descri {
           padding: 5% 12% 4%;
           font-size: 12px;
@@ -811,30 +828,30 @@ div, span, .hd_header_top .hd_place .none .hd_hot_city div, .hd_header_top .hd_p
             padding: 0; }
           .content .club-intro .club-swiper .intro-card ul li .descri a {
             color: #be9d74; }
-      .content .club-intro .club-swiper .intro-card ul li:nth-child(1) {
+      .content .club-intro .club-swiper .intro-card ul .card-1 {
         left: 259px;
         z-index: 20; }
-      .content .club-intro .club-swiper .intro-card ul li:nth-child(2) {
+      .content .club-intro .club-swiper .intro-card ul .card-2 {
         left: 555px;
         z-index: 16;
         transform: scale(0.93); }
-      .content .club-intro .club-swiper .intro-card ul li:nth-child(3) {
+      .content .club-intro .club-swiper .intro-card ul .card-3 {
         left: 610px;
         z-index: 12;
         transform: scale(0.8); }
-      .content .club-intro .club-swiper .intro-card ul li:nth-child(4) {
+      .content .club-intro .club-swiper .intro-card ul .card-4 {
         left: 370px;
         z-index: 12;
         transform: scale(0.8); }
-      .content .club-intro .club-swiper .intro-card ul li:nth-child(5) {
+      .content .club-intro .club-swiper .intro-card ul .card-5 {
         left: 130px;
         z-index: 12;
         transform: scale(0.8); }
-      .content .club-intro .club-swiper .intro-card ul li:nth-child(6) {
+      .content .club-intro .club-swiper .intro-card ul .card-6 {
         left: -110px;
         z-index: 12;
         transform: scale(0.8); }
-      .content .club-intro .club-swiper .intro-card ul li:nth-child(7) {
+      .content .club-intro .club-swiper .intro-card ul .card-7 {
         left: -40px;
         z-index: 16;
         transform: scale(0.93); }
