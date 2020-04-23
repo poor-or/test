@@ -15,7 +15,7 @@ for (var a = 0; a < ele.length; a++) {
 arr.shift()
 // ajax获取城市信息
 var xhr = new XMLHttpRequest();
-xhr.open('GET', 'http://localhost:8081/test/zxy/yhd/city.php', true);
+xhr.open('GET', 'http://localhost:8081/test/zxy/yhd/php/city.php', true);
 xhr.send();
 xhr.onreadystatechange = function () {
     if (xhr.readyState == 4 && xhr.status == 200) {

@@ -5,58 +5,221 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-        <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <link rel="stylesheet" href="./css/swiper/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="./css/cart.css">
 </head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    li {
+
+        list-style: none;
+        /* height: 193px; */
+        float: left;
+        width: 150px;
+        /* margin-right: 72px; */
+        margin-right: 58px;
+        margin-bottom: 25px;
+    }
+
+    li .goods {
+        margin-bottom: 20px;
+    }
+
+    /* .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;} */
+    .swiper-slide {
+        border: 1px solid red;
+    }
+
+    .like-prod {
+        margin: 50px auto;
+    }
+</style>
 
 <body>
-    <style>
-        .box {
-            height: 200px;
-            width: 100%;
-            background: #ccc;
-            margin: 10px 0;
-        }
 
-        .location {
-            position: fixed;
-            right: 0;
-            bottom: 10px;
-            width: 20px;
-            background: #FFC;
-            padding: 5px;
-            cursor: pointer;
-            color: #003 ;
-        }
-
-       
-    </style>
     </head>
 
     <body>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box a">产品介绍产品介绍产品介绍产品介绍产品介绍产品介绍产品介绍产品介绍产品介绍产品介绍产品介绍产品介绍产品介绍</div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box bottom"></div>
-
-        <div class="location">
-            <p class="scroll_top">返回顶部</p>
-            <p class="scroll_a">产品介绍</p>
-            <p class="scroll_bottom">滑到底部</p>
+        <div class="like-prod">
+            <div class="goods-box">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <ul>
+                                <li>
+                                    <div class="goods">
+                                        <div class="goods-img">
+                                            <a href="#" target="_blank">
+                                                <img src="./img/1.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="goods-text">
+                                            <p class="p-pirce">
+                                                ￥
+                                                <b>220</b>
+                                            </p>
+                                            <p class="p-name">
+                                                <a href="#" target="_blank">纽荃星（infatrini）中文版
+                                                    特殊医学用途婴儿配方食品早产/低出生体重婴儿配方400g 德国原装进口</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="goods">
+                                        <div class="goods-img">
+                                            <a href="#" target="_blank">
+                                                <img src="./img/1.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="goods-text">
+                                            <p class="p-pirce">
+                                                ￥
+                                                <b>220</b>
+                                            </p>
+                                            <p class="p-name">
+                                                <a href="#" target="_blank">纽荃星（infatrini）中文版
+                                                    特殊医学用途婴儿配方食品早产/低出生体重婴儿配方400g 德国原装进口</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="goods">
+                                        <div class="goods-img">
+                                            <a href="#" target="_blank">
+                                                <img src="./img/1.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="goods-text">
+                                            <p class="p-pirce">
+                                                ￥
+                                                <b>220</b>
+                                            </p>
+                                            <p class="p-name">
+                                                <a href="#" target="_blank">纽荃星（infatrini）中文版
+                                                    特殊医学用途婴儿配方食品早产/低出生体重婴儿配方400g 德国原装进口</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="goods">
+                                        <div class="goods-img">
+                                            <a href="#" target="_blank">
+                                                <img src="./img/1.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="goods-text">
+                                            <p class="p-pirce">
+                                                ￥
+                                                <b>220</b>
+                                            </p>
+                                            <p class="p-name">
+                                                <a href="#" target="_blank">纽荃星（infatrini）中文版
+                                                    特殊医学用途婴儿配方食品早产/低出生体重婴儿配方400g 德国原装进口</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="goods">
+                                        <div class="goods-img">
+                                            <a href="#" target="_blank">
+                                                <img src="./img/1.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="goods-text">
+                                            <p class="p-pirce">
+                                                ￥
+                                                <b>220</b>
+                                            </p>
+                                            <p class="p-name">
+                                                <a href="#" target="_blank">纽荃星（infatrini）中文版
+                                                    特殊医学用途婴儿配方食品早产/低出生体重婴儿配方400g 德国原装进口</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="goods">
+                                        <div class="goods-img">
+                                            <a href="#" target="_blank">
+                                                <img src="./img/1.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="goods-text">
+                                            <p class="p-pirce">
+                                                ￥
+                                                <b>220</b>
+                                            </p>
+                                            <p class="p-name">
+                                                <a href="#" target="_blank">纽荃星（infatrini）中文版
+                                                    特殊医学用途婴儿配方食品早产/低出生体重婴儿配方400g 德国原装进口</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="goods">
+                                        <div class="goods-img">
+                                            <a href="#" target="_blank">
+                                                <img src="./img/1.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="goods-text">
+                                            <p class="p-pirce">
+                                                ￥
+                                                <b>220</b>
+                                            </p>
+                                            <p class="p-name">
+                                                <a href="#" target="_blank">纽荃星（infatrini）中文版
+                                                    特殊医学用途婴儿配方食品早产/低出生体重婴儿配方400g 德国原装进口</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 4</div>
+                    </div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
         </div>
-        <script type="text/javascript">
-            jQuery(document).ready(function ($) {
-                $('.scroll_top').click(function () { $('html,body').animate({ scrollTop: '0px' }, 800); });
-                $('.scroll_a').click(function () { $('html,body').animate({ scrollTop: $('.a').offset().top }, 800); });
-                $('.scroll_bottom').click(function () { $('html,body').animate({ scrollTop: $('.bottom').offset().top }, 800); });
+        <!-- Swiper JS -->
+        <script src="./css/swiper/swiper.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable :true,
+                },
             });
         </script>
-
     </body>
 
 </html>

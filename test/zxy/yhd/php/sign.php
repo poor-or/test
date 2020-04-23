@@ -7,17 +7,15 @@
     $servername="localhost";
     $name="root";
     $password="123456";
-    $mysql="sign";
+    $mysql="project";
   //创建连接
   $connect=new mysqli($servername,$name,$password,$mysql);
   //   添加数据
-  $data="insert into information values('$_GET[user]','$_GET[phone]','$_GET[psd]');";
+  $data="insert into tb_member (MemberName,MobileTel,MemberPwd)values('$_GET[user]','$_GET[phone]','$_GET[psd]');";
   $result=$connect->query($data);
      //  查询数据
-    $select="select * from information where username='$_GET[user]';";
+    $select="select * from tb_member where MemberName='$_GET[user]';";
     $cont=$connect->query($select);
-    print_r($cont);
-    print_r($cont->num_rows);
-    echo "<script>sessionStorage.setItem('data','print_r($cont->num_rows)')</script>"
-
+    $number=$cont->num_rows;
+   //  echo "<script>sessionStorage.setItem('data','print_r($cont->num_rows)')</script>"
 ?>

@@ -1,8 +1,9 @@
+body{
+    list-style: none;
+    background-color: #f8f8f8;
+}
 .cart-content{
     background: url(../img/cart-bg.png)no-repeat top center fixed;
-}
-.wrap{
-    width: 980px !important;
 }
 .cart-heard{
     height: 60px;
@@ -26,4 +27,311 @@
     height: 40px;
     margin-right: 10px;
     background: url(../img/logo_txt.png) no-repeat 0 20px;
+}
+/* 城市选择 */
+.area{
+    float: left;
+    height: 26px;
+    width: 235px;
+    padding-top: 18px;
+    padding-left: 10px;
+    line-height: 26px;
+}
+.area-text{
+    float: left;
+}
+.area-select{
+    float: left;
+    position: relative;
+    top: 0;
+}
+.address{
+    position: absolute;
+    z-index: 1009;
+    height: 22px;
+    line-height: 22px;
+    padding: 2px 38px 2px 11px;
+    border: 1px solid #eceaea;
+    border-radius: 5px;
+    background: #fcfbfb;
+    cursor: pointer;
+}
+.select{
+    position: relative;
+    z-index: 1;
+    border-bottom:none ;
+}
+.address-text{
+    color: #666;
+    white-space: nowrap;
+}
+.address-text i{
+    margin: 0 9px;
+}
+.address-btn{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 12px;
+    height: 6px;
+    background: url(../img/cart-sprite.png) -60px -25px;
+    transition: transform .2s;
+}
+/* 城市隐藏 */
+.tab-box{
+    display: none;
+    position: absolute;
+    top: -8px;
+    left: -9px;
+    padding: 5px 10px;
+    width: 335px;
+    border: 1px solid #ccc;
+    background: #fff;
+    z-index: 2;
+}
+.close{
+    transition: transform 0.2s;
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    width: 13px;
+    height: 13px;
+    background: url(../img/cart-sprite.png) -66px -11px;
+}
+.close:hover{
+    transform: rotate(180deg);
+}
+.tabs{
+    border-bottom: 1px solid #e5e5e5;
+    height: 32px;
+}
+.tabs span{
+    position: relative;
+    float: left;
+    padding: 0px 10px;
+    height: 31px;
+    line-height: 31px;
+    border: 1px solid #e5e5e5;
+    border-bottom: none;
+    margin-left: -1px;
+    background: #f7f7f7;
+    cursor: pointer;
+}
+.area-box{
+    padding-top: 10px;
+}
+/* 右侧输入框 */
+.search{
+    float: right;
+    width: 260px;
+    height: 20px;
+    padding: 5px 10px;
+    margin: 15px 0;
+    border: 1px solid #eceaea;
+    border-radius: 5px;
+    background: #fcfbfb;
+}
+.search input{
+    float: left;
+    width: 230px;
+    height: 20px;
+    border: none;
+    background: #fcfbfb;
+    color: #666;
+    outline: none;
+}
+.search .search-btn{
+    font-size: 18px;
+    /* display: inline-block; */
+    float: right;
+    width: 30px;
+    height: 20px;
+    text-align: center;
+    color: #aaa;
+    overflow: hidden;
+    line-height: 20px;
+}
+/* 购物车为空时显示 */
+.cart-empty{
+    background: #f8f8f8;
+    padding: 50px 0;
+}
+.no-pro{
+    width: 550px;
+    height: 300px;
+    margin: 0 auto;
+}
+.house{
+    float: left;
+}
+.house img{
+    width: 300px;
+    height: 300px;
+}
+.inof{
+    float: left;
+    /* display: inline-block; */
+    vertical-align: middle;
+    text-align: left;
+    padding-top: 120px;
+}
+.inof p{
+    padding-left: 5px;
+    font-size: 14px;
+    font-family: 'sumhei';
+    line-height: 24px;
+}
+.shopping-btn{
+    padding-top: 25px;
+    text-align: left;
+}
+.shopping-btn a{
+    display: inline-block;
+    width: 75px;
+    height: 26px;
+    margin: 0 5px;
+    border: 1px solid #ff5e5e;
+    border-radius: 2px;
+    background-color: #ff6c6c;
+    color: #fff;
+    line-height: 26px;
+    text-align: center;
+}
+.shopping-btn a:hover{
+    background-color: #ff5e5e;
+}
+/* 猜你喜欢 */
+.youlike{
+    width: 1200px;
+    margin: 20px auto 0;
+}
+.top-title{
+    text-align: center;
+    font-size: 16px;
+    height: 40px;
+    padding-right: 10px;
+    line-height: 40px;
+    color: #ff9841;
+}
+.youlike-top p{
+    line-height: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    color: #999;
+}
+/*箭头 */
+.dian-btn{
+    width: 30px;
+    height: 44px;
+    margin-top: -22px;
+    line-height: 44px;
+    text-align: center;
+    color: #cdcdcd;
+}
+.left-arrow{
+    position: absolute;
+    top: 50%;
+    overflow: hidden;
+    z-index: 8;
+    left: 14px;
+}
+.right-arrow{
+    position: absolute;
+    top: 50%;
+    overflow: hidden;
+    z-index: 8;
+    right: 14px;
+}
+.left-arrow i{
+     color: #e5e5e5; 
+    cursor: default;
+}
+.dian-btn i{
+    font-size: 24px;
+    margin-left: -6px;
+}
+/* 小圆点 */
+.cire{
+    position: absolute;
+    left: 0px;
+    bottom: 16px;
+    z-index: 9;
+    width: 100%;
+    height: 20px;
+    margin: 0 auto;
+    text-align: center;
+}
+.cire span{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    text-align: center;
+    background-color: #e5e5e5;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: all 0.4s ease-in;
+}
+.cire .cire-active{
+    width: 18px;
+    background-color: #ff5e5e;
+}
+/* 猜你喜欢商品 */
+
+.like-prod{
+    position: relative;
+    /* padding: 40px 80px 10px; */
+    padding: 41px 40px 10px 80px;
+    margin-bottom: 50px;
+    width: 1040px;
+    border: 1px solid #f0f0f0;
+    border-radius: 2px;
+    background: #fff;
+    overflow: hidden;
+}
+.goods-box{
+    position: relative;
+    width: 1040px;
+    overflow: hidden;
+}
+.goods-list{
+    width: 4440px;
+    margin-left: 0px;
+}
+.goods-list li{
+    list-style: none;
+    /* height: 193px; */
+    float: left;
+    width: 150px;
+    /* margin-right: 72px; */
+    margin-right: 58px;
+    margin-bottom: 25px;
+}
+.goods-list  li .goods{
+    margin-bottom: 20px;
+}
+.goods-img{
+    width: 150px;
+    height: 150px;
+}
+.goods-img img{
+    width: 150px;
+    height: 150px;
+}
+.goods-text{
+    margin: 8px 0;
+    text-align: center;
+}
+.goods-text p{
+    width: 150px;
+    height: 22px;
+    line-height: 22px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #ff5e5e;
+}
+.p-pirce b{
+    font-family: 'Tahoma';
+    font-size: 13px;
 }

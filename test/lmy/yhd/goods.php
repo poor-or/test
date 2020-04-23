@@ -9,5 +9,4 @@
         $lists[]=$list;      
     }
     echo json_encode($lists);
-    $con->close();
 ?>

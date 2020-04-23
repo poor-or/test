@@ -41,7 +41,7 @@ $(".back").click(function () {
 function sell(num){
     $.ajax({
         type: "GET",
-        url: "http://localhost:8081/test/zxy/yhd/list.php?page="+num,
+        url: "http://localhost:8081/test/zxy/yhd/php/list.php?page="+num,
         data: {},
         dataType: "json",
         async: true,
@@ -83,7 +83,7 @@ sell(88);
  function comming(num){
     $.ajax({
                 type:"GET",
-                url:"http://localhost:8081/test/zxy/yhd/list.php?page="+num,
+                url:"http://localhost:8081/test/zxy/yhd/php/list.php?page="+num,
                 data:{ },
                 dataType:"json",
                 async:true,
