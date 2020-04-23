@@ -1,0 +1,29 @@
+.cart-content{
+    background: url(../img/cart-bg.png)no-repeat top center fixed;
+}
+.wrap{
+    width: 980px !important;
+}
+.cart-heard{
+    height: 60px;
+    padding-top: 10px;
+}
+.cart-heard h1{
+    float: left;
+}
+.logo{
+    float: left;
+    padding-top: 17px;
+    width: 40px;
+    height: 28px;
+    margin-right: 10px;
+    background: url(../img/cart-logo.png)no-repeat bottom;
+}
+.logo-text{
+    float: left;
+    padding-top: 8px;
+    width: 73px;
+    height: 40px;
+    margin-right: 10px;
+    background: url(../img/logo_txt.png) no-repeat 0 20px;
+}
