@@ -600,15 +600,107 @@ a{
             }
         }    
     }
+    // 中间
     .hd_cm_wrap{
-        border-bottom: 2px solid #ff4040;
+        border-bottom: 1px solid #ff4040;
         position: relative;
+        
         .hd_cm_nav{
-            height: 38px;         
+            height: 35px;     
+            li{
+                float: left;
+                list-style: none;
+                width: 86px;
+                height: 35px;
+                font-size: 14px;
+                text-align: center;
+                line-height: 35px;  
+                z-index: 100; 
+                a{
+                    color: #333;
+                }           
+            }
+            .hd-red{
+                background-color: red;
+                
+            }
+            .hd-white{
+                color: white;
+            }
+            .hd-duo{
+                display: inline-block;
+                width:86px;
+                height: 35px;
+                font-size: 14px;
+                text-align: center;
+                line-height: 35px;
+                
+                span{
+                    font-size: 10px;
+                    margin-left: 5px;
+                }
             }
         }
-        
-// 中间
+        .vouchers{
+            display: block;
+            float: right;
+            margin-right: 12px;
+            color: red;
+            line-height: 35px;
+            
+            i{
+                vertical-align: middle;
+            }
+        }   
+    }
+//   主题区域 
+    .ticket_coupon_floor{
+        background-color: #f0f0f0;
+        .coupon_center{
+            padding-top: 14px;
+        }
+        .floor_more{
+            height: 40px;
+            margin-top: 50px;  
+             text-align: center;    
+        }
+    } 
+    .coupon_center_page{
+        padding-top: 20px;
+        background-color: #f0f0f0;
+    }
+    .page_num{
+        float: right;
+        a{
+            display: inline-block;
+            width: 38px;
+            height: 38px;
+            margin-left: 10px;
+            border: 1px solid #fff;
+            background-color: #fff;
+            text-align: center;
+            line-height: 38px;
+        }
+        .prev_page,.next_page{
+            width: 78px;
+        }
+    }   
+    .coupon_center_rules{
+        padding: 34px 0 50px;
+        background-color: #f0f0f0;
+        color: #666;
+        // font-family: "microsoft yahei";
+        font-size: 12px;
+        h3{
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 14px;
+        }
+        p{
+            padding-top: 14px;
+            line-height: 16px;
+        }
+    }
 
 
 // 底部

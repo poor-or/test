@@ -462,10 +462,83 @@ a {
       font-size: 16px; }
 
 .hd_cm_wrap {
-  border-bottom: 2px solid #ff4040;
+  border-bottom: 1px solid #ff4040;
   position: relative; }
   .hd_cm_wrap .hd_cm_nav {
-    height: 38px; }
+    height: 35px; }
+    .hd_cm_wrap .hd_cm_nav li {
+      float: left;
+      list-style: none;
+      width: 86px;
+      height: 35px;
+      font-size: 14px;
+      text-align: center;
+      line-height: 35px;
+      z-index: 100; }
+      .hd_cm_wrap .hd_cm_nav li a {
+        color: #333; }
+    .hd_cm_wrap .hd_cm_nav .hd-red {
+      background-color: red; }
+    .hd_cm_wrap .hd_cm_nav .hd-white {
+      color: white; }
+    .hd_cm_wrap .hd_cm_nav .hd-duo {
+      display: inline-block;
+      width: 86px;
+      height: 35px;
+      font-size: 14px;
+      text-align: center;
+      line-height: 35px; }
+      .hd_cm_wrap .hd_cm_nav .hd-duo span, .hd_cm_wrap .hd_cm_nav .hd-duo .hd_header_top .hd_place .none .hd_hot_city div, .hd_header_top .hd_place .none .hd_hot_city .hd_cm_wrap .hd_cm_nav .hd-duo div, .hd_cm_wrap .hd_cm_nav .hd-duo .hd_header_top .hd_place .none .hd_letter_search div, .hd_header_top .hd_place .none .hd_letter_search .hd_cm_wrap .hd_cm_nav .hd-duo div {
+        font-size: 10px;
+        margin-left: 5px; }
+  .hd_cm_wrap .vouchers {
+    display: block;
+    float: right;
+    margin-right: 12px;
+    color: red;
+    line-height: 35px; }
+    .hd_cm_wrap .vouchers i {
+      vertical-align: middle; }
+
+.ticket_coupon_floor {
+  background-color: #f0f0f0; }
+  .ticket_coupon_floor .coupon_center {
+    padding-top: 14px; }
+  .ticket_coupon_floor .floor_more {
+    height: 40px;
+    margin-top: 50px;
+    text-align: center; }
+
+.coupon_center_page {
+  padding-top: 20px;
+  background-color: #f0f0f0; }
+
+.page_num {
+  float: right; }
+  .page_num a {
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    margin-left: 10px;
+    border: 1px solid #fff;
+    background-color: #fff;
+    text-align: center;
+    line-height: 38px; }
+  .page_num .prev_page, .page_num .next_page {
+    width: 78px; }
+
+.coupon_center_rules {
+  padding: 34px 0 50px;
+  background-color: #f0f0f0;
+  color: #666;
+  font-size: 12px; }
+  .coupon_center_rules h3 {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px; }
+  .coupon_center_rules p {
+    padding-top: 14px;
+    line-height: 16px; }
 
 .ft_top {
   padding: 30px 0;

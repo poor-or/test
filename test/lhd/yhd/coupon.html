@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>话费充值 流量充值-1号充值助中心</title>
+    <title>领券中心</title>
     <link rel="stylesheet" href="./css/coupon.css">
     <link rel="stylesheet" href="../../font/iconfont.css">
 </head>
@@ -181,20 +181,13 @@
                         <button><i class="iconfont icon-sousuo"></i></button>
                     </div>
                     <p>
-                        <a title="咖啡" target="_blank"
-                            href="//search.yhd.com/c0-0/k%25E5%2592%2596%25E5%2595%25A1/">咖啡</a>
-                        <a title="酒精75" target="_blank"
-                            href="//search.yhd.com/c0-0/k%25E9%2585%2592%25E7%25B2%25BE75/">酒精75</a>
-                        <a title="麦片" target="_blank"
-                            href="//search.yhd.com/c0-0/k%25E9%25BA%25A6%25E7%2589%2587/">麦片</a>
-                        <a title="广舒平脚气泡脚" target="_blank"
-                            href="//search.yhd.com/c0-0/k%25E5%25B9%25BF%25E8%2588%2592%25E5%25B9%25B3%25E8%2584%259A%25E6%25B0%2594%25E6%25B3%25A1%25E8%2584%259A/">广舒平脚气泡脚</a>
-                        <a title="衬衫男霁蓝" target="_blank"
-                            href="//search.yhd.com/c0-0/k%25E8%25A1%25AC%25E8%25A1%25AB%25E7%2594%25B7%25E9%259C%2581%25E8%2593%259D/">衬衫男霁蓝</a>
-                        <a title="滴露" target="_blank"
-                            href="//search.yhd.com/c0-0/k%25E6%25BB%25B4%25E9%259C%25B2/">滴露</a>
-                        <a title="大米10kg" target="_blank"
-                            href="//search.yhd.com/c0-0/k%25E5%25A4%25A7%25E7%25B1%25B310kg/">大米10kg</a>
+                        <a title="咖啡" target="_blank" href="#">咖啡</a>
+                        <a title="酒精75" target="_blank" href="#">酒精75</a>
+                        <a title="麦片" target="_blank" href="#">麦片</a>
+                        <a title="广舒平脚气泡脚" target="_blank" href="#">广舒平脚气泡脚</a>
+                        <a title="衬衫男霁蓝" target="_blank" href="#">衬衫男霁蓝</a>
+                        <a title="滴露" target="_blank" href="#">滴露</a>
+                        <a title="大米10kg" target="_blank" href="#">大米10kg</a>
                     </p>
                 </div>
                 <div class="shopping-t">
@@ -205,14 +198,74 @@
                 </div>
             </div>
         </div>
+        <!-- 中间 -->
         <div class="hd_cm_wrap">
             <div class="wrap">
                 <div class="hd_cm_nav clearfix">
-                    
+                    <ul class="app1">
+                        <li class="hd-red"><a href="#" class="hd-white">精选好券</a></li>
+                        <li><a href="#">食品饮料</a></li>
+                        <li><a href="#">美妆个护</a></li>
+                        <li><a href="#">母婴玩具</a></li>
+                        <li><a href="#">活色生鲜</a></li>
+                        <li><a href="#">宠物园艺</a></li>
+                        <li><a href="#">医药保健</a></li>
+                        <li><a href="#">手机数码</a></li>
+                        <li><a href="#">家用电器</a></li>
+                    </ul>
+                    <div class="hd-duo" onclick="duo()"><a href="#">更多分类<span
+                                class="iconfont icon-arrow-down"></span></a></div>
+                    <a href="http://coupon.yhd.com/myCoupon" class="vouchers clearfix">
+                        <i class="iconfont icon-youhuiquan"></i>
+                        <span>我的优惠券</span>
+                    </a>
+                </div>
+                <div class="hd_cm_nav  clearfix" id="hd-md" style="display: none;">
+                    <ul class="app2">
+                        <li><a href="#">图书音像</a></li>
+                        <li><a href="#">家居家纺</a></li>
+                        <li><a href="#">户外运动</a></li>
+                        <li><a href="#">电脑办公</a></li>
+                        <li><a href="#">服饰内衣</a></li>
+                        <li><a href="#">鞋靴箱包</a></li>
+                        <li><a href="#">钟表首饰</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
-       
+        <!-- 主题区域 -->
+        <div class="ticket_coupon_floor">
+            <div class="coupon_center wrap">
+                <ul class="floor_list clearfix">
+                </ul>
+                <div class="floor_more">
+                    <span>到底了，没有更多好券了 </span>
+                </div>
+            </div>
+        </div>
+        <div class="coupon_center_page">
+            <div class="coupon_center_wrap clearfix wrap">
+                <div class="page_num">
+                    <a data-tpa="COUPON_CENTER_FLIP_1" class="prev_page clearfix">
+                        <span>上一页</span>
+                     </a>
+                    <a href="javascript:;" data-tpa="COUPON_CENTER_FLIP_1" class="cur">1</a>
+                    <a href="javascript:;" data-tpa="COUPON_CENTER_FLIP_1" class="cur">2</a>
+                    <a data-tpa="COUPON_CENTER_FLIP_1" href="javascript:;" class="next_page clearfix">
+                        <span>下一页</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="coupon_center_rules">
+            <div class="coupon_center_wrap wrap">
+                <h3>优惠券使用规则：</h3>
+                <p>1、1号店发放的优惠券不适用于下列用户：（1）重复注册：即通过同一个IP或同一台电脑注册的多个账号，或多个账户指定同一收货人；（2）无流量用户：使用任何机器人软件、蜘蛛软件、爬虫软件、刷屏软件或其他非人工方式访问或登录1号店的用户；（3）1号店判断的其他带有任何恶意目的的用户。</p>
+                <p>2、1号店有权对优惠券进行反作弊监察，并对参加用券的用户信息进行排查，若发现存在前述情形的用户，1号店有权不予发券，对于已经发券的，1号店有权予以作废或要求用户返还，对于已经使用优惠券下单的，1号店有权取消订单，用户不得因此要求1号店做出任何补偿或赔偿。</p>
+                <p>3、1号店有权制定和单方面随时修改上述规则，新制定和经修改的规则将在本网站上进行公布，不做逐一通知。新制定和经修改的规则一旦公布则立即生效，且对生效前的用户同样适用。</p>
+            </div>
+        </div>
+
         <!-- 底部 -->
         <footer class="ft_content wrap">
             <!-- 正品保障一行 -->
@@ -330,7 +383,10 @@
             </p>
         </div>
     </div>
+    <script src="./js/jquery.js"></script>
     <script src="./js/yhd.js"></script>
+    <script src="./js/coupon.js"></script>
+
 </body>
 
 </html>
