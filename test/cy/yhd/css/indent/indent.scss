@@ -238,7 +238,19 @@ a{
         float: right;
         position: relative;
         z-index: 999;
-        
+        .hd_r_logReg{
+            a{
+                
+                color: #AAA;
+                &+a:hover{
+                    color: red;
+                }
+            }
+            span,span+a{
+                color: red;
+            }
+            
+        }
         // 登陆后显示
         .login-txt{
             float: left;
@@ -506,7 +518,7 @@ a{
             }
         }
         .iconfont{
-            font-size: 18px;
+            font-size: 24px;
         }
         
         &:hover .none{
@@ -725,13 +737,11 @@ a{
             width: 982px;
             background-color: #fff;
             .bd_centre_right_box{
-                div{
+                span{
                     float: left;
                     padding: 10px 10px;
                     font-size: 16px;
-                    a{
-                        padding-bottom: 10px;
-                    }
+                   
                 p{
                     display: inline-block;
                     padding-left: 15px;
@@ -742,6 +752,9 @@ a{
             }
             .bd_centre_right_block{
                 padding-top: 80px;
+                .right_none{
+                    display: none;
+                }
                 div{
                     float: left;
                     .bd_centre_right_block_img1{
@@ -755,9 +768,7 @@ a{
                 }
 
             }
-            // .right_none{
-            //     display: none;
-            // }
+           
         }
  }
 }

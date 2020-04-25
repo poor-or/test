@@ -5,9 +5,10 @@
   $servername="localhost";
   $name="root";
   $psd="123456";
-  $mysql="sign";
+  $mysql="project";
+  $num=$_GET['page'];
   $con=new mysqli($servername,$name,$psd,$mysql);
-    $select="select * from tb_goods limit 0,80 ";
+    $select="select * from tb_goods limit {$num},80";
     $txt=$con->query($select);
     while($pro=$txt->fetch_assoc()){
         $content[]=$pro;

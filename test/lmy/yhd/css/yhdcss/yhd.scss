@@ -541,9 +541,11 @@ div,span,a,i,p,img {
         }
     }
     ul{
-        float: right;
+        float: left;
+        position: absolute;
+        left: 214px;
         width: 800px;
-        padding: 34px 100px 0 0px;
+        padding: 34px 0 0 100px;
         li{
             float: left;
             height: 36px;
@@ -564,246 +566,7 @@ div,span,a,i,p,img {
         height: 580px;
         background: url(../../img/imgs/vip/bg.jpg) 50% 50% no-repeat;
         background-size: 200% 150%;
-        // 登陆显示
-        .vip-login{
-            padding-top: 50px;
-            text-align: center;
-            .vip-login-left{
-                float: left;
-                box-sizing: border-box;
-                width: 252px;
-                height: 472px;
-                border: 0 none;
-                background-color: #fff;
-                opacity: .6;
-                padding: 10px;
-                .userName{
-                    box-sizing: border-box;
-                    font-size: 18px;
-                    color: #000;
-                    margin-top: 33px ;
-                    height: 28px;
-                    overflow: hidden;
-                    line-height: 28px;
-                    font-weight: bold;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                    // vertical-align: bottom;
-                    span{
-                        box-sizing: border-box;
-                        vertical-align: bottom;
-                    }
-                }
-                .userImg{
-                    position: relative;
-                    border-radius: 50%;
-                    width: 76px;
-                    height: 76px;
-                    overflow: hidden;
-                    margin: 24px auto;
-                    box-shadow: 0 0 5px 0px #333;
-                    img{
-                        position: absolute;
-                        left: -1px;
-                        width: 76px;
-                        height: 76px;
-                        border: 1px solid #fff;
-                        border-radius: 50%;
-                        transform-origin: center center;
-                        transition: all .5s;
-                        &:hover{
-                            transform: scale(1.05);
-                        }
-                    }
-                }
-                .reg-time{
-                    font-size: 14px;
-                    color: #000;
-                    span{
-                        font-size: 14px;
-                        font-weight: bold;
-                        vertical-align: bottom;
-                    }
-                }
-                .gold{
-                    padding-top: 30px;
-                    box-sizing: border-box;
-                    span{
-                        display: block;
-                        width: 115px;
-                        float: left;
-                        color: #333;
-                        font-weight: bold;
-                        font-size: 22px;
-                        &:first-child{
-                            border-right: 1px solid #AAA9b9;
-                        }
-                        a{
-                            display: block;
-                            // padding-bottom: 5px;
-                            em{
-                                font-style: normal;
-                                font-size: 12px;
-                            }
-                            i{
-                                font-size: 30px;
-                                font-weight: normal;
-                            }
-                        }
-                    }
-                }
-                .red{
-                    position: relative;
-                    padding: 20px 40px 15px;
-                    font-size: 12px;
-                    a{
-                        padding: 10px;
-                        background-color: red;
-                        color: #fff;
-                        border-radius: 20px;
-                        display: block;
-                    }
-                    img{
-                        position: absolute;
-                        right: -205px;
-                        top: -40px;
-                        width: 240px;
-                        z-index: 100;
-                        display: none;
-                    }
-                    &:hover img{display: block;}
-                }
-                .red+span{
-                    font-size: 12px ;
-                    color: #333;
-                }
-            }
-            .vip-login-right{
-                position: relative;
-                float: right;
-                width: 975px;
-                height: 472px;
-                .level{
-                    li{
-                        width: 130px;
-                        height: 250px;
-                        float: left;
-                        position: relative;
-                        // transform-origin: 0 0;
-                        padding-top: 20px;
-                        margin: 0 10px;
-                        i{
-                            width: 50px;
-                            background-color: #666;
-                            font-size: 12px;
-                            color: #fff;
-                            border-radius: 20px;
-                            padding: 8px 10px;
-                            position: absolute;
-                            left: 50%;
-                            transform: translateX(-50%);
-                            font-style: normal;
-                            &::after{
-                                content: " ";
-                                display: block;
-                                position: absolute;
-                                bottom: -5px;
-                                left: 50%;
-                                width: 0px;
-                                height: 0px;
-                                transform: rotate(45deg) translateX(-50%);
-                                border: 5px solid #666;
-                                border-color: transparent  #666 #666 transparent;
-                            }
-                        }
-                        img{
-                            width: 130px;
-                            height: 130px;
-                            position: absolute;
-                            top: 55px;
-                            left: 0px;
-                        }
-                        img:hover{
-                            animation: swing .7s infinite;
-                            @keyframes swing {
-                                25%{
-                                    transform: rotate(-5deg);
-                                }
-                                50%{
-                                    transform: rotate(5deg);
-                                }
-                                75%{
-                                    transform: rotate(-5deg);
-                                }
-                                100%{
-                                    transform: rotate(5deg);
-                                }
-                            }
-                        }
-                        div{
-                            width: 100%;
-                            position: absolute;
-                            bottom: 0px;
-                            font-size: 14px;
-                            span{
-                                font-weight: bold;
-                            }
-                        }
-                        
-                        
-                    }
-                    .small{
-                        transform: scale(0.9);
-                    }
-                    .big{
-                        transform: scale(1.1);
-                    }
-                    
-                }
-                .font{
-                    position: absolute;
-                    bottom: 0px;
-                    left: 40px;
-                    width: 910px;
-                    overflow: hidden;
-                    margin: 0 auto;
-                    padding: 30px 0 25px;
-                    border: 1px solid rgba(255, 255, 255,.3);
-                    background-color: rgba(221, 167, 170,.3);
-                    
-                    li{
-                        float: left;
-                        text-align: center;
-                        a{
-                            display: inline-block;
-                            width: 90px;
-                            font-size: 16px;
-                            margin:0 20px;
-                            color: #fff;
-                            i{
-                                font-size: 70px;
-                            }
-                            transition: color .3s;
-                        }
-                        .col{
-                            color: #ff7364;
-                        }
-                        .purple{
-                            color: #6b6b90;
-                        }
-                        .green{
-                            color: #bc9148;
-                        }
-                        .modena{
-                            color: #203c7a;
-                        }
-                    }
-                }
-            }
-        }
-        // 未登录显示
         .vip-not-login{
-
             position: relative;
             text-align: center;
             overflow: hidden;
@@ -869,14 +632,8 @@ div,span,a,i,p,img {
                     width: 100px;
                     padding: 0 5px;
                     text-align: center;
-                    font-size: 16px;
-                    font-weight: bold;
-                    a{
-                        color: #333;
-                    }
                     i{
                         font-size: 70px;
-                        font-weight: normal;
                     }
                 }
             } 
