@@ -229,6 +229,7 @@ div, span, .hd_header_top .hd_place .none .hd_hot_city div, .hd_header_top .hd_p
           display: block; }
       .hd_header_top .hd_right .login-txt .hd-user-privilege {
         position: absolute;
+        z-index: 100;
         top: 29px;
         left: -1px;
         display: none;
@@ -286,6 +287,10 @@ div, span, .hd_header_top .hd_place .none .hd_hot_city div, .hd_header_top .hd_p
               transform: translateX(-50%);
               background-color: #fff;
               padding: 0 10px; }
+              .hd_header_top .hd_right .login-txt .hd-user-privilege .privilege-bot p span i, .hd_header_top .hd_right .login-txt .hd-user-privilege .privilege-bot p .hd_place .none .hd_hot_city div i, .hd_header_top .hd_place .none .hd_hot_city .hd_right .login-txt .hd-user-privilege .privilege-bot p div i, .hd_header_top .hd_right .login-txt .hd-user-privilege .privilege-bot p .hd_place .none .hd_letter_search div i, .hd_header_top .hd_place .none .hd_letter_search .hd_right .login-txt .hd-user-privilege .privilege-bot p div i {
+                font-style: normal;
+                vertical-align: bottom;
+                margin: 0 3px; }
           .hd_header_top .hd_right .login-txt .hd-user-privilege .privilege-bot .item {
             width: 260px;
             height: 85px;
@@ -416,11 +421,9 @@ div, span, .hd_header_top .hd_place .none .hd_hot_city div, .hd_header_top .hd_p
     .head-top .club-logo img {
       width: 100%; }
   .head-top ul {
-    float: left;
-    position: absolute;
-    left: 214px;
+    float: right;
     width: 800px;
-    padding: 34px 0 0 100px; }
+    padding: 34px 100px 0 0px; }
     .head-top ul li {
       float: left;
       height: 36px;
@@ -430,48 +433,268 @@ div, span, .hd_header_top .hd_place .none .hd_hot_city div, .hd_header_top .hd_p
       font-size: 16px;
       line-height: 36px; }
 
-.content .club-nav {
-  position: relative;
-  height: 580px;
-  background: url(../../img/imgs/vip/bg.jpg) 50% 50% no-repeat;
-  background-size: 200% 150%; }
-  .content .club-nav .vip-not-login {
+.content {
+  position: relative; }
+  .content canvas {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    opacity: .6; }
+  .content .club-nav {
     position: relative;
-    text-align: center;
-    overflow: hidden;
-    padding-top: 92px; }
-    .content .club-nav .vip-not-login .img-bor {
-      margin: 0px auto;
-      display: block;
-      width: 100px;
-      height: 100px;
-      border: 1px solid #fff;
-      border-radius: 50%;
-      padding: 10px;
-      box-sizing: border-box; }
-      .content .club-nav .vip-not-login .img-bor img {
-        width: 100%;
-        border-radius: 50%; }
-    .content .club-nav .vip-not-login p {
-      height: 24px;
-      padding: 14px 0 26px;
-      color: #333;
-      font-size: 16px;
+    height: 580px;
+    background: url(../../img/imgs/vip/bg.jpg) 50% 50% no-repeat;
+    background-size: 200% 150%; }
+    .content .club-nav .sec2 {
+      position: relative;
+      z-index: 10; }
+    .content .club-nav .vip-login {
+      padding-top: 50px;
+      text-align: center; }
+      .content .club-nav .vip-login .vip-login-left {
+        float: left;
+        box-sizing: border-box;
+        width: 252px;
+        height: 472px;
+        border: 0 none;
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 10px; }
+        .content .club-nav .vip-login .vip-login-left .userName {
+          box-sizing: border-box;
+          font-size: 18px;
+          color: #333;
+          margin-top: 33px;
+          height: 28px;
+          overflow: hidden;
+          line-height: 28px;
+          font-weight: bold;
+          text-overflow: ellipsis;
+          white-space: nowrap; }
+          .content .club-nav .vip-login .vip-login-left .userName span, .content .club-nav .vip-login .vip-login-left .userName .hd_header_top .hd_place .none .hd_hot_city div, .hd_header_top .hd_place .none .hd_hot_city .content .club-nav .vip-login .vip-login-left .userName div, .content .club-nav .vip-login .vip-login-left .userName .hd_header_top .hd_place .none .hd_letter_search div, .hd_header_top .hd_place .none .hd_letter_search .content .club-nav .vip-login .vip-login-left .userName div {
+            box-sizing: border-box;
+            vertical-align: bottom; }
+        .content .club-nav .vip-login .vip-login-left .userImg {
+          position: relative;
+          border-radius: 50%;
+          width: 76px;
+          height: 76px;
+          overflow: hidden;
+          margin: 24px auto;
+          box-shadow: 0 0 5px 0px #333; }
+          .content .club-nav .vip-login .vip-login-left .userImg img {
+            position: absolute;
+            left: -1px;
+            width: 76px;
+            height: 76px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            transform-origin: center center;
+            transition: all .5s; }
+            .content .club-nav .vip-login .vip-login-left .userImg img:hover {
+              transform: scale(1.05); }
+        .content .club-nav .vip-login .vip-login-left .reg-time {
+          font-size: 14px;
+          color: #333; }
+          .content .club-nav .vip-login .vip-login-left .reg-time span, .content .club-nav .vip-login .vip-login-left .reg-time .hd_header_top .hd_place .none .hd_hot_city div, .hd_header_top .hd_place .none .hd_hot_city .content .club-nav .vip-login .vip-login-left .reg-time div, .content .club-nav .vip-login .vip-login-left .reg-time .hd_header_top .hd_place .none .hd_letter_search div, .hd_header_top .hd_place .none .hd_letter_search .content .club-nav .vip-login .vip-login-left .reg-time div {
+            font-size: 14px;
+            font-weight: bold;
+            vertical-align: bottom; }
+        .content .club-nav .vip-login .vip-login-left .gold {
+          padding-top: 30px;
+          box-sizing: border-box; }
+          .content .club-nav .vip-login .vip-login-left .gold span, .content .club-nav .vip-login .vip-login-left .gold .hd_header_top .hd_place .none .hd_hot_city div, .hd_header_top .hd_place .none .hd_hot_city .content .club-nav .vip-login .vip-login-left .gold div, .content .club-nav .vip-login .vip-login-left .gold .hd_header_top .hd_place .none .hd_letter_search div, .hd_header_top .hd_place .none .hd_letter_search .content .club-nav .vip-login .vip-login-left .gold div {
+            display: block;
+            width: 115px;
+            float: left;
+            color: #333;
+            font-weight: bold;
+            font-size: 22px; }
+            .content .club-nav .vip-login .vip-login-left .gold span:first-child, .content .club-nav .vip-login .vip-login-left .gold .hd_header_top .hd_place .none .hd_hot_city div:first-child, .hd_header_top .hd_place .none .hd_hot_city .content .club-nav .vip-login .vip-login-left .gold div:first-child, .content .club-nav .vip-login .vip-login-left .gold .hd_header_top .hd_place .none .hd_letter_search div:first-child, .hd_header_top .hd_place .none .hd_letter_search .content .club-nav .vip-login .vip-login-left .gold div:first-child {
+              border-right: 1px solid #AAA9b9; }
+            .content .club-nav .vip-login .vip-login-left .gold span a, .content .club-nav .vip-login .vip-login-left .gold .hd_header_top .hd_place .none .hd_hot_city div a, .hd_header_top .hd_place .none .hd_hot_city .content .club-nav .vip-login .vip-login-left .gold div a, .content .club-nav .vip-login .vip-login-left .gold .hd_header_top .hd_place .none .hd_letter_search div a, .hd_header_top .hd_place .none .hd_letter_search .content .club-nav .vip-login .vip-login-left .gold div a {
+              display: block; }
+              .content .club-nav .vip-login .vip-login-left .gold span a em, .content .club-nav .vip-login .vip-login-left .gold .hd_header_top .hd_place .none .hd_hot_city div a em, .hd_header_top .hd_place .none .hd_hot_city .content .club-nav .vip-login .vip-login-left .gold div a em, .content .club-nav .vip-login .vip-login-left .gold .hd_header_top .hd_place .none .hd_letter_search div a em, .hd_header_top .hd_place .none .hd_letter_search .content .club-nav .vip-login .vip-login-left .gold div a em {
+                font-style: normal;
+                font-size: 12px; }
+              .content .club-nav .vip-login .vip-login-left .gold span a i, .content .club-nav .vip-login .vip-login-left .gold .hd_header_top .hd_place .none .hd_hot_city div a i, .hd_header_top .hd_place .none .hd_hot_city .content .club-nav .vip-login .vip-login-left .gold div a i, .content .club-nav .vip-login .vip-login-left .gold .hd_header_top .hd_place .none .hd_letter_search div a i, .hd_header_top .hd_place .none .hd_letter_search .content .club-nav .vip-login .vip-login-left .gold div a i {
+                font-size: 30px;
+                font-weight: normal; }
+        .content .club-nav .vip-login .vip-login-left .red {
+          position: relative;
+          padding: 20px 40px 15px;
+          font-size: 12px; }
+          .content .club-nav .vip-login .vip-login-left .red a {
+            padding: 10px;
+            background-color: red;
+            color: #fff;
+            border-radius: 20px;
+            display: block; }
+          .content .club-nav .vip-login .vip-login-left .red img {
+            position: absolute;
+            right: -205px;
+            top: -40px;
+            width: 240px;
+            z-index: 100;
+            display: none; }
+          .content .club-nav .vip-login .vip-login-left .red:hover img {
+            display: block; }
+        .content .club-nav .vip-login .vip-login-left .red + span, .content .club-nav .vip-login .vip-login-left .hd_header_top .hd_place .none .hd_hot_city .red + div, .hd_header_top .hd_place .none .hd_hot_city .content .club-nav .vip-login .vip-login-left .red + div, .content .club-nav .vip-login .vip-login-left .hd_header_top .hd_place .none .hd_letter_search .red + div, .hd_header_top .hd_place .none .hd_letter_search .content .club-nav .vip-login .vip-login-left .red + div {
+          font-size: 12px;
+          color: #333; }
+      .content .club-nav .vip-login .vip-login-right {
+        position: relative;
+        float: right;
+        width: 975px;
+        height: 472px; }
+        .content .club-nav .vip-login .vip-login-right .level li {
+          width: 130px;
+          height: 250px;
+          float: left;
+          position: relative;
+          padding-top: 20px;
+          margin: 0 10px; }
+          .content .club-nav .vip-login .vip-login-right .level li i {
+            width: 50px;
+            background-color: #666;
+            font-size: 12px;
+            color: #fff;
+            border-radius: 20px;
+            padding: 8px 10px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-style: normal; }
+            .content .club-nav .vip-login .vip-login-right .level li i::after {
+              content: " ";
+              display: block;
+              position: absolute;
+              bottom: -5px;
+              left: 50%;
+              width: 0px;
+              height: 0px;
+              transform: rotate(45deg) translateX(-50%);
+              border: 5px solid #666;
+              border-color: transparent  #666 #666 transparent; }
+          .content .club-nav .vip-login .vip-login-right .level li img {
+            width: 130px;
+            height: 130px;
+            position: absolute;
+            top: 55px;
+            left: 0px; }
+          .content .club-nav .vip-login .vip-login-right .level li img:hover {
+            animation: swing .7s infinite; }
+@keyframes swing {
+  25% {
+    transform: rotate(-5deg); }
+  50% {
+    transform: rotate(5deg); }
+  75% {
+    transform: rotate(-5deg); }
+  100% {
+    transform: rotate(5deg); } }
+          .content .club-nav .vip-login .vip-login-right .level li div {
+            width: 100%;
+            position: absolute;
+            bottom: 0px;
+            font-size: 14px; }
+            .content .club-nav .vip-login .vip-login-right .level li div span, .content .club-nav .vip-login .vip-login-right .level li div .hd_header_top .hd_place .none .hd_hot_city div, .hd_header_top .hd_place .none .hd_hot_city .content .club-nav .vip-login .vip-login-right .level li div div, .content .club-nav .vip-login .vip-login-right .level li div .hd_header_top .hd_place .none .hd_letter_search div, .hd_header_top .hd_place .none .hd_letter_search .content .club-nav .vip-login .vip-login-right .level li div div {
+              font-weight: bold; }
+        .content .club-nav .vip-login .vip-login-right .level .small {
+          transform: scale(0.9); }
+        .content .club-nav .vip-login .vip-login-right .level .big {
+          transform: scale(1.1); }
+        .content .club-nav .vip-login .vip-login-right .font {
+          position: absolute;
+          bottom: 0px;
+          left: 40px;
+          width: 910px;
+          overflow: hidden;
+          margin: 0 auto;
+          padding: 30px 0 25px;
+          border: 1px solid rgba(255, 255, 255, 0.3);
+          background-color: rgba(221, 167, 170, 0.3); }
+          .content .club-nav .vip-login .vip-login-right .font li {
+            float: left;
+            text-align: center; }
+            .content .club-nav .vip-login .vip-login-right .font li a {
+              display: inline-block;
+              width: 90px;
+              font-size: 16px;
+              margin: 0 20px;
+              color: #fff;
+              position: relative;
+              transition: color .3s; }
+              .content .club-nav .vip-login .vip-login-right .font li a span, .content .club-nav .vip-login .vip-login-right .font li a .hd_header_top .hd_place .none .hd_hot_city div, .hd_header_top .hd_place .none .hd_hot_city .content .club-nav .vip-login .vip-login-right .font li a div, .content .club-nav .vip-login .vip-login-right .font li a .hd_header_top .hd_place .none .hd_letter_search div, .hd_header_top .hd_place .none .hd_letter_search .content .club-nav .vip-login .vip-login-right .font li a div {
+                position: absolute;
+                top: 4px;
+                left: 11px;
+                display: inline-block;
+                width: 62px;
+                height: 62px;
+                transform-origin: center center;
+                transform: scale(0);
+                border: 3px solid #fff;
+                box-shadow: 0 0 15px -10px #f5f5f5;
+                border-radius: 50%;
+                background-color: #f5f5f5;
+                color: #666;
+                font-size: 12px;
+                line-height: 62px;
+                transition: all .3s; }
+              .content .club-nav .vip-login .vip-login-right .font li a i {
+                font-size: 70px; }
+              .content .club-nav .vip-login .vip-login-right .font li a i:hover + span, .content .club-nav .vip-login .vip-login-right .font li a .hd_header_top .hd_place .none .hd_hot_city i:hover + div, .hd_header_top .hd_place .none .hd_hot_city .content .club-nav .vip-login .vip-login-right .font li a i:hover + div, .content .club-nav .vip-login .vip-login-right .font li a .hd_header_top .hd_place .none .hd_letter_search i:hover + div, .hd_header_top .hd_place .none .hd_letter_search .content .club-nav .vip-login .vip-login-right .font li a i:hover + div {
+                transform: scale(1); }
+              .content .club-nav .vip-login .vip-login-right .font li a span:hover, .content .club-nav .vip-login .vip-login-right .font li a .hd_header_top .hd_place .none .hd_hot_city div:hover, .hd_header_top .hd_place .none .hd_hot_city .content .club-nav .vip-login .vip-login-right .font li a div:hover, .content .club-nav .vip-login .vip-login-right .font li a .hd_header_top .hd_place .none .hd_letter_search div:hover, .hd_header_top .hd_place .none .hd_letter_search .content .club-nav .vip-login .vip-login-right .font li a div:hover {
+                transform: scale(1); }
+            .content .club-nav .vip-login .vip-login-right .font li .col {
+              color: #ff7364; }
+            .content .club-nav .vip-login .vip-login-right .font li .purple {
+              color: #6b6b90; }
+            .content .club-nav .vip-login .vip-login-right .font li .green {
+              color: #bc9148; }
+            .content .club-nav .vip-login .vip-login-right .font li .modena {
+              color: #203c7a; }
+    .content .club-nav .vip-not-login {
+      position: relative;
       text-align: center;
-      line-height: 24px; }
-    .content .club-nav .vip-not-login .login-btn {
-      display: block;
-      width: 280px;
-      height: 50px;
-      margin: 0 auto;
-      background-color: #333;
-      color: #fff;
-      font-size: 16px;
-      font-weight: bold;
-      text-align: center;
-      line-height: 50px;
-      box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
-      animation: flashing 3s infinite; }
+      overflow: hidden;
+      padding-top: 92px; }
+      .content .club-nav .vip-not-login .img-bor {
+        margin: 0px auto;
+        display: block;
+        width: 100px;
+        height: 100px;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        padding: 10px;
+        box-sizing: border-box; }
+        .content .club-nav .vip-not-login .img-bor img {
+          width: 100%;
+          border-radius: 50%; }
+      .content .club-nav .vip-not-login p {
+        height: 24px;
+        padding: 14px 0 26px;
+        color: #333;
+        font-size: 16px;
+        text-align: center;
+        line-height: 24px; }
+      .content .club-nav .vip-not-login .login-btn {
+        display: block;
+        width: 280px;
+        height: 50px;
+        margin: 0 auto;
+        background-color: #333;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 50px;
+        box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+        animation: flashing 3s infinite; }
 @keyframes flashing {
   25% {
     background-color: #000; }
@@ -481,185 +704,204 @@ div, span, .hd_header_top .hd_place .none .hd_hot_city div, .hd_header_top .hd_p
     background-color: #000; }
   100% {
     background-color: #333; } }
-    .content .club-nav .vip-not-login ul {
-      display: inline-block;
-      width: auto;
-      overflow: hidden;
-      margin: 0 auto;
-      padding-top: 75px; }
-      .content .club-nav .vip-not-login ul li {
-        float: left;
-        width: 100px;
-        padding: 0 5px;
-        text-align: center; }
-        .content .club-nav .vip-not-login ul li i {
-          font-size: 70px; }
-.content .vip-not {
-  background: url(../../img/imgs/vip/bg-0.jpg) 50% 50% no-repeat;
-  background-size: 200% 150%; }
-.content .club-act {
-  height: 140px;
-  padding: 20px 0;
-  background-color: #fff; }
-  .content .club-act .wrap div {
-    position: relative;
-    float: left;
-    width: 130px;
-    height: 140px;
-    margin: 0 2px;
-    padding: 0 140px 0 30px;
-    color: #fff;
-    font-size: 14px; }
-    .content .club-act .wrap div a {
-      color: #fff; }
-    .content .club-act .wrap div p {
-      height: 30px;
-      overflow: hidden;
-      padding-top: 25px;
-      font-size: 20px;
-      font-weight: bold;
-      line-height: 30px;
-      margin-bottom: 10px; }
-    .content .club-act .wrap div img {
-      width: 50%;
-      position: absolute;
-      bottom: 0px;
-      right: 20px;
-      transition: right .5s; }
-    .content .club-act .wrap div:hover img {
-      right: 30px; }
-  .content .club-act .wrap .vip-1 {
-    background: url(../../img/imgs/vip/1-bg.png) no-repeat; }
-  .content .club-act .wrap .vip-2 {
-    background: url(../../img/imgs/vip/2-bg.png) no-repeat; }
-  .content .club-act .wrap .vip-3 {
-    background: url(../../img/imgs/vip/3-bg.png) no-repeat; }
-  .content .club-act .wrap .vip-4 {
-    background: url(../../img/imgs/vip/4-bg.png) no-repeat; }
-.content .club-intro h2 {
-  padding-top: 50px;
-  text-align: center;
-  border-bottom: 1px solid #eee;
-  font-size: 24px;
-  line-height: 1.8;
-  font-weight: normal; }
-.content .club-intro .club-swiper {
-  padding: 0 230px;
-  margin-bottom: 240px;
-  position: relative; }
-  .content .club-intro .club-swiper .intro-list {
-    padding: 20px 0;
-    width: 470px;
-    font-size: 0;
-    margin: 0 auto;
-    height: 24px;
-    overflow: hidden;
-    position: relative;
-    left: 5px; }
-    .content .club-intro .club-swiper .intro-list ul {
-      width: 1000%;
-      cursor: pointer; }
-      .content .club-intro .club-swiper .intro-list ul li {
-        font-size: 16px;
+      .content .club-nav .vip-not-login ul {
         display: inline-block;
-        padding: 0 15px; }
-      .content .club-intro .club-swiper .intro-list ul .active {
-        font-size: 18px;
-        color: #be9d74; }
-  .content .club-intro .club-swiper .intro-card {
-    position: relative;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    padding-left: 0;
-    padding-right: 0;
-    height: 350px; }
-    .content .club-intro .club-swiper .intro-card ul {
-      padding-top: 10px;
-      position: relative;
-      height: 400px; }
-      .content .club-intro .club-swiper .intro-card ul li {
-        position: absolute;
-        width: 250px;
-        height: 350px;
-        background: url(../../img/imgs/vip/card-bg.png) no-repeat;
-        background-size: 100% 100%;
-        box-shadow: 0 0 35px -10px #a2a2a2; }
-        .content .club-intro .club-swiper .intro-card ul li i {
-          display: block;
-          width: 60px;
-          height: 60px;
-          padding: 8% 0 0 0;
-          font-size: 60px;
-          margin: 0 auto;
-          color: white; }
-        .content .club-intro .club-swiper .intro-card ul li p {
+        width: auto;
+        overflow: hidden;
+        margin: 0 auto;
+        padding-top: 75px; }
+        .content .club-nav .vip-not-login ul li {
+          float: left;
+          width: 100px;
+          padding: 0 5px;
           text-align: center;
-          padding: 10% 0 10px 0;
-          font-size: 14px; }
-          .content .club-intro .club-swiper .intro-card ul li p span, .content .club-intro .club-swiper .intro-card ul li p .hd_header_top .hd_place .none .hd_hot_city div, .hd_header_top .hd_place .none .hd_hot_city .content .club-intro .club-swiper .intro-card ul li p div, .content .club-intro .club-swiper .intro-card ul li p .hd_header_top .hd_place .none .hd_letter_search div, .hd_header_top .hd_place .none .hd_letter_search .content .club-intro .club-swiper .intro-card ul li p div {
-            display: block;
-            line-height: 16px;
-            font-weight: bold; }
-          .content .club-intro .club-swiper .intro-card ul li p span:last-child, .content .club-intro .club-swiper .intro-card ul li p .hd_header_top .hd_place .none .hd_hot_city div:last-child, .hd_header_top .hd_place .none .hd_hot_city .content .club-intro .club-swiper .intro-card ul li p div:last-child, .content .club-intro .club-swiper .intro-card ul li p .hd_header_top .hd_place .none .hd_letter_search div:last-child, .hd_header_top .hd_place .none .hd_letter_search .content .club-intro .club-swiper .intro-card ul li p div:last-child {
-            background-color: #a2a2a2;
-            color: #fff;
-            display: inline-block;
-            border: 1px solid #a2a2a2;
-            border-radius: 15px;
-            margin-top: 10px;
-            padding: 2px 20px;
-            font-size: 12px;
+          font-size: 16px;
+          font-weight: bold; }
+          .content .club-nav .vip-not-login ul li a {
+            color: #333; }
+          .content .club-nav .vip-not-login ul li i {
+            font-size: 70px;
             font-weight: normal; }
-        .content .club-intro .club-swiper .intro-card ul li .descri {
-          padding: 5% 12% 4%;
-          font-size: 12px;
-          height: 32%;
-          overflow-y: auto;
-          line-height: 18px; }
-          .content .club-intro .club-swiper .intro-card ul li .descri p {
+  .content .vip-not {
+    background: url(../../img/imgs/vip/bg-0.jpg) 50% 50% no-repeat;
+    background-size: 200% 150%; }
+  .content .club-act {
+    height: 140px;
+    padding: 20px 0;
+    background-color: #fff; }
+    .content .club-act .wrap div {
+      position: relative;
+      float: left;
+      width: 130px;
+      height: 140px;
+      margin: 0 2px;
+      padding: 0 140px 0 30px;
+      color: #fff;
+      font-size: 14px; }
+      .content .club-act .wrap div a {
+        color: #fff; }
+      .content .club-act .wrap div p {
+        height: 30px;
+        overflow: hidden;
+        padding-top: 25px;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 30px;
+        margin-bottom: 10px; }
+      .content .club-act .wrap div img {
+        width: 50%;
+        position: absolute;
+        bottom: 0px;
+        right: 20px;
+        transition: right .5s; }
+      .content .club-act .wrap div:hover img {
+        right: 30px; }
+    .content .club-act .wrap .vip-1 {
+      background: url(../../img/imgs/vip/1-bg.png) no-repeat; }
+    .content .club-act .wrap .vip-2 {
+      background: url(../../img/imgs/vip/2-bg.png) no-repeat; }
+    .content .club-act .wrap .vip-3 {
+      background: url(../../img/imgs/vip/3-bg.png) no-repeat; }
+    .content .club-act .wrap .vip-4 {
+      background: url(../../img/imgs/vip/4-bg.png) no-repeat; }
+  .content .club-intro h2 {
+    padding-top: 50px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    font-size: 24px;
+    line-height: 1.8;
+    font-weight: normal; }
+  .content .club-intro .club-swiper {
+    padding: 0 230px;
+    margin-bottom: 240px;
+    position: relative; }
+    .content .club-intro .club-swiper .intro-list {
+      padding: 20px 0;
+      width: 470px;
+      font-size: 0;
+      margin: 0 auto;
+      height: 24px;
+      overflow: hidden;
+      position: relative;
+      left: 5px; }
+      .content .club-intro .club-swiper .intro-list ul {
+        width: 1000%;
+        cursor: pointer; }
+        .content .club-intro .club-swiper .intro-list ul li {
+          font-size: 16px;
+          display: inline-block;
+          padding: 0 15px; }
+        .content .club-intro .club-swiper .intro-list ul .active {
+          font-size: 18px;
+          color: #be9d74; }
+    .content .club-intro .club-swiper .intro-card {
+      position: relative;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      padding-left: 0;
+      padding-right: 0;
+      height: 350px; }
+      .content .club-intro .club-swiper .intro-card ul {
+        padding-top: 10px;
+        position: relative;
+        height: 400px; }
+        .content .club-intro .club-swiper .intro-card ul li {
+          opacity: .9;
+          position: absolute;
+          width: 250px;
+          height: 350px;
+          background: url(../../img/imgs/vip/card-bg.png) no-repeat;
+          background-size: 100% 100%;
+          box-shadow: 0 0 35px -10px #a2a2a2;
+          transition: all .3s; }
+          .content .club-intro .club-swiper .intro-card ul li i {
+            display: block;
+            width: 60px;
+            height: 60px;
+            padding: 8% 0 0 0;
+            font-size: 60px;
+            margin: 0 auto;
+            color: white; }
+          .content .club-intro .club-swiper .intro-card ul li p {
+            text-align: center;
+            padding: 10% 0 10px 0;
+            font-size: 14px; }
+            .content .club-intro .club-swiper .intro-card ul li p span:first-child, .content .club-intro .club-swiper .intro-card ul li p .hd_header_top .hd_place .none .hd_hot_city div:first-child, .hd_header_top .hd_place .none .hd_hot_city .content .club-intro .club-swiper .intro-card ul li p div:first-child, .content .club-intro .club-swiper .intro-card ul li p .hd_header_top .hd_place .none .hd_letter_search div:first-child, .hd_header_top .hd_place .none .hd_letter_search .content .club-intro .club-swiper .intro-card ul li p div:first-child {
+              display: block;
+              line-height: 16px;
+              font-weight: bold; }
+            .content .club-intro .club-swiper .intro-card ul li p .not-get {
+              background-color: #a2a2a2;
+              color: #fff;
+              display: inline-block;
+              border: 1px solid #a2a2a2;
+              border-radius: 15px;
+              margin-top: 10px;
+              padding: 2px 20px;
+              font-size: 12px;
+              font-weight: normal; }
+            .content .club-intro .club-swiper .intro-card ul li p .get {
+              position: absolute;
+              background-color: #fff;
+              color: #666;
+              display: inline-block;
+              border: 1px solid #a2a2a2;
+              border-radius: 15px;
+              margin-top: 10px;
+              font-size: 12px;
+              font-weight: normal;
+              display: none; }
+          .content .club-intro .club-swiper .intro-card ul li .descri {
+            padding: 5% 12% 4%;
             font-size: 12px;
-            text-align: left;
-            padding: 0; }
-          .content .club-intro .club-swiper .intro-card ul li .descri a {
-            color: #be9d74; }
-      .content .club-intro .club-swiper .intro-card ul li:nth-child(1) {
-        left: 259px;
-        z-index: 20; }
-      .content .club-intro .club-swiper .intro-card ul li:nth-child(2) {
-        left: 555px;
-        z-index: 16;
-        transform: scale(0.93); }
-      .content .club-intro .club-swiper .intro-card ul li:nth-child(3) {
-        left: 610px;
-        z-index: 12;
-        transform: scale(0.8); }
-      .content .club-intro .club-swiper .intro-card ul li:nth-child(4) {
-        left: 370px;
-        z-index: 12;
-        transform: scale(0.8); }
-      .content .club-intro .club-swiper .intro-card ul li:nth-child(5) {
-        left: 130px;
-        z-index: 12;
-        transform: scale(0.8); }
-      .content .club-intro .club-swiper .intro-card ul li:nth-child(6) {
-        left: -110px;
-        z-index: 12;
-        transform: scale(0.8); }
-      .content .club-intro .club-swiper .intro-card ul li:nth-child(7) {
-        left: -40px;
-        z-index: 16;
-        transform: scale(0.93); }
-  .content .club-intro .club-swiper .swi-left {
-    position: absolute;
-    top: 50%;
-    left: 0px;
-    transform: rotate(180deg);
-    cursor: pointer; }
-  .content .club-intro .club-swiper .swi-right {
-    position: absolute;
-    top: 50%;
-    right: 0px;
-    cursor: pointer; }
+            height: 32%;
+            overflow-y: auto;
+            line-height: 18px; }
+            .content .club-intro .club-swiper .intro-card ul li .descri p {
+              font-size: 12px;
+              text-align: left;
+              padding: 0; }
+            .content .club-intro .club-swiper .intro-card ul li .descri a {
+              color: #be9d74; }
+        .content .club-intro .club-swiper .intro-card ul .card-1 {
+          left: 259px;
+          z-index: 20;
+          opacity: 1; }
+        .content .club-intro .club-swiper .intro-card ul .card-2 {
+          left: 555px;
+          z-index: 16;
+          transform: scale(0.93); }
+        .content .club-intro .club-swiper .intro-card ul .card-3 {
+          left: 610px;
+          z-index: 12;
+          transform: scale(0.8); }
+        .content .club-intro .club-swiper .intro-card ul .card-4 {
+          left: 370px;
+          z-index: 12;
+          transform: scale(0.8); }
+        .content .club-intro .club-swiper .intro-card ul .card-5 {
+          left: 130px;
+          z-index: 12;
+          transform: scale(0.8); }
+        .content .club-intro .club-swiper .intro-card ul .card-6 {
+          left: -110px;
+          z-index: 12;
+          transform: scale(0.8); }
+        .content .club-intro .club-swiper .intro-card ul .card-7 {
+          left: -40px;
+          z-index: 16;
+          transform: scale(0.93); }
+    .content .club-intro .club-swiper .swi-left {
+      position: absolute;
+      top: 50%;
+      left: 0px;
+      transform: rotate(180deg);
+      cursor: pointer; }
+    .content .club-intro .club-swiper .swi-right {
+      position: absolute;
+      top: 50%;
+      right: 0px;
+      cursor: pointer; }
 
 .ft_top {
   padding: 30px 0;

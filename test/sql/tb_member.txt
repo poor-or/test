@@ -1,0 +1,4 @@
+"MemberID"	"MemberName"	"MemberPwd"	"Sex"	"RealName"	"MobileTel"	"Email"	"Address"	"ZhiFuPWD"	"userPictrue"	"level"	"birthday"
+"1"	"张xx"	"123456"	"男"	"张三"	"13544874455"	"12345@qq.com"	"郑州二七马寨"	"123456"		"2"	
+"2"	"张三"	"123456"	"男"	"张三"						"1"	
+"3"	"李四"	"123321"								"2"	

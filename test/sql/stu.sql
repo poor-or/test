@@ -1,17 +1,17 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : yao
+ Source Server         : test
  Source Server Type    : MySQL
- Source Server Version : 80019
+ Source Server Version : 50726
  Source Host           : localhost:3306
  Source Schema         : stu
 
  Target Server Type    : MySQL
- Target Server Version : 80019
+ Target Server Version : 50726
  File Encoding         : 65001
 
- Date: 20/04/2020 21:47:36
+ Date: 25/04/2020 23:07:12
 */
 
 SET NAMES utf8mb4;
@@ -22,9 +22,9 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- ----------------------------
 DROP TABLE IF EXISTS `tb_city`;
 CREATE TABLE `tb_city`  (
-  `cityLetter` char(2) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `city` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
+  `cityLetter` varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `city` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tb_city
@@ -397,14 +397,14 @@ INSERT INTO `tb_city` VALUES ('Z', '镇江市');
 -- ----------------------------
 DROP TABLE IF EXISTS `tb_goods`;
 CREATE TABLE `tb_goods`  (
-  `goodsId` int(0) NULL DEFAULT NULL,
-  `typeId` int(0) NULL DEFAULT NULL,
-  `typeName` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `goodsName` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `price` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `storeName` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `pictureAddress` varchar(1000) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
+  `goodsId` int(11) NULL DEFAULT NULL,
+  `typeId` int(11) NULL DEFAULT NULL,
+  `typeName` varchar(500) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `goodsName` varchar(800) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `price` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `storeName` varchar(500) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `pictureAddress` varchar(1000) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tb_goods
@@ -651,9 +651,9 @@ INSERT INTO `tb_goods` VALUES (239, 69, '箱包', 'BURBERRY/巴宝莉男装2020�
 INSERT INTO `tb_goods` VALUES (240, 70, '箱包', '地平线8号（LEVEL8）行李箱旅行箱登机箱20英寸德国科思创PC箱体男女拉杆箱黑色', '￥289.00', '地平线8号（LEVEL8）自营旗舰店', 'https://img12.360buyimg.com/n7/s230x230_jfs/t1/85630/25/18247/114245/5e93d8c9E8b53c602/66d2b77caee48ddc.jpg!cc_230x230.jpg');
 INSERT INTO `tb_goods` VALUES (241, 70, '箱包', '小米（MI）行李箱24英寸男女旅行箱万向轮静音拉杆箱密码箱灰色(灰色)', '￥368.00', '推荐智联优选旗舰店', 'https://img20.360buyimg.com/n7/s230x230_jfs/t1/92577/9/3328/84649/5dde5015E920bff70/bd360ea94abcad0f.jpg!cc_230x230.jpg');
 INSERT INTO `tb_goods` VALUES (242, 70, '箱包', '卡帝乐鳄鱼(CARTELO)拉杆箱耐磨防刮24英寸万向轮旅行李箱男女学生密码箱时尚轻盈商务休闲行李箱包', '￥192.00', '卡帝乐鳄鱼（CARTELO）箱包自营旗舰店', 'https://img20.360buyimg.com/n7/s230x230_jfs/t1/110029/29/12065/276240/5e93f216Ef249db13/10931daae9548919.jpg!cc_230x230.jpg');
-INSERT INTO `tb_goods` VALUES (243, 71, '鞋靴', '【品质男鞋闪电发货】品牌直营【4D立体飞织超轻透气】春夏新款时尚休闲鞋舒适运动鞋青春潮流男鞋韩版', '￥168.00', '罗兰船长旗舰店https://img10.360buyimg.com/n7/s230x230_jfs/t1/100947/10/16520/210318/5e7c0cfcEbccd7f86/20cc3679edf37d2d.jpg!cc_230x230.jpg', '');
-INSERT INTO `tb_goods` VALUES (244, 71, '鞋靴', '【官方正版甄选品质】男/女鞋【高弹缓震科技-超轻飞织透气】休闲鞋运动时尚慢跑鞋天空灰#40(天空灰)', '￥168.00', '探锐者旗舰店https://img20.360buyimg.com/n7/s230x230_jfs/t1/96222/12/13387/118095/5e58da02Ec9cfb110/f7deecaaca5f63c3.jpg!cc_230x230.jpg', '');
-INSERT INTO `tb_goods` VALUES (245, 71, '鞋靴', '【品质男鞋精选优品】【匠心制作品牌直营】限量版时尚休闲鞋舒适运动鞋韩版慢跑鞋百搭男潮鞋', '￥158.00', '罗兰船长旗舰店https://img10.360buyimg.com/n7/s230x230_jfs/t1/95571/9/15009/167451/5e6c7d10Eda6faa99/7972958967503852.jpg!cc_230x230.jpg', '');
+INSERT INTO `tb_goods` VALUES (243, 71, '鞋靴', '【品质男鞋闪电发货】品牌直营【4D立体飞织超轻透气】春夏新款时尚休闲鞋舒适运动鞋青春潮流男鞋韩版', '￥168.00', '罗兰船长旗舰店https://img10.360buyimg.com/n7/s230x230_jfs/t1/100947/10/16520/210318/5e7c0cfcEbccd7f86/20cc3679edf37d2d.jpg!cc_230x230.jpg', NULL);
+INSERT INTO `tb_goods` VALUES (244, 71, '鞋靴', '【官方正版甄选品质】男/女鞋【高弹缓震科技-超轻飞织透气】休闲鞋运动时尚慢跑鞋天空灰#40(天空灰)', '￥168.00', '探锐者旗舰店https://img20.360buyimg.com/n7/s230x230_jfs/t1/96222/12/13387/118095/5e58da02Ec9cfb110/f7deecaaca5f63c3.jpg!cc_230x230.jpg', NULL);
+INSERT INTO `tb_goods` VALUES (245, 71, '鞋靴', '【品质男鞋精选优品】【匠心制作品牌直营】限量版时尚休闲鞋舒适运动鞋韩版慢跑鞋百搭男潮鞋', '￥158.00', '罗兰船长旗舰店https://img10.360buyimg.com/n7/s230x230_jfs/t1/95571/9/15009/167451/5e6c7d10Eda6faa99/7972958967503852.jpg!cc_230x230.jpg', NULL);
 INSERT INTO `tb_goods` VALUES (246, 72, '箱包', '法国COW男士手包潮流大容量手拿包时尚休闲手抓包手机信封包C-9818黑色', '￥99.00', 'COW中奥专卖店', 'https://img30.360buyimg.com/n7/s230x230_jfs/t1/115098/28/1116/497724/5e948b58E32a4438d/7873323eab3c23c6.jpg!cc_230x230.jpg');
 INSERT INTO `tb_goods` VALUES (247, 72, '箱包', '男包公文包男士手提包笔记本电脑包商务休闲时尚单肩斜挎男皮包文件包男1919黑色(黑色)', '￥69.00', '朗斐优昂专卖店', 'https://img30.360buyimg.com/n7/s230x230_jfs/t1/92209/28/7276/193832/5df9e797E6b3b9ca6/d47f2e846fcd4f95.jpg!cc_230x230.jpg');
 INSERT INTO `tb_goods` VALUES (248, 72, '箱包', 'POLO男士单肩包牛津纺横款斜跨包大容量男包ZY041P533J黑色(横款黑色)', '￥199.00', 'POLO自营旗舰店', 'https://img13.360buyimg.com/n7/s230x230_jfs/t1/106930/9/17887/106468/5e90308bEdc91c6a4/54a72cfe190ca0d2.jpg!cc_230x230.jpg');
@@ -771,9 +771,9 @@ INSERT INTO `tb_goods` VALUES (356, 109, '音像', '周杰伦：全经典视听�
 -- ----------------------------
 DROP TABLE IF EXISTS `tb_goodstype`;
 CREATE TABLE `tb_goodstype`  (
-  `TypeID` int(0) NULL DEFAULT NULL,
-  `TypeName` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
+  `TypeID` int(11) NULL DEFAULT NULL,
+  `TypeName` varchar(800) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tb_goodstype
@@ -893,40 +893,43 @@ INSERT INTO `tb_goodstype` VALUES (109, '音像，录音，cd，MP3');
 -- ----------------------------
 DROP TABLE IF EXISTS `tb_member`;
 CREATE TABLE `tb_member`  (
-  `MemberID` int(0) NULL DEFAULT NULL,
-  `MemberName` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `MemberPwd` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `Sex` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `RealName` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `MobileTel` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `Email` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `Address` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `ZhiFuPWD` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `userPictrue` varchar(1000) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `addressType` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `birthday` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
+  `MemberID` int(11) NULL DEFAULT NULL,
+  `MemberName` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `MemberPwd` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `Sex` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `RealName` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `MobileTel` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `Email` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `Address` varchar(1000) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `ZhiFuPWD` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `userPictrue` varchar(800) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `level` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `birthday` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tb_member
 -- ----------------------------
-INSERT INTO `tb_member` VALUES (1, '张xx', '123456', '男', '张三', '13544874455', '12345@qq.com', '郑州二七马寨', '123456', NULL, NULL, NULL);
+INSERT INTO `tb_member` VALUES (1, '张xx', '123456', '男', '张三', '13544874455', '12345@qq.com', '郑州二七马寨', '123456', NULL, '2', NULL);
+INSERT INTO `tb_member` VALUES (2, '张三', '123456', '男', '张三', NULL, NULL, NULL, NULL, NULL, '1', NULL);
+INSERT INTO `tb_member` VALUES (3, '李四', '123321', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2', NULL);
 
 -- ----------------------------
 -- Table structure for tb_order
 -- ----------------------------
 DROP TABLE IF EXISTS `tb_order`;
 CREATE TABLE `tb_order`  (
-  `orderID` int(0) NULL DEFAULT NULL,
-  `goodsID` int(0) NULL DEFAULT NULL,
-  `num` int(0) NULL DEFAULT NULL,
-  `orderDate` timestamp(0) NULL DEFAULT NULL,
-  `OrderState` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
+  `orderID` int(11) NULL DEFAULT NULL,
+  `goodsID` int(11) NULL DEFAULT NULL,
+  `num` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `orderDate` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `OrderState` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `userId` int(11) NULL DEFAULT NULL
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tb_order
 -- ----------------------------
-INSERT INTO `tb_order` VALUES (1, 1, 1, '2020-04-01 16:53:18', '未处理');
+INSERT INTO `tb_order` VALUES (1, 1, '1', '1/4/2020 16:53:18', '未处理', NULL);
 
 SET FOREIGN_KEY_CHECKS = 1;

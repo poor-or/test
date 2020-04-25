@@ -230,7 +230,6 @@ a{
     }
     .hd_right{
         float: right;
-<<<<<<< HEAD:test/cy/yhd/css/yhdcss/yhd.scss
         .hd_r_logReg{
             a{
                 color: #AAA;
@@ -416,9 +415,6 @@ a{
             }
 
         }
-=======
-        
->>>>>>> aa65262b635c180f84e78fb74d1c20ffb9d49c90:test/cy/yhd/css/yhd.scss
         .hd_r_l{
             @extend .hd_t_left;
             padding: 0 10px;

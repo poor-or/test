@@ -219,29 +219,27 @@ a {
     .hd_header_top .hd_right .hd_r_logReg span, .hd_header_top .hd_right .hd_r_logReg .hd_place .none .hd_hot_city div, .hd_header_top .hd_place .none .hd_hot_city .hd_right .hd_r_logReg div, .hd_header_top .hd_right .hd_r_logReg .hd_place .none .hd_letter_search div, .hd_header_top .hd_place .none .hd_letter_search .hd_right .hd_r_logReg div, .hd_header_top .hd_right .hd_r_logReg span + a, .hd_header_top .hd_right .hd_r_logReg .hd_place .none .hd_hot_city div + a, .hd_header_top .hd_place .none .hd_hot_city .hd_right .hd_r_logReg div + a, .hd_header_top .hd_right .hd_r_logReg .hd_place .none .hd_letter_search div + a, .hd_header_top .hd_place .none .hd_letter_search .hd_right .hd_r_logReg div + a {
       color: red; }
     .hd_header_top .hd_right .login-txt {
-      float: left; }
-      .hd_header_top .hd_right .login-txt .user:hover + div a:first-child {
-        display: block; }
-        .hd_header_top .hd_right .login-txt .user:hover + div a:first-child + a {
-          display: none; }
-      .hd_header_top .hd_right .login-txt div {
-        width: 110px;
-        float: right;
-        position: relative; }
-        .hd_header_top .hd_right .login-txt div a {
-          position: absolute;
-          right: 0;
-          margin: 0 3px; }
-          .hd_header_top .hd_right .login-txt div a:first-child {
-            right: 10px;
-            color: #CCC;
-            display: none; }
-          .hd_header_top .hd_right .login-txt div a span, .hd_header_top .hd_right .login-txt div a .hd_place .none .hd_hot_city div, .hd_header_top .hd_place .none .hd_hot_city .hd_right .login-txt div a div, .hd_header_top .hd_right .login-txt div a .hd_place .none .hd_letter_search div, .hd_header_top .hd_place .none .hd_letter_search .hd_right .login-txt div a div {
-            padding: 2px 5px;
-            margin-right: 5px;
-            background-color: red;
-            color: #fff;
-            border-radius: 20px; }
+      float: left;
+      position: relative; }
+      .hd_header_top .hd_right .login-txt .user {
+        display: inline-block; }
+        .hd_header_top .hd_right .login-txt .user a {
+          display: inline-block;
+          vertical-align: bottom; }
+          .hd_header_top .hd_right .login-txt .user a:last-child {
+            margin: 0 10px;
+            color: #CCC; }
+      .hd_header_top .hd_right .login-txt .user:hover + a {
+        display: none; }
+      .hd_header_top .hd_right .login-txt .vip-lv {
+        position: absolute;
+        right: 0; }
+        .hd_header_top .hd_right .login-txt .vip-lv span, .hd_header_top .hd_right .login-txt .vip-lv .hd_place .none .hd_hot_city div, .hd_header_top .hd_place .none .hd_hot_city .hd_right .login-txt .vip-lv div, .hd_header_top .hd_right .login-txt .vip-lv .hd_place .none .hd_letter_search div, .hd_header_top .hd_place .none .hd_letter_search .hd_right .login-txt .vip-lv div {
+          padding: 2px 5px;
+          margin-right: 5px;
+          background-color: red;
+          color: #fff;
+          border-radius: 20px; }
     .hd_header_top .hd_right .hd_r_l {
       padding: 0 10px; }
     .hd_header_top .hd_right .hd_member:hover i {
@@ -358,50 +356,58 @@ a {
     font-size: 16px;
     text-align: center;
     background-color: #ff4040;
-    color: #fff; }
-    .hd_bp .contro i {
-      margin: 0 5px; }
-    .hd_bp .contro img {
-      width: 10px;
-      margin-left: 5px; }
+    z-index: 100; }
+    .hd_bp .contro .contro-h {
+      color: #fff; }
+      .hd_bp .contro .contro-h i {
+        margin: 0 5px; }
+      .hd_bp .contro .contro-h img {
+        width: 10px;
+        margin-left: 5px; }
     .hd_bp .contro:hover img {
       transform: rotate(180deg); }
-  .hd_bp .contro:hover ~ .category-list {
+    .hd_bp .contro .category-list {
+      display: none;
+      width: 1070px;
+      height: 410px;
+      background-color: #fff;
+      font-size: 12px;
+      text-align: left;
+      border: 1px solid #ff4040;
+      position: absolute;
+      top: 42px;
+      left: 0;
+      z-index: 100; }
+      .hd_bp .contro .category-list .item {
+        float: left;
+        width: 155px;
+        height: 370px;
+        padding-left: 20px;
+        margin: 20px 0;
+        line-height: 20px; }
+        .hd_bp .contro .category-list .item div {
+          height: 185px; }
+        .hd_bp .contro .category-list .item:first-child ~ .item {
+          border-left: 1px solid #e9e9e9; }
+        .hd_bp .contro .category-list .item h4 {
+          font-size: 14px; }
+          .hd_bp .contro .category-list .item h4 a {
+            color: #000; }
+            .hd_bp .contro .category-list .item h4 a:hover {
+              color: red; }
+        .hd_bp .contro .category-list .item ul {
+          margin-top: 8px; }
+          .hd_bp .contro .category-list .item ul li {
+            float: left;
+            width: 75px;
+            line-height: 16px;
+            margin-bottom: 8px;
+            white-space: normal;
+            cursor: pointer; }
+            .hd_bp .contro .category-list .item ul li:hover {
+              color: red; }
+  .hd_bp .contro:hover .category-list {
     display: block; }
-  .hd_bp .category-list {
-    display: none;
-    height: 410px;
-    background-color: #fff;
-    border: 1px solid #ff4040;
-    position: absolute;
-    top: 180px;
-    left: 0;
-    z-index: 100; }
-    .hd_bp .category-list .item {
-      float: left;
-      width: 155px;
-      padding-left: 20px;
-      margin: 30px 0; }
-      .hd_bp .category-list .item:first-child ~ .item {
-        border-left: 1px solid #e9e9e9; }
-      .hd_bp .category-list .item h4 {
-        font-size: 14px; }
-        .hd_bp .category-list .item h4 a {
-          color: #000; }
-          .hd_bp .category-list .item h4 a:hover {
-            color: red; }
-      .hd_bp .category-list .item ul {
-        height: 165px;
-        margin-top: 8px; }
-        .hd_bp .category-list .item ul li {
-          float: left;
-          width: 75px;
-          line-height: 16px;
-          margin-bottom: 8px;
-          white-space: normal;
-          cursor: pointer; }
-          .hd_bp .category-list .item ul li:hover {
-            color: red; }
 
 .banner {
   position: relative; }

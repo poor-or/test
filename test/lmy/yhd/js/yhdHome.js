@@ -1,3 +1,4 @@
+var server="http://localhost:8080";
 
 var ul = document.getElementById("ul_list");
 var ipt = document.getElementById("ipt");
@@ -16,7 +17,7 @@ arr.shift()
 // ajax获取城市信息
 function getCity() {
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://localhost:8081/city.php', true);
+    xhr.open('GET', server+'/test/test/lmy/yhd/city.php', true);
     xhr.send();
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
@@ -152,7 +153,7 @@ var userName = sessionStorage.getItem("userName");
 if (userName) {
     userInfo[0].parentElement.style.display = "block";
     userInfo[0].parentElement.previousElementSibling.style.display = "none";
-    userInfo[1].innerHTML = userName;
+    userInfo[1].children[0].innerHTML = userName;
 } else {
     userInfo[0].parentElement.previousElementSibling.style.display = "block";
     userInfo[0].parentElement.style.display = "none";
@@ -239,7 +240,7 @@ window.onscroll = function () {
 function getGoods(times = 0) {
     
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://localhost:8081/goods.php?page=' + times, true);
+    xhr.open('GET', server+'/test/test/lmy/yhd/goods.php?page=' + times, true);
     xhr.send();
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
@@ -253,7 +254,7 @@ function getGoods(times = 0) {
                         <span>${data[i].price}</span>
                     </a>
                     <div class="mask">
-                        <a class="one" href=""><i class="iconfont icon-iconset0309"></i></a>
+                        <a class="one" href=""><i class="iconfont icon-iconset11"></i></a>
                         <a class="last" href="">找相似</a>
                     </div>
                 </li>
@@ -263,18 +264,18 @@ function getGoods(times = 0) {
             var super_list = document.getElementById("super-good");
             if(super_list.children.length<=1){
                 for(var j=0;j<9;j++){
-                    var set_time1=Math.floor(Math.random()*Math.random()*80)
-                    var pri=parseFloat(data[set_time1].price.substr(1,data[set_time1].price.length))+50;
+                    var set_time=Math.floor(Math.random()*40)
+                    var pri=parseFloat(data[set_time].price.substr(1,data[set_time].price.length))+50;
                     super_list.innerHTML+=`
                     <li>
                         <a href="">
                             <div class="single-top">
-                                <img src="${data[set_time1].pictureAddress}" alt="">
+                                <img src="${data[set_time].pictureAddress}" alt="">
                             </div>
                             <div class="single-bot">
-                                <p>${data[set_time1].goodsName}</p>
+                                <p>${data[set_time].goodsName}</p>
                                 <span class="single-line"><i></i></span>
-                                <span class="original-price">${data[set_time1].price}</span><span class="Present-price">￥${pri}</span>
+                                <span class="original-price">${data[set_time].price}</span><span class="Present-price">￥${pri}</span>
                             </div>
                         </a>
                     </li>
@@ -284,7 +285,7 @@ function getGoods(times = 0) {
             
             setInterval(function() {
                 for(var j=0;j<9;j++){
-                    var set_time=Math.floor(Math.random()*Math.random()*80)
+                    var set_time=Math.floor(Math.random()*40)
                     var pri=parseFloat(data[set_time].price.substr(1,data[set_time].price.length))+50;
                     super_list.children[j+1].innerHTML=`
                         <a href="">
