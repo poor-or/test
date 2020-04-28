@@ -568,6 +568,223 @@ div,span,a,i,p,img {
         height: 580px;
         background: url(../../img/imgs/vip/bg.jpg) 50% 50% no-repeat;
         background-size: 200% 150%;
+        .gro-user{
+            text-align: center;
+            padding-top: 40px;
+            div{
+                width: 76px;
+                height: 76px;
+                border: 1px solid #ccc;
+                #{$bgc}: rgba(255, 255, 255,.3);
+                border-radius: 50%;
+                box-shadow: 0 0 20px -10px #666;
+                padding: 3px;
+                margin: 0 auto;
+            }
+            img{
+                width: 76px;
+                height: 76px;
+                border-radius: 50%;
+                margin-bottom: 10px;
+            }
+            p{
+                font-size: 18px;
+                font-weight: bolder;
+                margin-top: 10px;
+                span{
+                    vertical-align: bottom;
+                }
+            }
+        }
+        
+        .vip-img{
+            width: 1120px;
+            padding: 50px 0 0 10px;
+            margin: 30px auto 0;
+            height: 160px;
+            border: 0 none;
+            #{$bgc}: rgba(255, 255, 255,.3);
+            text-align: center;
+            position: relative;
+            .line{
+                width: 900px;
+                height: 6px;
+                #{$bgc}: #dcdfea;
+                position: absolute;
+                z-index: 2;
+                top: 50%;
+                margin-top: -20px;
+                left: 120px;
+                padding: 7px 0;
+                p{
+                    width: 10%;
+                    height: 6px;
+                    #{$bgc}: #aeb2d8;
+                }
+            }
+            .lv-img{
+                float: left;
+                width: 186px;
+                position: relative;
+                z-index: 5;
+                img{
+                    width: 84px;
+                    height: 84px;
+                }
+                img+span{
+                    display: block;
+                    font-size: 14px;
+                }
+                p{
+                    font-size: 14px;
+                    display: none;
+                }
+                &.big{
+                    img{
+                        transform-origin: center bottom;
+                        transform: scale(1.5);
+                    }
+                    p{
+                        display: block;
+                    }
+                } 
+            } 
+        }
+        
+    }
+    .growth-tab{
+        width: 1120px;
+        position: relative;
+        z-index: 6;
+        margin: -150px auto 0;
+        text-align: center;
+        h3{
+            position: relative;
+            font-size: 18px;
+            height: 50px;
+            line-height: 50px;
+            span{
+                color: #ff193c;
+            }
+            a{
+                position: absolute;
+                right: 0;
+                bottom: 10px;
+                font-size: 12px;
+                color: #0066cc;
+                line-height: 16px;
+            }
+        }
+        .gro-table{
+            #{$bgc}: #fff;
+            p{
+                line-height: 40px;
+                color: #333;
+                a:first-child{
+                    margin-right: 20px;
+                }
+                a{
+                    padding: 10px 5px;
+                }
+                .green{
+                    color: #ab844e; 
+                    border-bottom: 2px solid #ab844e;
+                }
+            }
+            th{
+                font-size: 14px;
+                height: 40px;
+                line-height: 40px;
+                #{$bgc}: #eee;
+                &:first-child{
+                    width: 245px;
+                    &+th{
+                        width: 245px;
+                        &+th{
+                            width: 180px;
+                        }
+                    }
+                }
+            }
+            td{
+                height: 40px;
+                line-height: 40px;
+                border-bottom: 1px solid #eee;
+                &:first-child{
+                    width: 245px;
+                    &+td{
+                        width: 245px;
+                        &+td{
+                            width: 180px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .month2{
+        p{
+            padding: 50px 0;
+            font-size: 20px;
+            border: 1px solid #eee;
+            border-left: none;
+            border-right: none;
+        }
+    }
+    .lv-gro-table{
+        #{$bgc}: #fff;
+        width: 1120px;
+        margin: 0 auto;
+        text-align: center;
+        h3{
+            font-size: 18px;
+            padding-top: 54px;
+            height: 60px;
+            line-height: 60px;
+        }
+        th{
+            width: 16.6%;
+            font-size: 14px;
+            height: 40px;
+            line-height: 40px;
+            #{$bgc}: #eee;
+        }
+        td{
+            width: 16.6%;
+            height: 50px;
+            border-bottom: 1px solid #eee;
+        }
+    }
+    .gro-info{
+        #{$bgc}: #fff;
+        width: 1120px;
+        margin: 0 auto 80px;
+        text-align: center;
+        
+        h3{
+            font-size: 18px;
+            padding-top: 54px;
+            height: 60px;
+            line-height: 60px;
+        }
+        ul{
+            border: 1px solid #eee;
+        }
+        li:nth-of-type(odd){
+            i{
+                font-size: 30px;
+                padding: 0 6px 0 10px; 
+            }
+            #{$bgc}: #eee;
+            text-align: left;
+            color: #ab844e;
+            font-size: 14px;
+            line-height: 40px;
+        }
+        li:nth-of-type(even){
+            padding: 20px 17px;
+            text-align: left;
+        }
     }
 }
 

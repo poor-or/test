@@ -297,7 +297,7 @@ a {
       .hd_bp .search-text .sea-ipt input {
         width: 476px;
         height: 38px;
-        padding: 0 30px;
+        padding: 0 50px 0 30px;
         font-size: 14px;
         line-height: 38px;
         color: #333;
@@ -307,10 +307,19 @@ a {
         background: url(../../img/imgs/sea.png) 435px 8px no-repeat;
         background-size: 20px 20px;
         outline: none; }
-        .hd_bp .search-text .sea-ipt input:focus + label {
+        .hd_bp .search-text .sea-ipt input:focus ~ label {
           display: none; }
+        .hd_bp .search-text .sea-ipt input:focus ~ .sea-history {
+          display: block; }
         .hd_bp .search-text .sea-ipt input:hover {
           border-color: red; }
+      .hd_bp .search-text .sea-ipt .sea-btn {
+        display: block;
+        position: absolute;
+        right: -1px;
+        top: -2px;
+        width: 47px;
+        height: 34px; }
       .hd_bp .search-text .sea-ipt label {
         position: absolute;
         top: 10px;
@@ -325,6 +334,55 @@ a {
         margin: 2px 5px; }
         .hd_bp .search-text .sea-ipt a:hover {
           color: #333; }
+      .hd_bp .search-text .sea-ipt .sea-history {
+        display: none;
+        width: 320px;
+        height: 170px;
+        box-sizing: border-box;
+        position: absolute;
+        top: 38px;
+        left: 30px;
+        z-index: 20;
+        background-color: #fff;
+        border: 1px solid #eee;
+        border-radius: 0 0 10px 10px; }
+        .hd_bp .search-text .sea-ipt .sea-history .his-left {
+          box-sizing: border-box;
+          float: left;
+          width: 50%;
+          height: 100%;
+          padding: 10px;
+          overflow: auto; }
+          .hd_bp .search-text .sea-ipt .sea-history .his-left li {
+            line-height: 20px; }
+            .hd_bp .search-text .sea-ipt .sea-history .his-left li a {
+              float: right;
+              font-size: 12px; }
+            .hd_bp .search-text .sea-ipt .sea-history .his-left li i {
+              font-size: 12px;
+              vertical-align: bottom; }
+        .hd_bp .search-text .sea-ipt .sea-history .his-right {
+          box-sizing: border-box;
+          padding: 10px;
+          float: left;
+          width: 50%;
+          height: 100%;
+          background-color: #eee;
+          border-radius: 0 0 10px 0; }
+          .hd_bp .search-text .sea-ipt .sea-history .his-right div {
+            height: 30px;
+            line-height: 20px; }
+          .hd_bp .search-text .sea-ipt .sea-history .his-right a {
+            padding: 3px 6px;
+            white-space: nowrap;
+            background-color: #fff;
+            color: #333;
+            margin: 2px 5px;
+            border: 1px solid transparent;
+            font-size: 12px; }
+            .hd_bp .search-text .sea-ipt .sea-history .his-right a:hover {
+              color: red;
+              border-color: red; }
     .hd_bp .search-text .shop-car {
       float: right;
       border: 1px solid #CCC;
@@ -400,7 +458,7 @@ a {
           .hd_bp .contro .category-list .item ul li {
             float: left;
             width: 75px;
-            line-height: 16px;
+            line-height: 14px;
             margin-bottom: 8px;
             white-space: normal;
             cursor: pointer; }

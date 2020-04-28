@@ -1,4 +1,4 @@
-var server="http://localhost:8080";
+var server = "http://localhost:8080";
 
 var ul = document.getElementById("ul_list");
 var ipt = document.getElementById("ipt");
@@ -17,7 +17,7 @@ for (var a = 0; a < ele.length; a++) {
 arr.shift()
 // ajax获取城市信息
 var xhr = new XMLHttpRequest();
-xhr.open('GET', server+'/test/test/lmy/yhd/city.php', true);
+xhr.open('GET', server + '/test/test/lmy/yhd/city.php', true);
 xhr.send();
 xhr.onreadystatechange = function () {
     if (xhr.readyState == 4 && xhr.status == 200) {
@@ -64,8 +64,8 @@ city.onclick = function () {
     city.parentElement.style.borderRight = "1px solid #dbdbdb";
     city.previousElementSibling.style.display = "block";
     event.stopPropagation();
-    window.addEventListener("click", function() {
-        if(!block.contains(event.target)){
+    window.addEventListener("click", function () {
+        if (!block.contains(event.target)) {
             close()
         }
     }, false)
@@ -139,19 +139,58 @@ opt.onclick = function () {
 // sessionStorage.userName = "李四";
 var userInfo = document.getElementsByClassName("login-txt")[0].children;
 var userName = sessionStorage.getItem("userName");
-
+var userName1 = document.getElementById("user-name");
+var userVip = document.getElementsByClassName("lv-img");
 if (userName) {
+    // 查询用户等级
+    function getLv() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", server + "/test/test/lmy/yhd/user.php", true);
+        xhr.send();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                var data = JSON.parse(xhr.responseText);
+                for (var i = 0; i < data.length; i++) {
+                    if (data[i].MemberName == userName) {
+                        var userLv = data[i].level;
+                        for (var k = 0; k < 6; k++) {
+                            userVip[k].classList.remove("big");
+                            userVip[userLv-1].classList.add("big");
+                            userVip[0].previousElementSibling.children[0].style.width=10+(userLv-1)*20+"%";
+                        }
+                    }
+                }
+            }
+        }
+    }
+    getLv();
     userInfo[0].parentElement.previousElementSibling.style.display = "none";
     userInfo[0].parentElement.style.display = "block";
     userInfo[1].innerHTML = userName;
     userInfo[3].children[0].children[1].innerHTML = userName;
-
+    userName1.children[0].innerHTML = userName;
 } else {
     userInfo[0].parentElement.previousElementSibling.style.display = "block";
     userInfo[0].parentElement.style.display = "none";
+    window.location.href = server + "/test/test/zxy/yhd/login.html";
 }
 function exitUser() {
     userInfo[0].parentElement.style.display = "none";
     userInfo[0].parentElement.previousElementSibling.style.display = "block";
     sessionStorage.removeItem("userName");
+    window.location.href = server + "/test/test/zxy/yhd/login.html";
+}
+
+var swit = document.getElementById("gro-switch");
+swit.children[0].onclick = function () {
+    swit.nextElementSibling.style.display = "block";
+    swit.nextElementSibling.nextElementSibling.style.display = "none";
+    this.className = "green";
+    swit.children[1].className = "";
+}
+swit.children[1].onclick = function () {
+    swit.nextElementSibling.style.display = "none";
+    swit.nextElementSibling.nextElementSibling.style.display = "block";
+    this.className = "green";
+    swit.children[0].className = "";
 }

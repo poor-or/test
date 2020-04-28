@@ -553,14 +553,14 @@ div, span, .hd_header_top .hd_place .none .hd_hot_city div, .hd_header_top .hd_p
       background-color: #fff;
       text-align: center;
       position: relative; }
-      .content .exchange .change-con img {
+      .content .exchange .change-con .not-img {
         width: 250px;
         height: 150px;
         position: absolute;
         top: 175px;
         left: 50%;
         transform: translateX(-50%); }
-      .content .exchange .change-con p {
+      .content .exchange .change-con .not-con {
         font-size: 12px;
         position: absolute;
         top: 345px;

@@ -1,4 +1,4 @@
-var server="http://localhost:8080";
+var server = "http://localhost:8080";
 
 var ul = document.getElementById("ul_list");
 var ipt = document.getElementById("ipt");
@@ -17,7 +17,7 @@ arr.shift()
 // ajax获取城市信息
 function getCity() {
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', server+'/test/test/lmy/yhd/city.php', true);
+    xhr.open('GET', server + '/test/test/lmy/yhd/city.php', true);
     xhr.send();
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
@@ -165,6 +165,29 @@ function exitUser() {
 }
 
 
+// 搜索商品
+var seacrh = document.getElementsByClassName("sea-ipt")[0];
+seacrh.children[1].onclick = function () {
+    var sea_txt = this.previousElementSibling.value;
+    if(sea_txt){
+        var sea_his = seacrh.lastElementChild.children[0].children[0];
+        sea_his.innerHTML += `
+            <li>
+                ${sea_txt}
+            </li>
+        `;
+        this.href+="?value="+sea_txt;
+    }
+}
+setInterval(function() {
+    if (seacrh.children[0].value != "") {
+        seacrh.children[2].style.display = "none";
+    }else{
+        seacrh.children[2].style.display = "block";
+    }
+},1000)
+
+
 // 轮播
 var swi = document.getElementsByClassName("lunbo")[0].children;
 var sec = document.getElementById("sec").children;
@@ -223,24 +246,24 @@ window.onscroll = function () {
     var src_h = document.documentElement.children[1].offsetHeight - window.scrollY;
 
     if (src_h < 900) {
-        
+
         scrTime++;
         if (scrTime > 1) {
             times += 80;
-            goods_list.parentElement.nextElementSibling.style.display="block";
+            goods_list.parentElement.nextElementSibling.style.display = "block";
         }
         if (times <= 80) {
             getGoods(times);
-        }else{
-            goods_list.parentElement.nextElementSibling.style.display="none";
+        } else {
+            goods_list.parentElement.nextElementSibling.style.display = "none";
         }
     }
 }
 // 异步请求加载数据
 function getGoods(times = 0) {
-    
+
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', server+'/test/test/lmy/yhd/goods.php?page=' + times, true);
+    xhr.open('GET', server + '/test/test/lmy/yhd/goods.php?page=' + times, true);
     xhr.send();
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
@@ -254,7 +277,7 @@ function getGoods(times = 0) {
                         <span>${data[i].price}</span>
                     </a>
                     <div class="mask">
-                        <a class="one" href=""><i class="iconfont icon-iconset11"></i></a>
+                        <a class="one" href="" title="${data[i].goodsId}"><i class="iconfont icon-iconset11"></i></a>
                         <a class="last" href="">找相似</a>
                     </div>
                 </li>
@@ -262,13 +285,13 @@ function getGoods(times = 0) {
             }
             // 超级单品更新商品
             var super_list = document.getElementById("super-good");
-            if(super_list.children.length<=1){
-                for(var j=0;j<9;j++){
-                    var set_time=Math.floor(Math.random()*40)
-                    var pri=parseFloat(data[set_time].price.substr(1,data[set_time].price.length))+50;
-                    super_list.innerHTML+=`
+            if (super_list.children.length <= 1) {
+                for (var j = 0; j < 9; j++) {
+                    var set_time = Math.floor(Math.random() * 40)
+                    var pri = parseFloat(data[set_time].price.substr(1, data[set_time].price.length)) + 50;
+                    super_list.innerHTML += `
                     <li>
-                        <a href="">
+                        <a href="" title="${data[set_time].goodsId}">
                             <div class="single-top">
                                 <img src="${data[set_time].pictureAddress}" alt="">
                             </div>
@@ -282,13 +305,13 @@ function getGoods(times = 0) {
                     `
                 }
             }
-            
-            setInterval(function() {
-                for(var j=0;j<9;j++){
-                    var set_time=Math.floor(Math.random()*40)
-                    var pri=parseFloat(data[set_time].price.substr(1,data[set_time].price.length))+50;
-                    super_list.children[j+1].innerHTML=`
-                        <a href="">
+
+            setInterval(function () {
+                for (var j = 0; j < 9; j++) {
+                    var set_time = Math.floor(Math.random() * 40)
+                    var pri = parseFloat(data[set_time].price.substr(1, data[set_time].price.length)) + 50;
+                    super_list.children[j + 1].innerHTML = `
+                        <a href="" title="${data[set_time].goodsId}">
                             <div class="single-top">
                                 <img src="${data[set_time].pictureAddress}" alt="">
                             </div>
@@ -301,7 +324,7 @@ function getGoods(times = 0) {
                     
                     `
                 }
-            },10800000)
+            }, 10800000)
         }
     }
 }
@@ -343,3 +366,16 @@ function next(e) {
     }
 }
 
+// 处理商品传值
+var all_a=document.querySelectorAll("a");
+var alist=[];
+for(var b=0;b<all_a.length;b++){
+    if(all_a[b].title){
+        alist.push(all_a[b]);
+    }
+}
+for(var c=0;c<alist.length;c++){
+    alist[c].onclick=function() {
+        window.location.href=server+"/test/test/lbc/yhd/yhd.html?value="+this.title;
+    }
+}

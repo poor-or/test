@@ -137,7 +137,6 @@ opt.onclick = function () {
 }
 
 // 登录显示用户名
-sessionStorage.userName = "李四";
 var userInfo = document.getElementsByClassName("login-txt")[0].children;
 var userName = sessionStorage.getItem("userName");
 var userName1 = document.getElementsByClassName("userName")[0];
@@ -325,7 +324,6 @@ function getPoint() {
 for (let i = 0; i < 100; i++) {
     points.push(getPoint());
 }
-console.log(points)
 function drawPoints() {
     points.forEach((item, i) => {
         ctx.beginPath();

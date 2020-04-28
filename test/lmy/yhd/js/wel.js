@@ -160,8 +160,8 @@ function exitUser() {
 // 福利
 var welfare = document.getElementsByClassName("welfare-card");
 for (var i = 0; i < welfare.length; i++) {
-    var wNum = welfare[i].children[2].children[1].innerHTML;
-    if (wNum == 0) {
+    var wNum = welfare[i].children[2].children[1];
+    if (wNum.innerHTML == 0) {
         welfare[i].lastElementChild.innerHTML = "福利已抢完";
         welfare[i].lastElementChild.classList.remove("have");
         welfare[i].firstElementChild.lastElementChild.style.display="block";
@@ -169,6 +169,18 @@ for (var i = 0; i < welfare.length; i++) {
         welfare[i].lastElementChild.innerHTML = "立即兑换";
         welfare[i].lastElementChild.classList.add("have");
         welfare[i].firstElementChild.lastElementChild.style.display="none";
+        welfare[i].lastElementChild.onclick=function() {
+            if(userName){
+                this.parentElement.firstElementChild.lastElementChild.style.display="block";
+                this.parentElement.firstElementChild.lastElementChild.children[0].classList.remove("icon-fuli23");
+                this.parentElement.firstElementChild.lastElementChild.children[0].classList.add("icon-yiduihuan30");
+                this.innerHTML = "已兑换";
+                this.classList.remove("have");
+                wNum.innerHTML-=1;
+            }else{
+                window.location.href = server + "/test/test/zxy/yhd/login.html";
+            }
+        }
     }
 }
 

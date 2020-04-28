@@ -438,6 +438,174 @@ div, span, .hd_header_top .hd_place .none .hd_hot_city div, .hd_header_top .hd_p
   height: 580px;
   background: url(../../img/imgs/vip/bg.jpg) 50% 50% no-repeat;
   background-size: 200% 150%; }
+  .content .club-nav .gro-user {
+    text-align: center;
+    padding-top: 40px; }
+    .content .club-nav .gro-user div {
+      width: 76px;
+      height: 76px;
+      border: 1px solid #ccc;
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      box-shadow: 0 0 20px -10px #666;
+      padding: 3px;
+      margin: 0 auto; }
+    .content .club-nav .gro-user img {
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      margin-bottom: 10px; }
+    .content .club-nav .gro-user p {
+      font-size: 18px;
+      font-weight: bolder;
+      margin-top: 10px; }
+      .content .club-nav .gro-user p span, .content .club-nav .gro-user p .hd_header_top .hd_place .none .hd_hot_city div, .hd_header_top .hd_place .none .hd_hot_city .content .club-nav .gro-user p div, .content .club-nav .gro-user p .hd_header_top .hd_place .none .hd_letter_search div, .hd_header_top .hd_place .none .hd_letter_search .content .club-nav .gro-user p div {
+        vertical-align: bottom; }
+  .content .club-nav .vip-img {
+    width: 1120px;
+    padding: 50px 0 0 10px;
+    margin: 30px auto 0;
+    height: 160px;
+    border: 0 none;
+    background-color: rgba(255, 255, 255, 0.3);
+    text-align: center;
+    position: relative; }
+    .content .club-nav .vip-img .line {
+      width: 900px;
+      height: 6px;
+      background-color: #dcdfea;
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      margin-top: -20px;
+      left: 120px;
+      padding: 7px 0; }
+      .content .club-nav .vip-img .line p {
+        width: 10%;
+        height: 6px;
+        background-color: #aeb2d8; }
+    .content .club-nav .vip-img .lv-img {
+      float: left;
+      width: 186px;
+      position: relative;
+      z-index: 5; }
+      .content .club-nav .vip-img .lv-img img {
+        width: 84px;
+        height: 84px; }
+      .content .club-nav .vip-img .lv-img img + span, .content .club-nav .vip-img .lv-img .hd_header_top .hd_place .none .hd_hot_city img + div, .hd_header_top .hd_place .none .hd_hot_city .content .club-nav .vip-img .lv-img img + div, .content .club-nav .vip-img .lv-img .hd_header_top .hd_place .none .hd_letter_search img + div, .hd_header_top .hd_place .none .hd_letter_search .content .club-nav .vip-img .lv-img img + div {
+        display: block;
+        font-size: 14px; }
+      .content .club-nav .vip-img .lv-img p {
+        font-size: 14px;
+        display: none; }
+      .content .club-nav .vip-img .lv-img.big img {
+        transform-origin: center bottom;
+        transform: scale(1.5); }
+      .content .club-nav .vip-img .lv-img.big p {
+        display: block; }
+.content .growth-tab {
+  width: 1120px;
+  position: relative;
+  z-index: 6;
+  margin: -150px auto 0;
+  text-align: center; }
+  .content .growth-tab h3 {
+    position: relative;
+    font-size: 18px;
+    height: 50px;
+    line-height: 50px; }
+    .content .growth-tab h3 span, .content .growth-tab h3 .hd_header_top .hd_place .none .hd_hot_city div, .hd_header_top .hd_place .none .hd_hot_city .content .growth-tab h3 div, .content .growth-tab h3 .hd_header_top .hd_place .none .hd_letter_search div, .hd_header_top .hd_place .none .hd_letter_search .content .growth-tab h3 div {
+      color: #ff193c; }
+    .content .growth-tab h3 a {
+      position: absolute;
+      right: 0;
+      bottom: 10px;
+      font-size: 12px;
+      color: #0066cc;
+      line-height: 16px; }
+  .content .growth-tab .gro-table {
+    background-color: #fff; }
+    .content .growth-tab .gro-table p {
+      line-height: 40px;
+      color: #333; }
+      .content .growth-tab .gro-table p a:first-child {
+        margin-right: 20px; }
+      .content .growth-tab .gro-table p a {
+        padding: 10px 5px; }
+      .content .growth-tab .gro-table p .green {
+        color: #ab844e;
+        border-bottom: 2px solid #ab844e; }
+    .content .growth-tab .gro-table th {
+      font-size: 14px;
+      height: 40px;
+      line-height: 40px;
+      background-color: #eee; }
+      .content .growth-tab .gro-table th:first-child {
+        width: 245px; }
+        .content .growth-tab .gro-table th:first-child + th {
+          width: 245px; }
+          .content .growth-tab .gro-table th:first-child + th + th {
+            width: 180px; }
+    .content .growth-tab .gro-table td {
+      height: 40px;
+      line-height: 40px;
+      border-bottom: 1px solid #eee; }
+      .content .growth-tab .gro-table td:first-child {
+        width: 245px; }
+        .content .growth-tab .gro-table td:first-child + td {
+          width: 245px; }
+          .content .growth-tab .gro-table td:first-child + td + td {
+            width: 180px; }
+.content .month2 p {
+  padding: 50px 0;
+  font-size: 20px;
+  border: 1px solid #eee;
+  border-left: none;
+  border-right: none; }
+.content .lv-gro-table {
+  background-color: #fff;
+  width: 1120px;
+  margin: 0 auto;
+  text-align: center; }
+  .content .lv-gro-table h3 {
+    font-size: 18px;
+    padding-top: 54px;
+    height: 60px;
+    line-height: 60px; }
+  .content .lv-gro-table th {
+    width: 16.6%;
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #eee; }
+  .content .lv-gro-table td {
+    width: 16.6%;
+    height: 50px;
+    border-bottom: 1px solid #eee; }
+.content .gro-info {
+  background-color: #fff;
+  width: 1120px;
+  margin: 0 auto 80px;
+  text-align: center; }
+  .content .gro-info h3 {
+    font-size: 18px;
+    padding-top: 54px;
+    height: 60px;
+    line-height: 60px; }
+  .content .gro-info ul {
+    border: 1px solid #eee; }
+  .content .gro-info li:nth-of-type(odd) {
+    background-color: #eee;
+    text-align: left;
+    color: #ab844e;
+    font-size: 14px;
+    line-height: 40px; }
+    .content .gro-info li:nth-of-type(odd) i {
+      font-size: 30px;
+      padding: 0 6px 0 10px; }
+  .content .gro-info li:nth-of-type(even) {
+    padding: 20px 17px;
+    text-align: left; }
 
 .ft_top {
   padding: 30px 0;

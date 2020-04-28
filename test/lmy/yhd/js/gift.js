@@ -139,12 +139,6 @@ opt.onclick = function () {
 var userInfo = document.getElementsByClassName("login-txt")[0].children;
 var userName = sessionStorage.getItem("userName");
 var userName1 = document.getElementById("user-name");
-
-window.onload=function() {
-    if(!userName){
-        window.location.href=server+"/test/test/zxy/yhd/login.html";
-    }
-}
 if (userName) {
     userInfo[0].parentElement.previousElementSibling.style.display = "none";
     userInfo[0].parentElement.style.display = "block";
@@ -154,6 +148,7 @@ if (userName) {
 } else {
     userInfo[0].parentElement.previousElementSibling.style.display = "block";
     userInfo[0].parentElement.style.display = "none";
+    window.location.href = server + "/test/test/zxy/yhd/login.html";
 }
 function exitUser() {
     userInfo[0].parentElement.style.display = "none";
@@ -180,7 +175,6 @@ function getPoint() {
 for (let i = 0; i < 100; i++) {
     points.push(getPoint());
 }
-console.log(points)
 function drawPoints() {
     points.forEach((item, i) => {
         ctx.beginPath();

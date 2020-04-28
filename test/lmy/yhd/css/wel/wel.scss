@@ -706,7 +706,7 @@ div,span,a,i,p,img {
             #{$bgc}: #fff;
             text-align: center;
             position: relative;
-            img{
+            .not-img{
                 width: 250px;
                 height: 150px;
                 position: absolute;
@@ -714,7 +714,7 @@ div,span,a,i,p,img {
                 left: 50%;
                 transform: translateX(-50%);
             }
-            p{
+            .not-con{
                 font-size: 12px;
                 position: absolute;
                 top: 345px;
