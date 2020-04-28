@@ -149,3 +149,16 @@ function exitUser() {
     userInfo[0].parentElement.previousElementSibling.style.display="block";
     sessionStorage.removeItem("userName");
 }
+// 处理商品传值
+var all_a=document.querySelectorAll('a');
+var alist=[];
+for(var b=0;b<all_a.length;b++){
+    if(all_a[b].title){
+        alist.push(all_a[b]);
+    }
+}
+for(var c=0;c<alist.length;c++){
+    alist[c].onclick=function(){
+        window.location.href=server+"/test/test/lbc/yhd/yhd.html?value="+this.title
+    }
+}

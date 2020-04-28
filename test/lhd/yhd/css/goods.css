@@ -10,7 +10,7 @@
   visibility: hidden; }
 
 .wrap {
-  width: 980px;
+  width: 1228px;
   margin: 0 auto; }
 
 body {
@@ -188,7 +188,8 @@ a {
       float: left;
       position: relative;
       text-align: left;
-      padding: 0 10px; }
+      padding: 0 10px;
+      box-sizing: border-box; }
       .hd_header_top .hd_right .login-txt div {
         width: 60px;
         float: right;
@@ -216,7 +217,8 @@ a {
       .hd_header_top .hd_right .login-txt:hover {
         background-color: #fff;
         border: 1px solid #CCC;
-        border-top: none; }
+        border-top: none;
+        box-sizing: border-box; }
         .hd_header_top .hd_right .login-txt:hover .vip i {
           transform: rotate(45deg); }
         .hd_header_top .hd_right .login-txt:hover .hd-user-privilege {
@@ -397,206 +399,73 @@ a {
     display: block; }
 
 .subnav {
-  height: 110px;
-  width: 980px; }
-  .subnav .co_logo {
-    width: 205px;
-    height: 110px;
-    position: absolute;
-    margin-left: 0; }
-    .subnav .co_logo img {
-      width: 205px;
-      height: 110px; }
-  .subnav .subnav-inf {
-    height: 76px;
-    float: left;
-    margin-left: 205px;
-    padding: 32px 14px 0 35px; }
-    .subnav .subnav-inf .search {
-      background-color: red;
-      padding: 2px;
-      border-radius: 2px; }
-      .subnav .subnav-inf .search input {
-        border: 0 none;
-        width: 437px;
-        height: 36px;
-        padding-left: 15px;
-        outline: 0 none; }
-      .subnav .subnav-inf .search button {
-        width: 50px;
-        height: 36px;
-        border: 0 none;
-        background-color: #ff4040;
-        text-align: center;
-        line-height: 36px;
-        color: #fff;
-        float: right; }
-        .subnav .subnav-inf .search button i {
-          font-size: 24px; }
-    .subnav .subnav-inf p a {
-      margin-right: 15px;
-      line-height: 36px;
-      color: #aaa;
-      font-size: 14px; }
-      .subnav .subnav-inf p a:hover {
-        color: red; }
-  .subnav .shopping-t {
-    float: right;
-    width: 132px;
-    height: 40px;
-    border: 1px solid #d7d7d7;
-    background: #fff;
+  width: 100%;
+  height: 90px;
+  background-color: #fff;
+  overflow: hidden; }
+  .subnav .subnav-a {
+    margin-top: 32px;
+    width: 124px;
+    height: 30px;
+    line-height: 30px;
     text-align: center;
-    margin-top: 30px; }
-    .subnav .shopping-t a {
-      display: block;
-      width: 130px;
-      height: 20px;
-      padding: 9px 0 9px;
-      line-height: 20px;
-      color: #666;
+    position: relative;
+    z-index: 1; }
+  .subnav .gs-logo-gif {
+    width: 218px;
+    height: 90px;
+    margin-left: -10px; }
+  .subnav .gs-fl {
+    float: left; }
+  .subnav .gs-nav {
+    margin-left: 84px; }
+    .subnav .gs-nav li {
+      float: left;
+      list-style: none;
+      height: 100%;
+      line-height: 90px;
       font-size: 16px;
-      float: right; }
-    .subnav .shopping-t i {
-      margin-right: 12px;
-      font-size: 20px; }
-
-.hd_cm_wrap {
-  border-bottom: 2px solid #ff4040;
-  position: relative; }
-  .hd_cm_wrap .hd_cm_nav {
-    height: 38px; }
-  .hd_cm_wrap .hd-cm-app {
-    width: 214px; }
-    .hd_cm_wrap .hd-cm-app:hover .mod_h {
-      display: block; }
-  .hd_cm_wrap .hd_cm_allsort_wrap {
-    float: left; }
-    .hd_cm_wrap .hd_cm_allsort_wrap a {
-      display: block;
-      width: 210px;
-      height: 40px;
-      background-color: #ff4040;
-      line-height: 40px;
-      text-align: center;
-      font-weight: bold;
-      font-size: 14px;
-      color: #fff;
-      cursor: pointer;
-      z-index: 10; }
-      .hd_cm_wrap .hd_cm_allsort_wrap a i {
-        display: inline-block;
-        font-size: 14px;
-        transition: all .2s; }
-      .hd_cm_wrap .hd_cm_allsort_wrap a:hover i {
-        transform: rotate(180deg); }
-  .hd_cm_wrap .mod_h {
-    display: none;
-    position: absolute;
-    width: 210px;
-    height: 400px;
-    background-color: rgba(48, 48, 48, 0.9);
-    top: 40px;
-    font-size: 14px;
-    z-index: 10; }
-    .hd_cm_wrap .mod_h li {
-      display: block;
-      height: 32px;
-      line-height: 32px;
-      transition: all .1s ease-out 0s;
-      font-weight: normal;
-      color: #fff; }
-      .hd_cm_wrap .mod_h li i {
-        color: #8f8f8f;
-        margin: 0 14px;
-        font-size: 20px; }
-      .hd_cm_wrap .mod_h li a {
-        color: #fff;
-        font-size: 12px; }
-  .hd_cm_wrap .hd_cm_nav_wrap {
-    width: 78px;
+      padding: 0 37px; }
+    .subnav .gs-nav .active-a a {
+      font-weight: 600;
+      color: #bc9c66; }
+    .subnav .gs-nav .active:hover a {
+      color: #bc9c66; }
+  .subnav .gs-fr {
+    float: right;
+    right: 0; }
+  .subnav .gs-shopping {
+    border: 1px solid #cccecf;
+    width: 132px;
     height: 38px;
-    float: left; }
-    .hd_cm_wrap .hd_cm_nav_wrap a {
-      padding-left: 20px;
-      line-height: 38px;
-      font-size: 16px; }
-
-.left_menu {
-  width: 205px;
-  float: left;
-  margin-top: 10px; }
-  .left_menu ul {
-    border: 1px solid #d4d4d4;
-    list-style: none; }
-    .left_menu ul h2 {
-      background: url(../img/ft-cn/4.png) repeat-x;
-      height: 30px;
-      line-height: 31px;
-      font-size: 14px;
-      padding-left: 18px;
-      color: #333; }
-    .left_menu ul h3 {
-      background: url(../img/ft-cn/2.jpg) no-repeat;
-      height: 29px;
-      line-height: 29px;
+    line-height: 36px;
+    text-align: center;
+    margin-top: 27px;
+    font-size: 16px;
+    position: relative; }
+    .subnav .gs-shopping i {
+      font-size: 18px;
+      margin-right: 12px; }
+    .subnav .gs-shopping .badge {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      padding: 1px 6px;
+      line-height: 17px;
+      background-color: #fc4246;
       font-size: 12px;
-      padding-left: 19px;
-      color: #333;
-      font-weight: normal;
-      border-top: 1px solid #d4d4d4;
-      cursor: pointer; }
-    .left_menu ul .on {
-      background: url(../img/ft-cn/3.jpg) no-repeat; }
-    .left_menu ul .one {
-      color: red; }
-    .left_menu ul li a {
-      background: url(../img/ft-cn/5.png) no-repeat 0px 7px;
-      height: 24px;
-      line-height: 24px;
-      padding-left: 10px;
-      margin-left: 10px; }
+      border-radius: 20px;
+      color: #fff; }
 
-.right_content {
-  width: 760px;
-  float: right;
-  margin-top: 10px; }
-  .right_content .crumb {
-    background: url(../img/service/4.png) no-repeat 0px 5px;
-    height: 21px;
-    line-height: 21px; }
-    .right_content .crumb .home {
-      background: none; }
-    .right_content .crumb a {
-      background: url(../img/service/3.png) no-repeat 5px 0px;
-      padding-left: 23px;
-      height: 21px;
-      display: inline-block; }
-  .right_content .help_box {
-    border: 1px solid #dbdbdb;
-    margin-top: 10px; }
-    .right_content .help_box h3 {
-      background: url(../img/service/5.png) repeat-x;
-      height: 35px;
-      padding-left: 17px;
-      font-size: 14px;
-      font-weight: bold;
-      color: #333;
-      line-height: 35px; }
-    .right_content .help_box .help_detail {
-      padding: 6px 22px; }
-      .right_content .help_box .help_detail dl {
-        line-height: 20px; }
-        .right_content .help_box .help_detail dl dt {
-          font-weight: bold;
-          margin-top: 10px; }
-      .right_content .help_box .help_detail .bg_blue {
-        background: #DEEDF9;
-        line-height: 28px; }
-      .right_content .help_box .help_detail dd {
-        margin-bottom: 10px; }
-        .right_content .help_box .help_detail dd .txt_indent {
-          text-indent: 2em; }
+.ten {
+  width: 100%;
+  height: 515px;
+  margin-top: 70px;
+  overflow: hidden; }
+  .ten .im {
+    height: 414px;
+    text-align: center;
+    margin-top: 100px; }
 
 .ft_top {
   padding: 30px 0;
@@ -604,7 +473,7 @@ a {
   .ft_top a {
     float: left;
     width: 205px;
-    margin: 0 20px;
+    margin: 0 51px;
     overflow: hidden; }
     .ft_top a img {
       float: left;
@@ -629,7 +498,7 @@ a {
     .ft_help .ft_hp_list li {
       float: left;
       list-style: none;
-      width: 135px; }
+      width: 195px; }
     .ft_help .ft_hp_list b, .ft_help .ft_hp_list a {
       display: block;
       height: 32px;
@@ -673,4 +542,4 @@ a {
   .footer_link p + p + p a {
     margin: 0 4px; }
 
-/*# sourceMappingURL=service.css.map */
+/*# sourceMappingURL=goods.css.map */

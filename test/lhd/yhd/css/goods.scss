@@ -246,6 +246,7 @@ a{
             position: relative;
             text-align: left;
             padding: 0 10px;
+            box-sizing: border-box;
             div{
                 width: 60px;
                 float: right;
@@ -282,6 +283,7 @@ a{
                 background-color: #fff;
                 border: 1px solid #CCC;
                 border-top: none;
+                box-sizing: border-box;
                 .vip i{
                     transform: rotate(45deg);
                 }
@@ -516,290 +518,89 @@ a{
         }
     }
 }
-// 搜索
+// 金币商城
     .subnav{
-        height: 110px;
-        width: 1228px;
-        .co_logo{
-            width: 205px;
-            height: 110px;
-            position: absolute;
-            margin-left: 0;
-            
-            img{
-                width: 205px;
-                height: 110px;
-            }
-            
-        }
-        .subnav-inf{
-            height: 76px;
-            // width: 754px;
-            float: left;    
-            margin-left: 250px;
-             padding: 32px 14px 0 35px;
-             .search{
-                background-color: red;
-                padding: 2px;
-                border-radius: 2px;
-                input{
-                    border: 0 none;
-                    width: 655px;
-                    height: 36px;
-                    padding-left: 30px;
-                    outline: 0 none;
-                }
-                button{
-                    width: 50px;
-                    height: 36px;
-                    border: 0 none;
-                    background-color: #ff4040;
-                    text-align: center;
-                    line-height: 36px;
-                    color: #fff;
-                    float: right;
-                    i{  
-                        font-size: 24px;
-                    }
-                }
-            }
-            p{
-                a{
-                    margin-right: 15px;
-                    line-height: 36px;
-                    color: #aaa;
-                    font-size: 14px;
-                     &:hover {
-                    color:red;
-                }
-                }
-               
-            }
-        }
-        .shopping-t{   
-            float: right;
-            width: 132px;
-            height: 40px;
-            border: 1px solid #d7d7d7;
-            background: #fff; 
-            text-align: center; 
-            margin-top: 30px;         
-            a{
-                display: block;
-                width: 130px;
-                height: 20px;
-                padding: 9px 0 9px;                
-                line-height: 20px;
-                color: #666;
-                font-size: 16px;
-                 float: right;                
-            }
-            i{
-                margin-right: 12px;
-                font-size: 16px;
-            }
-        }    
-    }
-    .hd_cm_wrap{
-        border-bottom: 2px solid #ff4040;
-        position: relative;
-        .hd_cm_nav{
-            height: 38px;         
-            }
-            .hd-cm-app{
-                width: 214px;
-                &:hover .mod_h{
-                    display:block;
-            } 
-        }
-        .hd_cm_allsort_wrap{
-            float: left;      
-            a{
-                display: block;
-                width: 210px;
-                height: 40px;
-                background-color: #ff4040;
-                line-height: 40px;
-                text-align: center;
-                font-weight: bold;
-                font-size: 14px;
-                color: #fff;
-                cursor:pointer;
-                z-index: 10;
-                i{  
-                    display: inline-block;
-                    font-size: 14px;
-                    transition: all .2s;
-                }
-                &:hover i{
-                transform: rotate(180deg);
-                
-                }
-                
-            }         
-        }
-        .mod_h{
-            display:none;
-            position: absolute;
-            width: 210px;
-            height: 400px;
-            background-color: rgba(48,48,48,0.9);
-            top: 40px;
-            font-size: 14px; 
-            z-index: 10;
-            li{
-                display: block;
-                height: 32px;
-                line-height: 32px;
-                transition: all .1s ease-out 0s;
-                font-weight: normal;
-                color: #fff;
-                i{
-                    color: #8f8f8f;
-                    margin: 0 14px;
-                    font-size: 20px;
-                }
-                a{
-                    color: #fff;
-                    font-size: 12px;
-                }
-            }           
-        }
-       
-        .hd_cm_nav_wrap{
-            width: 78px;
-            height: 38px;
-            float: left;
-            
-            a{
-                padding-left: 20px;
-                line-height: 38px;
-                font-size: 16px;
-            }
-        }
-    }
-// 中间
-.cn_content{
-    background-color: #f5f5f5;
-    padding: 30px 0 80px; 
-    .cnnt{
-    background-color: #fff;
-    margin: 0 auto;
-    padding: 40px 0 40px 56px;
-        .leift_l{
-            float: left;
-            width: 540px;
-            .pay-a{
-                width: 540px;
-                height: 32px;
-                position: relative;
-                border-bottom: 1px solid #dcdcdc;
-                h3{
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    height: 32px;
-                    font-size: 16px;
-                    font-weight: bold;
-                    border-bottom: 2px solid #ff3c3c;
-                }
-            }
-            .box-1{
-                width: 524px;
-                height: 362px;
-                padding-top: 30px;
-                padding-left: 16px;
-                table{
-                    color: #666;
-                    border-collapse: separate;
-                    border-spacing: 0 12px;
-                     tr td:first-child{
-                         width: 60px;
-                     }
-                     .crm-td{
-                        padding-left: 12px;
-                     }
-                     .table-it{
-                        margin-left: 20px;
-                        width: 314px;
-                        height: 40px;
-                        display: table-cell;
-                        vertical-align: middle;
-                        border: 1px solid #dedede;
-                        span{
-                            margin-left: 20px;
-                            font-size: 16px;
-                            color:#dedede;
-                        }
-                     }
-                     .table-top-value div{
-                         margin-top:-35px;
-                     }
-                     .crm-ul li{
-                        float: left;
-                        width: 96px;
-                        height: 54px;
-                        line-height: 54px;
-                        border: 1px solid #dedede;
-                        color: #a0a0a0;
-                        margin: 20px 7px 0 0;
-                        text-align: center;     
-                        font-size: 15px;
-                        list-style: none;
-                        box-sizing: border-box;
-                        font-weight:bolder;
-                     }
-                     .crm-cc-op{
-                         display: inline-block;
-                        width: 14px;
-                        height: 14px;
-                        border: 1px solid #e3e3e3;
-                        border-radius: 2px;
-                        vertical-align: -1px;
-                        overflow: hidden;
-                        position: relative;
-                        margin-right: 5px;
-                        background-color: #eee;
-                        border-radius: 50%;
-                     }
-                     .crm-cc-o{
-                        display: inline-block;
-                        font-size: 14px;
-                        color: #999;
-                        margin-top: 10px;
-                     }
-                     .crm-submit{
-                         text-align: center;
-                         line-height: 36px;
-                        width: 128px;
-                        height: 36px;     
-                        font-size: 14px;  
-                        border-radius: 2px;
-                        margin-top: 26px;
-                        border-color: #dedede;
-                        background-color: #f5f5f5;
-                        span{
-                            color: #a0a0a0;
-                            font-weight:bolder
-                        }
-                     }
-                }
-            }
-        }
-        .right_r{
+        width: 100%;
+        height: 90px;
+        background-color: #fff;
+        overflow: hidden;
+        .subnav-a{
+            margin-top: 32px;
+            width: 124px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
             position: relative;
-            width: 360px;
-            height: 260px;
-            transform: translateY(40%);
-            right: -210px;
-            overflow: hidden;
-            img{
-                
+            z-index: 1;
+        }
+        .gs-logo-gif{
+            width: 218px;
+            height: 90px;
+            margin-left: -10px;
+        }
+        .gs-fl{
+            float: left;
+        }
+        .gs-nav{
+            margin-left: 84px;
+            li{
+                float: left;
+                list-style: none;
+                height: 100%;
+                line-height: 90px;
+                font-size: 16px;
+                padding: 0 37px;          
+            }
+            .active-a a{
+                font-weight: 600;
+                color: #bc9c66;             
+            }
+            .active:hover a{
+                color: #bc9c66;
             }
         }
+        .gs-fr{
+            float: right;
+            right: 0;
+        }
+        .gs-shopping{
+            border: 1px solid rgb(204,206,207);
+            width: 132px;
+            height: 38px;
+            line-height: 36px;
+            text-align: center;
+            margin-top: 27px;
+            font-size: 16px;
+            position: relative;
+            i{
+                font-size: 18px;
+                margin-right: 12px;
+            }
+            .badge {
+                position: absolute;
+                top: -5px;
+                right: -5px;
+                padding: 1px 6px;
+                line-height: 17px;
+                background-color: #fc4246;
+                font-size: 12px;
+                border-radius: 20px;
+                color: #fff;
+            }
+        }
+    }
+// 中间部分
+.ten{
+    width: 100%;
+    height: 515px;
+    margin-top: 70px;  
+    overflow: hidden; 
+    .im{
+        height: 414px;
+        text-align: center;
+        margin-top: 100px;
     }
 }
-
 
 // 底部
 .ft_top{

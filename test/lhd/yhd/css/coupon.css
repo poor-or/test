@@ -503,29 +503,131 @@ a {
 .ticket_coupon_floor {
   background-color: #f0f0f0; }
   .ticket_coupon_floor .coupon_center {
-    padding-top: 14px; }
+    padding-top: 14px;
+    overflow: hidden; }
+    .ticket_coupon_floor .coupon_center .floor_list {
+      width: 1280px; }
+    .ticket_coupon_floor .coupon_center li {
+      float: left;
+      margin-right: 36px;
+      padding-bottom: 20px;
+      list-style: none;
+      width: 385px; }
+      .ticket_coupon_floor .coupon_center li .left_l {
+        float: left;
+        width: 292px;
+        height: 156px;
+        margin-right: 8px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        background-color: #fff;
+        position: relative; }
+        .ticket_coupon_floor .coupon_center li .left_l img {
+          width: 86px;
+          height: 86px;
+          margin: 35px 15px;
+          border: 1px solid #eee;
+          float: left; }
+        .ticket_coupon_floor .coupon_center li .left_l .selection_info {
+          padding-left: 0px;
+          width: 128px; }
+        .ticket_coupon_floor .coupon_center li .left_l .info {
+          position: relative;
+          float: left;
+          color: #666;
+          font-size: 12px; }
+        .ticket_coupon_floor .coupon_center li .left_l .price {
+          padding-top: 25px;
+          padding-bottom: 5px;
+          width: 98px; }
+          .ticket_coupon_floor .coupon_center li .left_l .price em {
+            color: #ffa8a9;
+            font-family: Verdana;
+            font-size: 24px; }
+          .ticket_coupon_floor .coupon_center li .left_l .price span, .ticket_coupon_floor .coupon_center li .left_l .price .hd_header_top .hd_place .none .hd_hot_city div, .hd_header_top .hd_place .none .hd_hot_city .ticket_coupon_floor .coupon_center li .left_l .price div, .ticket_coupon_floor .coupon_center li .left_l .price .hd_header_top .hd_place .none .hd_letter_search div, .hd_header_top .hd_place .none .hd_letter_search .ticket_coupon_floor .coupon_center li .left_l .price div {
+            color: #ff9495;
+            font-size: 36px;
+            font-weight: bold; }
+          .ticket_coupon_floor .coupon_center li .left_l .price i {
+            background-color: #ff6769;
+            display: inline-block;
+            height: 16px;
+            color: #fff;
+            line-height: 16px;
+            font-style: normal;
+            border-radius: 2px; }
+        .ticket_coupon_floor .coupon_center li .left_l .condition {
+          margin: 0;
+          color: #333; }
+        .ticket_coupon_floor .coupon_center li .left_l .rule_detail {
+          position: relative;
+          height: 20px;
+          line-height: 20px; }
+        .ticket_coupon_floor .coupon_center li .left_l .tips {
+          width: 120px;
+          display: inline-block;
+          overflow: hidden;
+          color: #999;
+          white-space: nowrap;
+          text-overflow: ellipsis; }
+        .ticket_coupon_floor .coupon_center li .left_l .ticket_get {
+          float: left; }
+        .ticket_coupon_floor .coupon_center li .left_l .ticket_get_pe {
+          position: relative;
+          float: left;
+          height: 5px;
+          margin-top: 6px;
+          background: #f2f2f2;
+          border-radius: 5px;
+          width: 68px; }
+          .ticket_coupon_floor .coupon_center li .left_l .ticket_get_pe .ticket_get_per {
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #ffb4b5;
+            border-radius: 5px;
+            height: 5px; }
+        .ticket_coupon_floor .coupon_center li .left_l .tu {
+          position: absolute;
+          top: 0;
+          right: -9px;
+          width: 9px;
+          height: 156px;
+          overflow: hidden;
+          background: url(../img/coupon/1.png) no-repeat -500px 0; }
+      .ticket_coupon_floor .coupon_center li .right_r {
+        position: relative;
+        float: left;
+        padding-left: 8px;
+        font-size: 16px;
+        text-align: center; }
+        .ticket_coupon_floor .coupon_center li .right_r a {
+          width: 70px;
+          background-color: #f77a7a;
+          display: block;
+          height: 114px;
+          padding-top: 42px;
+          text-align: center; }
+        .ticket_coupon_floor .coupon_center li .right_r .tu_1 {
+          position: absolute;
+          left: 0;
+          top: 0;
+          right: -9px;
+          width: 9px;
+          height: 156px;
+          overflow: hidden;
+          background: url(../img/coupon/1.png) no-repeat -500px 0;
+          background-position: -480px 0; }
+        .ticket_coupon_floor .coupon_center li .right_r .tu_2 {
+          display: inline-block;
+          width: 18px;
+          color: #fff;
+          margin-left: -5px;
+          line-height: 20px; }
   .ticket_coupon_floor .floor_more {
     height: 40px;
     margin-top: 50px;
     text-align: center; }
-
-.coupon_center_page {
-  padding-top: 20px;
-  background-color: #f0f0f0; }
-
-.page_num {
-  float: right; }
-  .page_num a {
-    display: inline-block;
-    width: 38px;
-    height: 38px;
-    margin-left: 10px;
-    border: 1px solid #fff;
-    background-color: #fff;
-    text-align: center;
-    line-height: 38px; }
-  .page_num .prev_page, .page_num .next_page {
-    width: 78px; }
 
 .coupon_center_rules {
   padding: 34px 0 50px;

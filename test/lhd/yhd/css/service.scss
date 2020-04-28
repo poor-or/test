@@ -707,6 +707,10 @@ a{
         }
         .on{
             background: url(../img/ft-cn/3.jpg) no-repeat;
+           
+        }
+        .one{
+             color: red;
         }
         li a{
             background: url(../img/ft-cn/5.png) no-repeat 0px 7px;
@@ -714,6 +718,58 @@ a{
             line-height: 24px;
             padding-left: 10px;
             margin-left: 10px;
+        }
+    }
+}
+.right_content{
+    width: 760px;
+    float: right;
+    margin-top: 10px;
+    .crumb{
+        background: url(../img/service/4.png) no-repeat 0px 5px;
+        height: 21px;
+        line-height: 21px;
+        .home{
+            background: none;
+        }
+        a{
+            background: url(../img/service/3.png) no-repeat 5px 0px;
+            padding-left: 23px;
+            height: 21px;
+            display: inline-block;
+        }
+    }
+    .help_box{
+        border: 1px solid #dbdbdb;
+        margin-top: 10px;
+        h3{
+            background: url(../img/service/5.png) repeat-x;
+            height: 35px;
+            padding-left: 17px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+            line-height: 35px;
+        }
+        .help_detail{
+            padding: 6px 22px;
+            dl{
+                line-height: 20px;
+                dt{
+                    font-weight: bold;
+                    margin-top: 10px;
+                }
+            }
+            .bg_blue{
+                background: #DEEDF9;
+                line-height: 28px;
+            }
+            dd{
+                margin-bottom: 10px;
+                .txt_indent{
+                    text-indent: 2em;
+                }
+            }
         }
     }
 }
