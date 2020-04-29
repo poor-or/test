@@ -525,10 +525,12 @@ a {
 .cn_content {
   background-color: #f5f5f5;
   padding: 30px 0 80px; }
+  .cn_content .cll {
+    background-color: #fff; }
   .cn_content .cnnt {
-    background-color: #fff;
     margin: 0 auto;
-    padding: 40px 0 40px 56px; }
+    padding: 40px 0 40px 56px;
+    height: 430px; }
     .cn_content .cnnt .leift_l {
       float: left;
       width: 540px; }
@@ -557,18 +559,29 @@ a {
           .cn_content .cnnt .leift_l .box-1 table tr td:first-child {
             width: 60px; }
           .cn_content .cnnt .leift_l .box-1 table .crm-td {
-            padding-left: 12px; }
+            padding-left: 12px;
+            position: relative; }
           .cn_content .cnnt .leift_l .box-1 table .table-it {
-            margin-left: 20px;
-            width: 314px;
+            width: 190px;
             height: 40px;
-            display: table-cell;
             vertical-align: middle;
-            border: 1px solid #dedede; }
-            .cn_content .cnnt .leift_l .box-1 table .table-it span, .cn_content .cnnt .leift_l .box-1 table .table-it .hd_header_top .hd_place .none .hd_hot_city div, .hd_header_top .hd_place .none .hd_hot_city .cn_content .cnnt .leift_l .box-1 table .table-it div, .cn_content .cnnt .leift_l .box-1 table .table-it .hd_header_top .hd_place .none .hd_letter_search div, .hd_header_top .hd_place .none .hd_letter_search .cn_content .cnnt .leift_l .box-1 table .table-it div {
-              margin-left: 20px;
+            box-sizing: border-box; }
+            .cn_content .cnnt .leift_l .box-1 table .table-it input {
+              width: 100%;
+              height: 100%;
               font-size: 16px;
-              color: #dedede; }
+              outline: 0;
+              padding: 0 96px 0 20px;
+              border: 1px solid #dedede; }
+            .cn_content .cnnt .leift_l .box-1 table .table-it input::-webkit-input-placeholder {
+              color: #a0a0a0; }
+          .cn_content .cnnt .leift_l .box-1 table .tel-info {
+            position: absolute;
+            top: 45px;
+            left: 12px;
+            color: #ff875a; }
+            .cn_content .cnnt .leift_l .box-1 table .tel-info i {
+              font-size: 12px; }
           .cn_content .cnnt .leift_l .box-1 table .table-top-value div {
             margin-top: -35px; }
           .cn_content .cnnt .leift_l .box-1 table .crm-ul li {
