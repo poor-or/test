@@ -5,9 +5,10 @@ header("Access-Control-Allow-Origin: *");
   $servername="localhost";
   $name="root";
   $psd="123456";
-  $mysql="project";
+  $mysql="stu";
+  $num=$_GET['page'];
   $con=new mysqli($servername,$name,$psd,$mysql);
-    $select="select * from tb_goods limit 120,40";
+    $select="select * from tb_goods limit {$num},10";
     $txt=$con->query($select);
     while($pro=$txt->fetch_assoc()){
         $content[]=$pro;

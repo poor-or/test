@@ -7,7 +7,7 @@
     <title>Document</title>
     <!-- <link rel="stylesheet" href="/css/login.css"> -->
     <link rel="stylesheet" href="./css/login.css">
-    <link rel="stylesheet" href="../../font/iconfont.css">
+    <link rel="stylesheet" href="../../font/Alliconfont.css">
     <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
 </head>
 
@@ -26,15 +26,15 @@
                 <div class="help">
                     <div class="dian">
                         <s class="help-l"></s>
-                        <a href="" class="help-a">帮助中心</a>
+                        <a href="javascript:void(0);" class="help-a">帮助中心</a>
                         <s class="help-r"></s>
                     </div>
                     <div class="help-hiddle">
                         <ul>
-                            <li><a href="" class="change1-color">包裹跟踪</a></li>
-                            <li><a href="" class="change2-color">常见问题</a></li>
-                            <li><a href="" class="change3-color">在线退换货</a></li>
-                            <li><a href="" class="change4-color">在线投诉</a></li>
+                            <li><a href="javascript:void(0);" class="change1-color">包裹跟踪</a></li>
+                            <li><a href="javascript:void(0);" class="change2-color">常见问题</a></li>
+                            <li><a href="javascript:void(0);" class="change3-color">在线退换货</a></li>
+                            <li><a href="javascript:void(0);" class="change4-color">在线投诉</a></li>
                         </ul>
                     </div>
                 </div>
@@ -48,6 +48,12 @@
                 <img src="./img/login_pic.png" alt="">
             </div>
             <div class="mod-right">
+                <div>
+                    <p class="err-tip one">账号和密码不匹配，请重新输入</p>
+                    <p class="err-tip two">请输入账户</p>
+                    <p class="err-tip three">请输入密码</p>
+                    <p class="err-tip four">请输入账户密码</p>
+                </div>
                 <div class="clearfix" style="padding-bottom: 5px;">
                     <h4 class="mod-login">1号店用户登陆</h4>
                     <a href="./sign.html" class="mod-sign">注册登陆</a>
@@ -55,64 +61,59 @@
                 <div class="mod-item">
                     <div class="login-user">
                         <span class="user-ico"></span>
-                        <input type="text" placeholder="用户名/邮箱/手机号" class="ipt" id="ipt" >
+                        <input type="text" placeholder="用户名/邮箱/手机号" class="ipt" id="ipt" name="user">
                     </div>
                     <div class="login-user">
                         <span class="psd-ico"></span>
                         <input type="password" placeholder="密码" class="ipt" id="psd">
                     </div>
-                    
+
                 </div>
-                <!-- <div class="focus-block" >
-                    <div class="inform-data">
-                        <p class="data-user"></p>
-                        <p class="data-psd"></p>
-                    </div>
-                    <div class="inform-botoom">管理账户</div>
-                </div>  -->
-                    <div class="inform">
-                            <p></p>
-                            <p></p>
-                    </div> 
                 <!-- </div> -->
                 <div class="auto-login">
                     <p>
-                        <a href="#" class="auto-check">自动登录</a>
+                        <a href="javascript:void(0);" class="auto-check">自动登录</a>
                         <span class="auto-hidden">请勿再公共电脑上启用</span>
-                        <a href="" class="auto-right">忘记密码？</a>
+                        <a href="javascript:void(0);" class="auto-right">忘记密码？</a>
                     </p>
                 </div>
-                
+
                 <button type="button" class="btn">登陆</button>
                 <div class="more-login">
                     <p>更多合作网站账号登录</p>
                     <div class="clearfix pointer">
                         <ul class="more-ul clearfix">
-                            <li><a href="https://passport.yhd.com/qq/login.do" target="_blank" class="iconfont icon-qq1"
-                                    title="QQ" style="color: #10a8ff;"></a></li>
+                            <li><a href="https://passport.yhd.com/qq/login.do" target="_blank"
+                                    class="iconfont icon-qq45" title="QQ" style="color: #10a8ff;"></a></li>
                             <li><a href="https://passport.yhd.com/jingdong/login.do" target="_blank"
-                                    class="iconfont icon-jingdong-1" title="京东"  style=" color: #c81825;
+                                    class="iconfont icon-jingdong43" title="京东" style=" color: #c81825;
                                     ;"></a></li>
                             <li><a href="https://passport.yhd.com/wechat/login.do" target="_blank"
-                                    class="iconfont icon-weixin" title="微信"  style="color: #0c0;"></a></li>
-                            <li><a href="https://passport.yhd.com/sina/login.do" target="_blank" class="iconfont icon-xinlang-1" style="color: #dd2e37;"
-                                    title="新浪微博"></a></li>
+                                    class="iconfont icon-weixin52" title="微信" style="color: #0c0;"></a></li>
+                            <li><a href="https://passport.yhd.com/sina/login.do" target="_blank"
+                                    class="iconfont icon-xinlang54" style="color: #dd2e37;" title="新浪微博"></a></li>
                         </ul>
-                        <a href="javascript: ;" class="fold">更多合作网站
+                        <a href="javascript:void(0);" class="fold">更多合作网站
                             <i class="fold-i"></i>
                         </a>
-                    </div>                
-                        <ul  class="more-loading clearfix">
-                            <li style="display: list-item;"><a href="https://passport.yhd.com/alipay/login.do" target="_blank"><i class="iconfont icon-zhifubao zhifubao"></i>支付宝</a></li>
-                            <li style="display: list-item;"><a href="https://passport.yhd.com/netease/login.do" target="_blank"><i class="iconfont icon-wangyi wangyi"></i>网易</a></li>
-                            <li style="display: list-item;"><a href="https://passport.yhd.com/baidu/login.do" target="_blank"><i class="iconfont icon-baidu baidu"></i>百度</a></li>
-                            <li style="display: list-item;"><a href="https://passport.yhd.com/renren/login.do" target="_blank"><i class="iconfont icon-renren renren"></i>人人网</a></li>
-                            <li style="display: list-item;"><a href="https://passport.yhd.com/wanlitong/login.do" target="_blank"><i class="iconfont icon-pingan pingan"></i>平安万里通</a></li>
-                            <li style="display: list-item;"><a href="https://passport.yhd.com/mogujie/login.do" target="_blank"><i class="iconfont icon-mogujieicon mogujie"></i>蘑菇街</a></li>
-                        </ul>
+                    </div>
+                    <ul class="more-loading clearfix">
+                        <li style="display: list-item;"><a href="https://passport.yhd.com/alipay/login.do"
+                                target="_blank"><i class="iconfont icon-zhifubao37 zhifubao"></i>支付宝</a></li>
+                        <li style="display: list-item;"><a href="https://passport.yhd.com/netease/login.do"
+                                target="_blank"><i class="iconfont icon-wangyi34 wangyi"></i>网易</a></li>
+                        <li style="display: list-item;"><a href="https://passport.yhd.com/baidu/login.do"
+                                target="_blank"><i class="iconfont icon-baidu63 baidu"></i>百度</a></li>
+                        <li style="display: list-item;"><a href="https://passport.yhd.com/renren/login.do"
+                                target="_blank"><i class="iconfont icon-renren47 renren"></i>人人网</a></li>
+                        <li style="display: list-item;"><a href="https://passport.yhd.com/wanlitong/login.do"
+                                target="_blank"><i class="iconfont icon-pingan31 pingan"></i>平安万里通</a></li>
+                        <li style="display: list-item;"><a href="https://passport.yhd.com/mogujie/login.do"
+                                target="_blank"><i class="iconfont icon-mogujie33 mogujie"></i>蘑菇街</a></li>
+                    </ul>
                 </div>
                 <div class="login-switch">
-                    <a href="#" class="switch-a"></a>
+                    <a href="javascript:void(0);" class="switch-a"></a>
                 </div>
             </div>
         </div>
@@ -121,61 +122,95 @@
     <div class="footer">
         <a href="" class="point">沪ICP备16050468号</a>
         <span>|</span>
-        <a href="">沪B2-20170039</a>
+        <a href="javascript:void(0);">沪B2-20170039</a>
         <span>|</span>
-        <a href="" class="point">营业执照</a>
+        <a href="javascript:void(0);" class="point">营业执照</a>
         <p>Copyright © 1号店网上超市 2007-2018，All Rights Reserved</p>
     </div>
     <script>
+        var server="http://localhost:8080";
         $(".auto-check").click(function () {
             $(this).toggleClass("auto-uncheck")
             $(".auto-hidden").toggle()
-             // 将数据存入记录
-            localStorage.setItem("username",$("#ipt").val()) 
-            localStorage.setItem("password",$("#psd").val())
+            // 将数据存入记录
+            localStorage.setItem("username", $("#ipt").val())
+            localStorage.setItem("password", $("#psd").val())
         })
-        $(".fold").click(function(){
+        $(".fold").click(function () {
             $(this).toggleClass("unfold")
             $(".more-loading").toggle()
         })
         // 判断是否存入数据
-       if(localStorage.username!= null){        
-            var user=localStorage.username;
-            var psd=localStorage.username; 
-            $("#ipt").css("background","#E8F0FE");
-            $("#psd").css("background","#E8F0FE");
+        if (localStorage.username != null) {
+            var user = localStorage.username;
+            var psd = localStorage.password;
+            $("#ipt").css("background", "#E8F0FE");
+            $("#psd").css("background", "#E8F0FE");
             $("#ipt").val(user);
             $("#psd").val(psd);
-            $(".data-user").text(user)
-            $(".data-psd").text(psd)
-            }
-            $("#ipt").click(function(){
-                $(".focus-block").css("display","block");
-            })
+            // $(".data-user").text(user)
+            // $(".data-psd").text(psd)
+        }
+        $("#ipt").click(function () {
+            $(".focus-block").css("display", "block");
+        }) 
+        name=location.search
+        name1=name.split("=") 
         // 登陆按钮       
-        $(".btn").click(function(){
-          var value=$("#ipt").val();  
-          var psd=$("#psd").val(); 
-          console.log(value)
-          console.log(psd)
-            // location.href="product.html";
-        // 将数据存入记录
-            localStorage.setItem("username",value) 
-          localStorage.setItem("password",psd)
-        })   
-        // 获取存入的数据   
-    //     var oldvalue=localStorage.getItem("username")
-    //     var oldpsd=localStorage.getItem("password")       
-    //     $("#ipt").click(function(){
-    //    console.log(oldpsd)
-    //    console.log(oldvalue )
-    //    $("#ipt") .val(oldvalue);
-    //     $("#psd").val(oldpsd);
-    //     })
+        $(".btn").click(function () {
+            $.ajax({
+                type: "GET",
+                url: "/test/test/zxy/yhd/php/login.php?data=" + $("#ipt").val(),
+                data: {},
+                dataType: "json",
+                async: true,
+                success: function (res) {
+                    var arr = [];
+                    arr.unshift(res)
+                    if (arr[0] != null) {
+                        if ($("#psd").val() != arr[0][0].MemberPwd) {
+                            $(".one").css("display", "block")
+                            $(".one").siblings().css("display", "none")
+                        }
+                        else {
+                            $(".one").css("display", "none")
+                            $(".two").css("display", "none")
+                            $(".three").css("display", "none")
+                            if(name1==1){
+                                console.log("dui")
+                             window.history.go(-1)
+                            }
+                            else{
+                            sessionStorage.userName=$("#ipt").val();
+                              location.href=server+"/test/test/lmy/yhd/yhdHome.html";  
+                            }
+                        }
+                    } else {
+                        if (($("#ipt").val() == "" && $("#psd").val() == "")) {
+                            $(".four").css("display", "block")
+                            $(".four").siblings().css("display", "none")
+                        }
+                        if ($("#ipt").val() == "") {
+                            $(".two").css("display", "block")
+                            $(".two").siblings().css("display", "none")
+                        }
+                        if ($("#psd").val() == "") {
+                            $(".three").css("display", "block")
+                            $(".three").siblings().css("display", "none")
+                        }
+                        else{
+                            $(".one").css("display", "block")
+                        $(".one").siblings().css("display", "none")
+                        }
+                        
 
-   
+                    }
 
+                }
+            })
 
+        })
     </script>
 </body>
+
 </html>

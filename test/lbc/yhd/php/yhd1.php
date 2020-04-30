@@ -3,9 +3,9 @@
     $servername="localhost";
     $name="root";
     $password="123456";
-    $mysql="movies";
+    $mysql="stu";
     $connect=new mysqli($servername,$name,$password,$mysql);
-    $select="select * from tb_goods where goodsId={$id};";
+    $select="select * from tb_goods where goodsId='$id';";
         $txt=$connect->query($select);
         $arr=[];
         while($row=$txt->fetch_assoc()){

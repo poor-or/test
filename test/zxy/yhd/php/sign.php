@@ -7,15 +7,25 @@
     $servername="localhost";
     $name="root";
     $password="123456";
-    $mysql="project";
+    $mysql="stu";
   //创建连接
   $connect=new mysqli($servername,$name,$password,$mysql);
+  $select="select max(MemberID) from tb_member ;";
+  $cont=$connect->query($select);
+  $user=$_GET["user"];
+  $phone=$_GET["phone"];
+  $psd=$_GET["psd"];
+  echo $user."-".$phone."-".$psd;
+//   获取行数，每次添加数据让id加1
+while($list=$cont->fetch_assoc()){
+  $lists[]=$list;      
+}
+$number=$lists[0]["max(MemberID)"];
+$num=$number+1;
+echo $num;
   //   添加数据
-  $data="insert into tb_member (MemberName,MobileTel,MemberPwd)values('$_GET[user]','$_GET[phone]','$_GET[psd]');";
+  if($user && $phone  && $psd ){
+  $data="insert into tb_member (MemberID,MemberName,MobileTel,MemberPwd)values({$num},'{$user}','{$phone}','{$psd}');";
   $result=$connect->query($data);
-     //  查询数据
-    $select="select * from tb_member where MemberName='$_GET[user]';";
-    $cont=$connect->query($select);
-    $number=$cont->num_rows;
-   //  echo "<script>sessionStorage.setItem('data','print_r($cont->num_rows)')</script>"
+  }
 ?>

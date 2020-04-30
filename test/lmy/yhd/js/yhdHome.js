@@ -151,6 +151,23 @@ if (dateTime.getHours() <= 11) {
 }
 var userName = sessionStorage.getItem("userName");
 if (userName) {
+    // 查询用户id
+    function getLv() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", server + "/test/test/lmy/yhd/user.php", true);
+        xhr.send();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                var data = JSON.parse(xhr.responseText);
+                for (var i = 0; i < data.length; i++) {
+                    if (data[i].MemberName == userName) {
+                        sessionStorage.userId = data[i].MemberID;
+                    }
+                }
+            }
+        }
+    }
+    getLv();
     userInfo[0].parentElement.style.display = "block";
     userInfo[0].parentElement.previousElementSibling.style.display = "none";
     userInfo[1].children[0].innerHTML = userName;
@@ -169,23 +186,23 @@ function exitUser() {
 var seacrh = document.getElementsByClassName("sea-ipt")[0];
 seacrh.children[1].onclick = function () {
     var sea_txt = this.previousElementSibling.value;
-    if(sea_txt){
+    if (sea_txt) {
         var sea_his = seacrh.lastElementChild.children[0].children[0];
         sea_his.innerHTML += `
             <li>
                 ${sea_txt}
             </li>
         `;
-        this.href+="?value="+sea_txt;
+        this.href += "?value=" + sea_txt;
     }
 }
-setInterval(function() {
+setInterval(function () {
     if (seacrh.children[0].value != "") {
         seacrh.children[2].style.display = "none";
-    }else{
+    } else {
         seacrh.children[2].style.display = "block";
     }
-},1000)
+}, 1000)
 
 
 // 轮播
@@ -271,13 +288,13 @@ function getGoods(times = 0) {
             for (var i = 0; i < 40; i++) {
                 goods_list.innerHTML += `
                 <li>
-                    <a class="clearfix goods-file" href="">
+                    <a class="clearfix goods-file" href="javascript:  void(0);" title="${data[i].goodsId}">
                         <img src="${data[i].pictureAddress}" alt="">
                         <p>${data[i].goodsName}</p>
                         <span>${data[i].price}</span>
                     </a>
                     <div class="mask">
-                        <a class="one" href="javascript:  void(0);" title="${data[i].goodsId}"><i class="iconfont icon-iconset11"></i></a>
+                        <a class="one addGoods" href="javascript:  void(0);" data-id="${data[i].goodsId}"><i class="iconfont icon-iconset11"></i></a>
                         <a class="last" href="javascript:  void(0);">找相似</a>
                     </div>
                 </li>
@@ -291,7 +308,7 @@ function getGoods(times = 0) {
                     var pri = parseFloat(data[set_time].price.substr(1, data[set_time].price.length)) + 50;
                     super_list.innerHTML += `
                     <li>
-                        <a href="javascript:  void(0);" title="${data[set_time].goodsId}">
+                        <a href="../../zxy/yhd/product.html">
                             <div class="single-top">
                                 <img src="${data[set_time].pictureAddress}" alt="">
                             </div>
@@ -311,7 +328,7 @@ function getGoods(times = 0) {
                     var set_time = Math.floor(Math.random() * 40)
                     var pri = parseFloat(data[set_time].price.substr(1, data[set_time].price.length)) + 50;
                     super_list.children[j + 1].innerHTML = `
-                        <a href="javascript:  void(0);" title="${data[set_time].goodsId}">
+                        <a href="../../zxy/yhd/product.html">
                             <div class="single-top">
                                 <img src="${data[set_time].pictureAddress}" alt="">
                             </div>
@@ -331,25 +348,6 @@ function getGoods(times = 0) {
 getGoods()
 
 
-
-// 超级品牌倒计时
-window.onload = function () {
-    setInterval(function () {
-        var timeNow = new Date();
-        var time = timeNow.getSeconds();
-        var minute = timeNow.getMinutes();
-        var hours = timeNow.getHours();
-        var h = document.getElementById("djs-clock").children[0];
-        var m = document.getElementById("djs-clock").children[1];
-        var s = document.getElementById("djs-clock").children[2];
-        var num = ["02", "01", "00"];
-        hours > 12 ? hours -= 12 : hours;
-        h.innerHTML = num[hours % 3];
-        60 - minute < 10 ? m.innerHTML = "0" + (60 - minute) : m.innerHTML = 60 - minute;
-        60 - time < 10 ? s.innerHTML = "0" + (60 - time) : s.innerHTML = 60 - time;
-    }, 1000)
-}
-
 // 甄选右边分页
 function prev(e) {
     e = window.event.target;
@@ -366,29 +364,127 @@ function next(e) {
     }
 }
 
-// 处理商品传值
-var all_a=document.querySelectorAll("a");
-var alist=[];
-for(var b=0;b<all_a.length;b++){
-    if(all_a[b].title){
-        alist.push(all_a[b]);
+
+// 超级品牌倒计时
+window.onload = function () {
+    var userName = sessionStorage.getItem("userName");
+    if (userName) {
+        // 查询用户id
+        function getLv() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", server + "/test/test/lmy/yhd/user.php", true);
+            xhr.send();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var data = JSON.parse(xhr.responseText);
+                    for (var i = 0; i < data.length; i++) {
+                        if (data[i].MemberName == userName) {
+                            sessionStorage.userId = data[i].MemberID;
+                        }
+                    }
+                }
+            }
+        }
+        getLv();
+        userInfo[0].parentElement.style.display = "block";
+        userInfo[0].parentElement.previousElementSibling.style.display = "none";
+        userInfo[1].children[0].innerHTML = userName;
+    } else {
+        userInfo[0].parentElement.previousElementSibling.style.display = "block";
+        userInfo[0].parentElement.style.display = "none";
     }
-}
-for(var c=0;c<alist.length;c++){
-    alist[c].onclick=function() {
-        console.log(this.title)
-        window.location.href=server+"/test/test/lbc/yhd/yhdHome.html?value="+this.title;
+
+    setInterval(function () {
+        var timeNow = new Date();
+        var time = timeNow.getSeconds();
+        var minute = timeNow.getMinutes();
+        var hours = timeNow.getHours();
+        var h = document.getElementById("djs-clock").children[0];
+        var m = document.getElementById("djs-clock").children[1];
+        var s = document.getElementById("djs-clock").children[2];
+        var num = ["02", "01", "00"];
+        hours > 12 ? hours -= 12 : hours;
+        h.innerHTML = num[hours % 3];
+        60 - minute < 10 ? m.innerHTML = "0" + (60 - minute) : m.innerHTML = 60 - minute;
+        60 - time < 10 ? s.innerHTML = "0" + (60 - time) : s.innerHTML = 60 - time;
+    }, 1000)
+    // 处理商品传值
+    var all_a = document.querySelectorAll("a");
+    var alist = [];
+    for (var b = 0; b < all_a.length; b++) {
+        if (all_a[b].title) {
+            alist.push(all_a[b]);
+        }
+    }
+    for (var c = 0; c < alist.length; c++) {
+        alist[c].onclick = function () {
+            var tit = Number(this.title)
+            if (tit) {
+                window.location.href = server + "/test/test/lbc/yhd/yhd1.html?goodsId=" + this.title;
+            } else {
+                window.location.href = server + "/test/test/lbc/yhd/yhdHome.html?value=" + this.title;
+            }
+        }
+    }
+
+    setTimeout(function () {
+        var addGoods = document.getElementsByClassName("addGoods");
+        var orderNum = document.getElementById("orderNum");
+        for (var i = 0; i < addGoods.length; i++) {
+            addGoods[i].onclick = function () {
+                if (userName) {
+                    var orderNum = document.getElementById("orderNum");
+                    orderNum.innerHTML = parseInt(orderNum.innerHTML) + 1;
+                    var userId = sessionStorage.getItem("userId");
+                    var goodsId = this.dataset.id;
+                    var NowDate = new Date();
+                    var nowtime = NowDate.toLocaleDateString();
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('GET', server + '/test/test/lmy/yhd/addOrder.php?userId=' + userId + "&goodsId=" + goodsId + "&nowtime=" + nowtime, true);
+                    xhr.send();
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState == 4 && xhr.status == 200) {
+                            var data = xhr.responseText;
+                        }
+                    }
+                } else {
+                    window.location.href = server + "/test/test/zxy/yhd/login.html"
+                }
+            }
+        }
+        if (orderNum.innerHTML == "0") {
+            orderNum.style.display = "none";
+        } else {
+            orderNum.style.display = "block";
+        }
+    }, 100)
+    function getorder() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', server + '/test/test/lmy/yhd/addOrder.php', true);
+        xhr.send();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                var data = xhr.responseText;
+                var orderNum = document.getElementById("orderNum");
+                orderNum.innerHTML = data;
+            }
+        }
+    }
+    if (userName) {
+        getorder()
     }
 }
 
 
-var seaSend=document.getElementById("send-sea");
-seaSend.onclick=function() {
+
+
+var seaSend = document.getElementById("send-sea");
+seaSend.onclick = function () {
     sendVal(this)
 }
 function sendVal(e) {
-    var iptVal=e.parentElement.children[0];
-    if(iptVal!=""){
-        window.location.href=server+"/test/test/lbc/yhd/yhdHome.html?value="+iptVal.value;
+    var iptVal = e.parentElement.children[0];
+    if (iptVal.value != "") {
+        window.location.href = server + "/test/test/lbc/yhd/yhdHome.html?value=" + iptVal.value;
     }
 }

@@ -241,7 +241,7 @@
       width: 100px;
       height: 120px;
       border: 1px solid #e5e5e5;
-      z-index: 100;
+      z-index: 600;
       background: #fff;
       display: none;
       position: absolute;

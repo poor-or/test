@@ -1,5 +1,5 @@
 <?php
-    $con=new mysqli("localhost", "root", "123456", "movies");
+    $con=new mysqli("localhost", "root", "123456", "stu");
     // if($con->$con_error){
     //     die("连接失败:".$con->$con_error);
     // }

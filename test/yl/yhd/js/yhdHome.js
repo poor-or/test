@@ -160,58 +160,16 @@ function exitUser() {
 }
 
 
-// 轮播
-var swi = document.getElementsByClassName("lunbo")[0].children;
-var sec = document.getElementById("sec").children;
-var x = 0;
-for (var i = 0; i < sec.length; i++) {
-    sec[i].index = i;
-    sec[i].onmouseenter = function () {
-        for (var j = 0; j < swi.length; j++) {
-            swi[j].children[0].style.opacity = 0;
-            sec[j].style = ""
-        }
-        swi[this.index].children[0].style.opacity = 1;
-        x = this.index;
-        this.style.backgroundColor = "#333"
-        this.style.color = "#fff"
-    }
-}
-setInterval(function () {
-    x++;
-    if (x == 3) {
-        x = 0;
-    }
-    sec[x].onmouseenter()
-}, 3000)
 
 // 顶部固定和回顶部
-var hdNav = document.getElementsByClassName("hd-fixed")[0];
-var toTop=document.getElementById("to-top");
+var backtop = document.getElementById("hd-fixed");
 window.onscroll = function () {
-    if (this.scrollY > 651) {
-        hdNav.style.display = "block";
+    if (this.scrollY < 4600&&this.scrollY>100) {
+        backtop.style.display = "block";
     }
     else {
-        hdNav.style.display = "none";
-        
-    }
-    if(this.scrollY > 495){
-        toTop.parentElement.style.position="fixed";
-        toTop.parentElement.style.top="156px";
-    }
-    else{
-        toTop.parentElement.style="";
-    }
-    if(this.scrollY > 1637){
-        toTop.style.display="block";
-    }
-    else{
-        toTop.style.display="none";
-    }
-    toTop.onclick=function() {
-        document.documentElement.scrollTop = 0;
-    }
+       backtop.style.display = "none"; 
+    } 
 }
 
 // 超级品牌倒计时
@@ -231,3 +189,16 @@ window.onload=function() {
         60-time<10?s.innerHTML="0"+(60-time):s.innerHTML=60-time;
     }, 1000)
 }
+// 点击变色
+
+//  window.onload=function(){
+    var hdfixed=document.getElementById("hd-fixed")[0]
+    hdfixed.click=function (){
+    // var clo1= document.getElementById("clo1");
+    // var col2= document.getElementById("clo2");
+    // var col3= document.getElementById("clo3");
+        this.style.color="#FF4040";
+        this.style.backgroundColor="red";
+        console.log(11)
+    }
+// }

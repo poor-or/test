@@ -1,4 +1,4 @@
-
+var server ="http://localhost:8080";
 var collect = document.getElementById('collect');
 var heart = document.getElementById('heart');
 var heart1 = document.getElementById('heart1');
@@ -99,7 +99,7 @@ function text(id) {
             var data = JSON.parse(xhr.responseText);
             for (var i = 0; i < data.length; i++)
                 proImg_border.innerHTML += `
-                      <div class="proImg" id="proImg">
+                    <div class="proImg" id="proImg">
                                 <div id="proImg1"></div>
                                 <img src="${data[i].pictureAddress}" alt="">
                     </div>    
@@ -382,7 +382,7 @@ function text(id) {
                          `
         }
     }
-    xhr.open('GET', 'http://localhost:8080/yhd/php/yhd1.php?goodsId=' + id, true);
+    xhr.open('GET', server+'/test/test/lbc/yhd/php/yhd1.php?goodsId=' + id, true);
     xhr.send();
 }
 text(id)
@@ -427,7 +427,7 @@ var opt1 = `
         <option value="-1">--请选择--</option>
         `
 var xhr2 = new XMLHttpRequest();
-xhr2.open('GET', 'http://localhost:8080/yhd/php/sel.php', true);
+xhr2.open('GET', server+'/test/test/lbc/yhd/php/sel.php', true);
 xhr2.send();
 xhr2.onreadystatechange = function () {
     if (xhr2.readyState == 4 && xhr2.status == 200) {

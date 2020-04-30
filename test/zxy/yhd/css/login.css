@@ -146,6 +146,21 @@ body{
     width: 330px;
     float: right;
 }
+.err-tip{
+    display: none;
+    position: absolute;
+    top: 9px;
+    left: 35px;
+    width: 282px;
+    height: 30px;
+    overflow: hidden;
+    padding: 0 10px 0 36px;
+    border: 1px solid #e5debc;
+    border-radius: 2px;
+    background: #fff7d1 url(../img/login-bg.png) no-repeat -324px -150px;
+    line-height: 30px;
+    color: #999
+}
 .mod-login{
     font-size: 14px;
     float: left;

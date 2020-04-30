@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/sign.css">
     <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
-
+    <script src="./js/index.js"></script>
 </head>
 <body>
     <div class="header">
@@ -23,15 +23,15 @@
                 <div class="help">
                     <div class="dian">
                         <s class="help-l"></s>
-                        <a href="" class="help-a">帮助中心</a>
+                        <a href="javascript:void(0);" class="help-a">帮助中心</a>
                         <s class="help-r"></s>
                     </div>
                     <div class="help-hiddle">
                         <ul>
-                            <li><a href="" class="change1-color">包裹跟踪</a></li>
-                            <li><a href="" class="change2-color">常见问题</a></li>
-                            <li><a href="" class="change3-color">在线退换货</a></li>
-                            <li><a href="" class="change4-color">在线投诉</a></li>
+                            <li><a href="javascript:void(0);" class="change1-color">包裹跟踪</a></li>
+                            <li><a href="javascript:void(0);" class="change2-color">常见问题</a></li>
+                            <li><a href="javascript:void(0);" class="change3-color">在线退换货</a></li>
+                            <li><a href="javascript:void(0);" class="change4-color">在线投诉</a></li>
                         </ul>
                     </div>
                 </div>
@@ -39,7 +39,7 @@
         </div>
     </div>
     <!-- 表单 -->
-    <form action="./sign.php" method="GET" target="stop">
+    <form action="./php/sign.php" method="GET" target="stop">
         <div class="content">
             <div class="bg-icon1"></div>
             <div class="bg-icon2"></div>
@@ -66,6 +66,10 @@
                                     <s class="sq"></s>
                                     用户名不能为空</div>
                                 <div class="cir" id="cirUser"></div>
+                                <div id="user-bg1">
+                                    <s class="square1"></s>
+                                    用户名已存在,请重新输入
+                                </div>
                             </div>
                         </div>
                     </li>
@@ -87,15 +91,17 @@
                         </div>
                     </li>
                     <li class="current-li">
-                        <div class="current-item flcurrrent-item">
-                            <input type="text" placeholder="短信验证码" id="news">
-                            <span class="item-block  new-block">短信验证码</span>
-                            <div class="new new-block1">
+                        <div id="verifyCode" class="current-item1">
+                            <input type="text" id="code_input" placeholder="输入验证码">
+                            <p id="picyzm" class="img" ></p>
+                            <input type="button" value="验证" id="btn">
+                        </div>
+                            <!-- <input type="button" value="验证" id="btn"> -->
+                            <!-- <div class="new new-block1">
                                 <s class="square"></s>
                                 如无法接受验证码,请重启手机并确认短信未被拦截!4G用户请关闭网络进行接受
-                            </div>
-                        </div>
-                        <a href="" class="current-phone">获取验证码</a>
+                            </div> -->
+                        <!-- <a href="javascript:void(0);" class="current-phone">获取验证码</a> -->
                     </li>
                     <li>
                         <div class="current-item">
@@ -136,7 +142,7 @@
                     </li>
                     <li>
                         <div class="current-argeen">点击注册,表示同意1号店
-                            <a href="">《服务协议及隐私声明》</a>
+                            <a href="javascript:void(0);">《服务协议及隐私声明》</a>
                             <input type="submit" class="argeen-sign" id="login" value="同意协议并注册">
                             <!-- <a href="javascript:void(0)" class="argeen-sign" id="login">同意协议并注册</a> -->
                         </a>
@@ -150,14 +156,32 @@
 <iframe name="stop" style="display: none;"></iframe>
     <!-- footer -->
     <div class="footer">
-        <a href="" class="point">沪ICP备16050468号</a>
+        <a href="javascript:void(0);" class="point">沪ICP备16050468号</a>
         <span>|</span>
-        <a href="">沪B2-20170039</a>
+        <a href="javascript:void(0);">沪B2-20170039</a>
         <span>|</span>
-        <a href="" class="point">营业执照</a>
+        <a href="javascript:void(0);" class="point">营业执照</a>
         <p>Copyright © 1号店网上超市 2007-2018，All Rights Reserved</p>
     </div>
+    <script type="text/javascript">
+		//初始化验证码
+		var verifyCode = new GVerify({
+			id : "picyzm",
+			type : "blend"
+		});
+		//点击按钮验证
+		var code = document.getElementById("code_input");
+		var btn = document.getElementById("btn");
+		btn.onclick = function() {
+			var res = verifyCode.validate(code.value);
+			if (res) {
+				alert("验证通过");
+			} else {
+				alert("验证码错误");
+			}
+		}
+	</script>
     <script src="js/sign.js"></script>
-    <script scr="sign.php"></script>
+  
 </body>
 </html>

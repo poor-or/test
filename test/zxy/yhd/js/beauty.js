@@ -1,3 +1,25 @@
+var server="http://localhost:8080"
+// 搜索框
+$(".inp-icon").click(function(){
+    if($(".inp").val()==""){
+        $(".heard-inp").removeClass("inp-bg")
+    }
+    else{
+        console.log($(".inp").val())
+        // 跳转到详情页面
+    //  location.href="cart.html?value="+$(".inp").val()
+    }
+})
+
+$(".inp").focus(function(){
+    $(".heard-inp").addClass("inp-bg")
+    $(".inp").css("background","#fff")
+})
+$(".inp").blur(function(){
+    $(".inp").css("background","#f8f8f8")
+    $(".heard-inp").removeClass("inp-bg")
+})
+
 $(".box").click(function () {
     $(this).toggleClass("block-box");
 })
@@ -21,7 +43,6 @@ $(window).scroll(function () {
     } else {
         $(".rightside").css("display", "none");
     }
-    console.log($(window).scrollTop())
 })
 
     // 回到抢购中
@@ -37,13 +58,19 @@ $(window).scroll(function () {
     $(".back").click(function () {
         $('html').animate({ scrollTop: '0px' }, 900);
     });
+// 点击 跳转到详情页
+function val(e) {
+    console.log(e.id)
+    var id=e.id;
+    window.location.href=server+"/test/test/lbc/yhd/yhd1.html?goodsId="+id;
+}
 
 // 请求数据 抢购中
 
 function sell(num){
     $.ajax({
         type: "GET",
-        url: "http://localhost:8081/test/zxy/yhd/php/list.php?page="+num,
+        url: server+"/test/test/zxy/yhd/php/list.php?page="+num,
         data: {},
         dataType: "json",
         async: true,
@@ -52,11 +79,11 @@ function sell(num){
                                 $(".food-list").get(0).innerHTML += `
                                 <li>
                                 <div class="inner">
-                                    <a href="#" class="pro-img">
+                                <a href="javascript: void(0);" class="pro-img" onclick="val(this)" id=${data[i].goodsId}>
                                         <img src=${data[i].pictureAddress} alt="">
                                     </a>
                                     <p class="pro-title">
-                                        <a href="#">${data[i].goodsName}</a>
+                                        <a href="javascript: void(0);" onclick="val(this)" id=${data[i].goodsId}>${data[i].goodsName}</a>
                                     </p>
                                     <div class="bottom-info">
                                         <div class="bottom-con">
@@ -71,7 +98,8 @@ function sell(num){
                                              </div>
                                         </div>
                                     </div>
-                                    <a href="#" class="btn" target="_blank">加入购物</a>
+                                    <a href="javascript: void(0);" class="btn shop-btn" onclick="shopcar(this)" id=${data[i].goodsId}>加入购物</a>
+                <p class="ok">成功加入</p>
                                 </div>
                             </li>
                                `
@@ -85,22 +113,21 @@ sell(183);
  function comming(num){
     $.ajax({
                 type:"GET",
-                url:"http://localhost:8081/test/zxy/yhd/php/list.php?page="+num,
+                url:server+"/test/test/zxy/yhd/php/list.php?page="+num,
                 data:{ },
                 dataType:"json",
                 async:true,
                 success:function(data1){
-                    console.log(data1)
                     for(var i=0;i<data1.length;i++){
                         $(".comming-list").get(0).innerHTML+=`
                         <li>
                     <div class="inner">
-                        <a href="#" class="pro-img">
-                            <img src=${data1[i].pictureAddress} alt="">
-                        </a>
-                        <p class="pro-title">
-                            <a href="#">${data1[i].goodsName}</a>
-                        </p>
+                    <a href="javascript: void(0);" class="pro-img" onclick="val(this)" id=${data1[i].goodsId}>
+                    <img src=${data1[i].pictureAddress} alt="">
+                </a>
+                <p class="pro-title">
+                    <a href="javascript: void(0);" onclick="val(this)" id=${data1[i].goodsId}>${data1[i].goodsName}</a>
+                </p>
                         <div class="bottom-info">
                             <div class="bottom-con">
                                 <p class="sell-num">22:00:00准时开始</p>
@@ -110,7 +137,8 @@ sell(183);
                                 </div>
                             </div>
                         </div>
-                        <a href="#" class="btn" target="_blank" style="background-color:#ffb74d;">加入购物</a>
+                        <a href="javascript: void(0);" class="btn shop-btn" onclick="shopcar(this)" id=${data1[i].goodsId}>加入购物</a>
+                        <p class="ok">成功加入</p>
                     </div>
                 </li>
                 `
@@ -119,3 +147,54 @@ sell(183);
                 })  
  }
  comming(0)
+ // 获取用户名id
+var userInfo = document.getElementsByClassName("login-txt")[0].children;
+var userName = sessionStorage.getItem("userName");
+if (userName) {
+    var user_ID;
+    function getLv() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", server+"/test/test/zxy/yhd/php/userID.php", true);
+        xhr.send();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                var data = JSON.parse(xhr.responseText);
+                console.log(data);
+                for (var i = 0; i < data.length; i++) {
+                    if (data[i].MemberName == userName) {
+                        user_ID = data[i].MemberID
+                        console.log(user_ID)
+                    }
+                }
+            }
+        }
+    }
+    getLv();
+    userInfo[0].parentElement.previousElementSibling.style.display = "none";
+    userInfo[0].parentElement.style.display = "block";
+    userInfo[1].innerHTML = userName;
+    userInfo[3].children[0].children[1].innerHTML = userName;
+} else {
+    userInfo[0].parentElement.previousElementSibling.style.display = "block";
+    userInfo[0].parentElement.style.display = "none";
+}
+// 加入购物车
+function shopcar(e) {
+  e.nextElementSibling.style.display="block";
+  setTimeout(function(){
+    e.nextElementSibling.style.display="none";
+},800)
+    var member_id = user_ID;
+    var time = new Date();
+    var timeNow = time.toLocaleDateString();
+    var good_id = e.id;
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", server+"/test/test/zxy/yhd/php/add-goods.php?member_id=" + member_id + "&timeNow=" + timeNow + "&good_id=" + good_id, true);
+    xhr.send();
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            var data = xhr.responseText;
+        }
+    }
+}
+ 

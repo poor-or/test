@@ -93,10 +93,14 @@ a{
     margin-right: 20px;
     margin-top: 10px;
 }
+.inp-bg{
+    background-color: #fff;
+}
 .heard-inp:hover{
     border: 1px solid #d7d7d7;
 }
 .inp{
+    width: 130px;
     outline: none;
     height: 38px;
     border: 0;
@@ -210,8 +214,6 @@ a{
 .tabs-list1{
     border-radius: 5px 0 0 5px;
     border-right: none;
-    background-color: #fff;
-    color: #ff6805;
 }
 .tabs-checkout{
     background-color: #fff;
@@ -220,7 +222,7 @@ a{
 .tabs-list2{
     border-radius: 0px 5px  5px 0;
 }
-.tabs-list2:hover{
+.item:hover{
     background-color: rgba(255,255,255,.1)
 }
 .checkbox{
@@ -241,6 +243,19 @@ a{
     margin-left: 5px;
     border: 1px solid #fff;
     background-color: rgba(255,255,255,0.1);
+}
+.pro-tabs{
+    display: inline-block;
+    width: 26px;
+    height: 12px;
+    line-height: 12px;
+    padding: 1px;
+    border: 1px solid #ff3c25;
+    color: #ff3c25;
+    font-size: 12px;
+    text-align: center;
+    margin-right: 4px;
+    background: #fff8f8;
 }
 .box:hover{
     background-color: rgba(255,255,255,0.2);
@@ -277,6 +292,18 @@ a{
     margin-right: -10px;
 }
 .comming_list li{
+    position: relative;
+    float: left;
+    width: 282px;
+    height: 398px;
+    margin: 0 10px 10px 0;
+    background-color: #fff;
+}
+/* 自营 */
+.box-list{
+    margin-right: -10px;
+}
+.box-list li{
     position: relative;
     float: left;
     width: 282px;
@@ -412,6 +439,18 @@ a{
     border-bottom-right-radius: 5px;
     transition: height .4s;
 }
+.ok{
+    display: none;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid gray;
+}
 .btn:hover{
     color: #fff;
 }
@@ -421,7 +460,12 @@ a{
 .pro-list li:hover .btn{
     height: 40px;
 }
-
+.box-list li:hover .bottom-con{
+    top: -35px;
+}  
+.box-list li:hover .btn{
+    height: 40px;
+}
 /* 商品下面的 */
 .super-bottom{
      margin-bottom: 86px;
@@ -447,6 +491,7 @@ a{
 }
 /* 定位在右边的*/
 .rightside{
+    display: none;
     cursor: pointer;
     position: fixed;
     right: 10px;
@@ -464,6 +509,7 @@ a{
     background-color: #fff;
     border: 1px solid #ececec;
     margin-bottom: 3px;
+    scroll-behavior:smooth
 }
 .wait-sell{
     width: 29px;

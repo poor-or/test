@@ -3,7 +3,7 @@
     $servername="localhost";
     $name="root";
     $password="123456";
-    $mysql="movies";
+    $mysql="stu";
     $con=new mysqli($servername,$name,$password,$mysql); 
     // if($con->$con_error){
     //     die("连接失败:".$con->$con_error);

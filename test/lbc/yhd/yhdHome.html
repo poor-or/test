@@ -993,6 +993,7 @@
     </div>
     <script src="./js/yhdHome.js"></script>
     <script>
+        var server="http://localhost:8080";
         var cur2 = document.getElementById("cur2")
         var pp = document.getElementById("pp")
         cur2.onmouseenter = function () {
@@ -1004,7 +1005,7 @@
             console.log('鼠标离开')
         };
         function sendTo(id) {
-            window.open("http://localhost:8080/yhd/yhd1.html?goodsId=" + id)
+            window.open(server+"/test/test/lbc/yhd/yhd1.html?goodsId=" + id)
         }
         function getNum(text) {
             var hd_search = document.getElementById("hd_search_ipt")
@@ -1068,7 +1069,7 @@
                     }
                 }
             }
-            xhr.open('GET', 'http://localhost:8080/yhd/php/yhd.php?value=' + hd_search.value, true);
+            xhr.open('GET', server+'/test/test/lbc/yhd/php/yhd.php?value=' + hd_search.value, true);
             xhr.send();
         };
         var search_btn = document.getElementById("hd_search_btn")
@@ -1104,7 +1105,7 @@
         <option value="-1">--请选择--</option>
         `
         var xhr3 = new XMLHttpRequest();
-        xhr3.open('GET', 'http://localhost:8080/yhd/php/sel.php', true);
+        xhr3.open('GET', server+'/test/test/lbc/yhd/php/sel.php', true);
         xhr3.send();
         xhr3.onreadystatechange = function () {
             if (xhr3.readyState == 4 && xhr3.status == 200) {

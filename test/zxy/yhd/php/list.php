@@ -5,7 +5,7 @@ header("Access-Control-Allow-Origin: *");
   $servername="localhost";
   $name="root";
   $psd="123456";
-  $mysql="project";
+  $mysql="stu";
   $num=$_GET['page'];
   $con=new mysqli($servername,$name,$psd,$mysql);
     $select="select * from tb_goods limit {$num},80";

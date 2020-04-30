@@ -389,12 +389,26 @@ a {
       border: 1px solid #CCC;
       border-radius: 20px; }
       .hd_bp .search-text .shop-car a {
+        position: relative;
         display: inline-block;
         width: 120px;
         height: 38px;
         text-align: center;
         line-height: 38px;
         font-size: 16px; }
+      .hd_bp .search-text .shop-car span #orderNum, .hd_bp .search-text .shop-car .hd_header_top .hd_place .none .hd_hot_city div #orderNum, .hd_header_top .hd_place .none .hd_hot_city .hd_bp .search-text .shop-car div #orderNum, .hd_bp .search-text .shop-car .hd_header_top .hd_place .none .hd_letter_search div #orderNum, .hd_header_top .hd_place .none .hd_letter_search .hd_bp .search-text .shop-car div #orderNum {
+        display: none;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 14px;
+        font-style: normal;
+        background-color: red;
+        color: #fff;
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        border-radius: 50%; }
   .hd_bp .bp-nav {
     position: absolute;
     bottom: 0px;

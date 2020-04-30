@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/order.css">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+</head>
+
+<body>
+    <div class="order-hearder wrap">
+        <h1 class="clearfix">
+            <a href="javascript:void(0);" class="logo"></a>
+            <a href="javascript:void(0);" class="logo-txt"></a>
+        </h1>
+    </div>
+    <div class="container">
+        <div class="content">
+    <div class="message wrap">
+        <div class="message-con">
+            <div class="box clearfix">
+                <span class="box-txt">收货信息</span>
+                <a href="javascript:void(0);" class="box-btn">新建地址</a>
+            </div>
+            <div class="cont">
+                <ul class="list clearfix">
+                </ul>
+            </div>
+        </div>
+        <div class="mes-con">
+            <div class="pay-mothod message wrap">
+                <div class="message-con">
+                    <div class="message-con-top clearfix">
+                        <span class="con-top-txt">支付方式</span>
+                   <span class="con-top-txt2">
+                    您的订单中包含不支持货到付款商品，请选择在线支付。
+                <i></i>   
+                </span>
+                    </div>
+                <div class="pay">
+                    <a href="javascript:void(0);">在线支付
+                        <i></i>
+                    </a>
+                </div>
+                </div>
+            </div>
+            <div class="goods message wrap">
+                <div class="message-con">
+                    <div class="message-con-top clearfix">
+                        <span class="con-top-txt">配送清单</span>
+                        <a href="./cart.html" class="box-btn">返回购物车修改</a>
+                    </div>
+                    <div class="goods-cont">
+                    </div>
+                <div class="message1">
+                    <p class="message-new">添加订单备注</p>
+                    <div class="mes-con clearfix">
+                    <input class="inp" maxlength="45"   placeholder="限45个字（定制类商品，请将购买需求在备注中做详细说明）" type="text">
+                    <span class="new-tip">提示：请勿填写有关支付、收货、发票方面的信息</span>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+        <div class="invoice">
+            <div class="message2">
+                <div class="message-con-top clearfix">
+                    <span class="con-top-txt">发票信息</span>
+                </div>
+                <div class="message2-con">
+                    <p>
+                     <span>商品明细（普通发票）- 个人</span>
+                    <i class="sprite_odr"></i>
+                  </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="Allprice  fixed-price">
+    <div class="pay-price wrap">
+        <div class="pay-price-inner clearfix ">
+            <div class="null"></div>
+            <div class="pay-price-money">
+                 <ul class="clearfix">
+                     <li class="jge">
+                         <p>商品金额</p>
+                         <p class="jge-price g-price">123</p>
+                     </li>
+                     <li class="yhu">
+                        <p>优惠</p>
+                        <p class="jge-price">￥0.00</p>
+                    </li>
+                    <li class="zg">
+                        <p>折扣</p>
+                        <p class="jge-price">￥0.00</p>
+                    </li>
+                    <li class="yf">
+                        <p>运费</p>
+                        <p class="jge-price">￥0.00</p>
+                    </li>
+                 </ul>
+            </div>
+            <a href="javascript:void(0);" class="pay-btn" id="pay-btn">付款</a>
+        <div class="pay-count">
+            <p class="one">还需支付</p>
+            <p id="payPrice" class="ptc_count">
+                <em>¥</em>
+                <b class="All-price">123.00</b></p>
+        </div>
+        </div>
+    </div>
+</div>
+<!-- 点击提交提单弹出 -->
+<div class="refer">
+    <p class="refer-txt">确认付款吗</p>
+    <a href="javascript:void(0);" class="refer-del"></a>
+    <div class="btn_box clearfix">
+        <a href="javascript:void(0);" class="cancel pop_close">取消</a>
+        <a href="javascript:void(0);" class="confirm pop_close">确定</a>
+    </div>
+</div>
+<div class="mask">
+</div>
+<div class="footer">
+    <div class="footer-con">
+        <div class="footer-top">
+            <ul class="ul">
+                <li>沪ICP备16050468号</li>
+                <li class="gray ml5 mr5">|</li>
+                <li>营业执照</li>
+            </ul>
+        </div>
+        <div class="copyright">Copyright© 1号店网上超市 2007-2019， All Rights Reserved</div>
+    </div>
+</div>
+    <!-- 新增地址 -->
+    <div class="area">
+        <form action="./php/address.php" method="GET" target="stop">
+        <div class="order-title">
+            <span>新增收货人信息</span>
+        </div>
+        <div class="order-content">
+            <div class="new">
+               
+                <div class="new-list clearfix">
+                    <span class="label">
+                        <em>*</em>
+                        收货人
+                    </span>
+                    <div class="fl">
+                        <input type="text" name="name" class="ipt name">
+                    </div>
+                    <span class="error-msg error-name">请输入收货人姓名</span>
+                </div>
+                <div class="new-list clearfix">
+                    <span class="label">
+                        <em>*</em>
+                        手机号
+                    </span>
+                    <div class="fl">
+                        <span class="num">0086</span>
+                        <span class="line"></span>
+                        <input type="text" name="phone" class="ipt ipt1 phone">
+                        <span class="error-msg error-phone">请输入收货人手机号</span>
+                    </div>
+
+                </div>
+                <div class="new-list clearfix">
+                    <span class="label">
+                        <em>&nbsp;&nbsp;</em>
+                        邮箱地址
+                    </span>
+                    <div class="fl">
+                        <input type="text" name="email" class="ipt email">
+                        <span class="error-msg error-email">请输入收货人邮箱</span>
+                        <div class="emai">用来接收订单提醒邮件，便于您及时了解订单状态</div>
+                    </div>
+
+                </div>
+                <div class="new-list list1 clearfix">
+                    <span class="label"><em>*</em>所在地区</span>
+                    <div class="fl">
+                        <span id="span_area">
+                            <span id="span_province">
+                                <select name="" id="sel1" class="selt">
+                                    <option value="-1">--请选择--</option>
+                                </select>
+                            </span>
+                            <span id="span_city">
+                                <select name="" id="sel2" class="selt" style="visibility: hidden;">
+                                    <option value="-1">--请选择--</option>
+                                </select>
+                            </span>
+                            <span id="span_county">
+                                <select name="" id="sel3" class="selt" style="visibility: hidden;">
+                                    <option value="-1">--请选择--</option>
+                                </select>
+                            </span>
+                        </span>
+                        <span class="error-msg" id="area_div_error">请输入完整的地址信息</span>
+                    </div>
+                </div>
+                <div class="new-list clearfix">
+                    <span class="label">
+                        <em>*</em>
+                        详细地址
+                    </span>
+                    <div class="fl">
+                        <input type="text" name="address" class="ipt address">
+                    </div>
+                    <span class="error-msg error-address">请输入详细地址</span>
+                </div>
+                <div class="item1 list2">
+                    <span class="label">&nbsp;</span>
+                    <div class="fl">
+                        <input type="submit" value="保存收货人信息" class="btn-1" id="savenew">
+                        <div class="loading loading-1" style="display:none"><b></b>正在提交信息，请等待！</div>
+                    </div>
+                </div>
+           
+            </div>
+        </form>
+        <iframe name="stop" style="display: none;"></iframe>
+        </div>
+        <a href="javascript:void(0);" class="dian"></a>
+    </div>
+    <script src="./js/order.js"></script>
+</body>
+
+</html>

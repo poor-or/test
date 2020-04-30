@@ -510,12 +510,27 @@ a{
             border: 1px solid #CCC;
             border-radius: 20px;
             a{
+                position: relative;
                 display: inline-block;
                 width: 120px;
                 height: 38px;
                 text-align: center;
                 line-height: 38px;
                 font-size: 16px;
+            }
+            span #orderNum{
+                display: none;
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                font-size: 14px;
+                font-style: normal;
+                #{$bgc}: red;
+                color: #fff;
+                position: absolute;
+                top: -5px;
+                right: -5px;
+                border-radius: 50%;
             }
         } 
     }

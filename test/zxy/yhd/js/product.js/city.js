@@ -1,3 +1,4 @@
+var server="http://localhost:8080"
 var ul = document.getElementById("ul_list");
 var ipt = document.getElementById("ipt");
 var opt = document.getElementById("txt");
@@ -15,7 +16,7 @@ for (var a = 0; a < ele.length; a++) {
 arr.shift()
 // ajax获取城市信息
 var xhr = new XMLHttpRequest();
-xhr.open('GET', 'http://localhost:8081/test/zxy/yhd/php/city.php', true);
+xhr.open('GET', server+'/test/test/zxy/yhd/php/city.php', true);
 xhr.send();
 xhr.onreadystatechange = function () {
     if (xhr.readyState == 4 && xhr.status == 200) {
@@ -147,5 +148,6 @@ if(userName){
 function exitUser() {
     userInfo[0].parentElement.style.display="none";
     userInfo[0].parentElement.previousElementSibling.style.display="block";
+    userInfo[0].children[0].innerHTML=userName;
 }
 
