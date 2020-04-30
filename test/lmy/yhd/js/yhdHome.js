@@ -277,8 +277,8 @@ function getGoods(times = 0) {
                         <span>${data[i].price}</span>
                     </a>
                     <div class="mask">
-                        <a class="one" href="" title="${data[i].goodsId}"><i class="iconfont icon-iconset11"></i></a>
-                        <a class="last" href="">找相似</a>
+                        <a class="one" href="javascript:  void(0);" title="${data[i].goodsId}"><i class="iconfont icon-iconset11"></i></a>
+                        <a class="last" href="javascript:  void(0);">找相似</a>
                     </div>
                 </li>
                 `
@@ -291,7 +291,7 @@ function getGoods(times = 0) {
                     var pri = parseFloat(data[set_time].price.substr(1, data[set_time].price.length)) + 50;
                     super_list.innerHTML += `
                     <li>
-                        <a href="" title="${data[set_time].goodsId}">
+                        <a href="javascript:  void(0);" title="${data[set_time].goodsId}">
                             <div class="single-top">
                                 <img src="${data[set_time].pictureAddress}" alt="">
                             </div>
@@ -311,7 +311,7 @@ function getGoods(times = 0) {
                     var set_time = Math.floor(Math.random() * 40)
                     var pri = parseFloat(data[set_time].price.substr(1, data[set_time].price.length)) + 50;
                     super_list.children[j + 1].innerHTML = `
-                        <a href="" title="${data[set_time].goodsId}">
+                        <a href="javascript:  void(0);" title="${data[set_time].goodsId}">
                             <div class="single-top">
                                 <img src="${data[set_time].pictureAddress}" alt="">
                             </div>
