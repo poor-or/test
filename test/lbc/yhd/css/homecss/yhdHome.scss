@@ -10,9 +10,6 @@ $bgc:background-color;
     width: 1070px;
     margin: 0 auto;
 }
-a,i,span,div,p{
-    vertical-align: middle;
-}
 body{
     font:12px Arial,Helvetica,sans-serif;
     color: #333;
@@ -31,6 +28,7 @@ a{
 }
 
 .hd_header{
+    margin-bottom: 200px;
     .hd-bg{
         #{$bgc}: #f4f4f4;
         border-bottom: 1px solid #e5e5e5;
@@ -48,9 +46,181 @@ a{
         float: left;
         padding: 0 10px;
     }    
-    .hd_t_left>i{
-        color: red;
-        font-size: 12px;
+    .hd_place{
+
+        .fff{
+            position: absolute;
+            width: 100%;
+            display: none;
+            height: 3px;
+            #{$bgc}: #fff;
+            top: 28px;
+            left: 0px;
+            z-index: 3;
+        }
+        a{
+            i{
+                font-size: 16px;
+                color: red;
+            }
+        }
+        @extend .hd_t_left;
+        .none{
+            width: 720px;
+            top: 29px;
+            left: -1px;
+            color: #999;
+            border: 1px solid #dbdbdb;
+            #{$bgc}:#fff;
+            z-index: 1;
+            text-align: left;
+            .hd_city_search{
+                height: 30px;
+                padding: 15px 20px 0 ;
+                span{
+                    display: inline-block;
+                    color: #666;
+                    height: 28px;
+                    line-height: 28px;
+                    padding-right: 10px;
+                    font-weight: bold;
+                }
+                div{
+                    display: inline-block;
+                    input{
+                        width: 135px;
+                        height: 26px;
+                        line-height: 26px;
+                        padding: 0 8px 0 25px;
+                        vertical-align: middle;
+                        color: #333;
+                        font-size: 12px;
+                    }
+                    #txt{
+                        position: absolute;
+                        #{$bgc}: #fff;
+                        border-radius: 3px;
+                        border: 1px solid #AAA;
+                        padding-left: 10px;
+                        width: 158px;
+                        left: 94px;
+                        top: 47px;
+                        display: none;
+                    }
+                    .iconfont{
+                        position: absolute;
+                        top: 17px;
+                        left: 100px;
+                        font-size: 16px;
+                        color: #dcdcdc;
+                    }
+                }
+                .close_city{
+                    &:hover{
+                        cursor: pointer;
+                    }
+                    width: 20px;
+                    height: 20px;
+                    float: right;
+                    font: 20px "Tahoma";
+                    color: #ccc;
+                    margin: {
+                        top: -8px;
+                        right: -19px;
+                    }
+                }
+                .clearText{
+                    @extend .close_city;
+                    font-size: 16px;
+                    position: absolute;
+                    top: 30px;
+                    left: 245px;
+                }
+            }
+            .hd_hot_city{
+                padding: 12px 0 5px;
+                margin-left: 20px;
+                border-bottom: 1px solid #e0e0e0;
+                span{
+                    float: left;
+                    color: #666;
+                    font-weight: bold;
+                    padding-right: 10px;
+                }
+                div{
+                    @extend span;
+                    font-weight: normal;
+                    width: 610px;
+                    a{
+                        white-space: nowrap;
+                        padding: {
+                            right: 21px;
+                            bottom: 5px;
+                        }
+                    }
+                }
+            }
+            .hd_letter_search{
+                @extend .hd_hot_city;
+                padding: 12px 0 0;
+                border: none;
+                span{
+                    height: 20px;
+                    line-height: 20px;
+                    vertical-align: bottom;
+                }
+                a{
+                    float: left;
+                    width: 22px;
+                    height: 20px;
+                    margin: 0 5px 5px 0;
+                    #{$bgc}:#eee;
+                    line-height: 20px;
+                    text-align: center;
+                    vertical-align: middle;
+                }
+                .col{
+                    color: #fff;
+                    #{$bgc}:red;
+                }
+            }
+            .hd_city_list{
+                position: relative;
+                height: 245px;
+                margin: {
+                    left: 20px;
+                    bottom: 10px;
+                }
+                ul{
+                    position: relative;
+                    height: 215px;
+                    padding: 10px 0;
+                    overflow: auto;
+                    scroll-behavior: smooth;
+                    li{
+                        position: relative;
+                        margin-bottom: 10px;
+                        padding-left: 30px;
+                        padding-left: 30px;
+                        .city_screen{
+                            position: absolute;
+                            left: 3px;
+                            top: 2px;
+                            font-size: 18px;
+                            font-family: "Arial";
+                            color: #ccc;
+                        }
+                        .city_box{
+                            float: left;
+                            a{
+                                white-space: nowrap;
+                                padding-right: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
     .news{
         height: 30px;
@@ -58,7 +228,6 @@ a{
         @extend .hd_t_left;
         text-align: left;
         i{
-            font-size: 16px;
             color: red;
         }
         .n_mess{
@@ -113,46 +282,11 @@ a{
             }
             
         }
-        // 登陆后显示
-        .login-txt{
-            float: left;
-            .user:hover+div a:first-child{
-                display: block;
-                &+a{
-                    display: none;
-                }
-            }
-            div{
-                width: 110px;
-                float: right;
-                position: relative;
-                a{
-                    position: absolute;
-                    right: 0;
-                    margin: 0 3px;
-                    &:first-child{
-                        right: 10px;
-                        color: #CCC;
-                        display: none;
-                    }
-                    span{
-                        padding: 2px 5px;
-                        margin-right: 5px;
-                        #{$bgc}:red;
-                        color: #fff;
-                        border-radius: 20px;
-                    }
-                }
-            }
-        }
         .hd_r_l{
             @extend .hd_t_left;
             padding: 0 10px;
         }
         .hd_member{
-            i{
-               font-size: 16px;
-            }
             &:hover{
                 i{
                     color: red;
@@ -178,44 +312,7 @@ a{
         display: none;
         position: absolute;
     }
-    .app{
-        .none{
-            position: absolute;
-            top: 30px;
-            left: -10px;
-            padding: 15px 9px 9px;
-            z-index: 1;
-            #{$bgc}:#fff;
-            border: 1px solid #e5e5e5;
-            p{
-                line-height: 18px;
-            }
-            &::before{
-                content: "";
-                display: block;
-                position: absolute;
-                z-index: 3;
-                left: 50%;
-                margin-left: -5px;
-                top: -5px+0.5px;
-                width: 8px;
-                height: 8px;
-                #{$bgc}:#fff;
-                border: {
-                    top:1px solid #e5e5e5;
-                    left: 1px solid #e5e5e5;;
-                } 
-                transform: rotate(45deg);
-            }
-        }
-        .iconfont{
-            font-size: 18px;
-        }
-        
-        &:hover .none{
-            display: block;
-        }
-    }
+    
 }
 // 头部搜索
 .hd_bp{

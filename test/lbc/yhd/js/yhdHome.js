@@ -1,32 +1,3 @@
-// 控制登陆后显示
-var userInfo = document.getElementsByClassName("login-txt")[0].children;
-var dateTime = new Date();
-if (dateTime.getHours() <= 11) {
-    userInfo[0].innerHTML = "上午好"
-} else if (dateTime.getHours() <= 14) {
-    userInfo[0].innerHTML = "中午好"
-} else if (dateTime.getHours() <= 20) {
-    userInfo[0].innerHTML = "下午好"
-} else {
-    userInfo[0].innerHTML = "晚上好"
-}
-var userName = sessionStorage.getItem("userName");
-if (userName) {
-    userInfo[0].parentElement.style.display = "block";
-    userInfo[0].parentElement.previousElementSibling.style.display = "none";
-    userInfo[1].innerHTML = userName;
-} else {
-    userInfo[0].parentElement.previousElementSibling.style.display = "block";
-    userInfo[0].parentElement.style.display = "none";
-}
-function exitUser() {
-    userInfo[0].parentElement.style.display = "none";
-    userInfo[0].parentElement.previousElementSibling.style.display = "block";
-    sessionStorage.removeItem("userName");
-}
-
-
-
 
 var span = document.getElementById("span")
 var brand = document.getElementById("brand")
@@ -94,4 +65,3 @@ hd1.onmouseleave = function () {
     hd2.style.display = 'none'
     console.log('鼠标离开')
 }
-
