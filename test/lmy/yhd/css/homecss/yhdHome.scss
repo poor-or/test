@@ -424,6 +424,7 @@ a{
                 position: absolute;
                 right: -1px;
                 top: -2px;
+                z-index: 2;
                 width: 47px;
                 height: 34px;
             }
@@ -679,7 +680,7 @@ a{
             vertical-align: middle;
             &.fix-search{
                 width: 405px;
-                margin: 8px 0 0 80px;
+                margin: 0px 0 3px 80px;
                 position: relative;
                 input{
                     width: 400px;
@@ -710,6 +711,7 @@ a{
                     border-radius: 0 20px 20px 0;
                     right: -88px;
                     top: 0;
+                    cursor: pointer;
                     .iconfont{
                         font-size: 24px;
                     }

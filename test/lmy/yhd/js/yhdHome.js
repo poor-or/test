@@ -376,6 +376,19 @@ for(var b=0;b<all_a.length;b++){
 }
 for(var c=0;c<alist.length;c++){
     alist[c].onclick=function() {
-        window.location.href=server+"/test/test/lbc/yhd/yhd.html?value="+this.title;
+        console.log(this.title)
+        window.location.href=server+"/test/test/lbc/yhd/yhdHome.html?value="+this.title;
+    }
+}
+
+
+var seaSend=document.getElementById("send-sea");
+seaSend.onclick=function() {
+    sendVal(this)
+}
+function sendVal(e) {
+    var iptVal=e.parentElement.children[0];
+    if(iptVal!=""){
+        window.location.href=server+"/test/test/lbc/yhd/yhdHome.html?value="+iptVal.value;
     }
 }
